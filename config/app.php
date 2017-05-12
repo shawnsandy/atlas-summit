@@ -173,9 +173,10 @@ return [
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         ShawnSandy\Extras\ExtrasServicesProvider::class,
-    Thujohn\Twitter\TwitterServiceProvider::class,        
-    Collective\Html\HtmlServiceProvider::class,
-    ShawnSandy\Dash\DashServicesProvider::class,
+        Thujohn\Twitter\TwitterServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        ShawnSandy\Dash\DashServicesProvider::class,
+        Laracademy\Commands\MakeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -235,17 +236,17 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
-    'Breadcrumbs' => ShawnSandy\PageKit\Facades\BreadcrumbFacade::class,    
-    'MD' => ShawnSandy\PageKit\Facades\MarkdownFacade::class,    
-    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-    'Debugbar' => Barryvdh\Debugbar\Facade::class,
-    'Form' => Collective\Html\FormFacade::class,
-    'Html' => Collective\Html\HtmlFacade::class,
-    'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
-    'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
-    "Dash" => ShawnSandy\Dash\DashFacade::class,
-    "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
-    "Twitter" => \Thujohn\Twitter\Facades\Twitter::class
+        'Breadcrumbs' => ShawnSandy\PageKit\Facades\BreadcrumbFacade::class,
+        'MD' => ShawnSandy\PageKit\Facades\MarkdownFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
+        'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
+        "Dash" => ShawnSandy\Dash\DashFacade::class,
+        "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
+        "Twitter" => \Thujohn\Twitter\Facades\Twitter::class
 
     ],
 
