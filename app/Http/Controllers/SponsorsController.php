@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SponsorsRequest;
+use App\Sponsor;
 use App\Sponsors;
 use Illuminate\Http\Request;
 
@@ -30,21 +32,21 @@ class SponsorsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param SponsorsRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SponsorsRequest $request)
     {
-        //
+        return $request->all();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sponsors  $sponsors
+     * @param  \App\Sponsor  $sponsors
      * @return \Illuminate\Http\Response
      */
-    public function show(Sponsors $sponsors)
+    public function show(Sponsor $sponsors)
     {
         //
     }
@@ -52,10 +54,10 @@ class SponsorsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Sponsors  $sponsors
+     * @param Sponsor $sponsors
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sponsors $sponsors)
+    public function edit(Sponsor $sponsors)
     {
         //
     }
@@ -63,11 +65,11 @@ class SponsorsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sponsors  $sponsors
+     * @param  \Illuminate\Http\Request $request
+     * @param Sponsor $sponsors
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sponsors $sponsors)
+    public function update(Request $request, Sponsor $sponsors)
     {
         //
     }
@@ -75,10 +77,10 @@ class SponsorsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sponsors  $sponsors
+     * @param Sponsor $sponsors
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sponsors $sponsors)
+    public function destroy(Sponsor $sponsors)
     {
         //
     }

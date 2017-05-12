@@ -13,7 +13,7 @@ class SponsorsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,12 +26,10 @@ class SponsorsRequest extends FormRequest
         return [
             //
             'contact_name' => 'required|max:255',
-            'contact_phone' => 'required|max:11|min:7',
+            'contact_phone' => 'required|max:20|min:7',
             'contact_email' => 'required|email',
             'company_name' => 'required|max:255',
-            'sponsor_description' => 'required',
-            'sponsor_logo' => 'required|file|image',
-            'sponsor_banner' => 'required|file|image',
+            'company_name' => 'required|max:255',
         ];
     }
 }
