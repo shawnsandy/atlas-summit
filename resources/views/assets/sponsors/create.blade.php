@@ -2,7 +2,7 @@
 @section("content")
 
     <div class="container-fluid">
-        <div class="col-md-9">
+        <div class="col-md-9 form-component">
             @component("dash::components.panels.dashboard", ["title" => "Add Sponsors"])
                 {{ Form::createForm('App\Sponsor', "sponsors") }}
             @endcomponent
