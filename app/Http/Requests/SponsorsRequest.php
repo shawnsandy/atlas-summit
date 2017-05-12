@@ -26,7 +26,7 @@ class SponsorsRequest extends FormRequest
         return [
             //
             'contact_name' => 'required|max:255',
-            'contact_phone' => 'required|max:20|min:7',
+            'contact_phone' => 'required|max:20|min:10',
             'contact_email' => 'required|email',
             'company_name' => 'required|max:255',
             'company_name' => 'required|max:255',

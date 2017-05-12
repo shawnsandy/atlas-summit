@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "08b721fb37cc12da3ee2dae94a043e20",
-    "content-hash": "9886a177d3644ace1202711eabf4c6c6",
+    "hash": "655c90c27ed04d67216cb4f56e4e09f7",
+    "content-hash": "5d5ff70c9dda8edad6f30faa0b5a9c75",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -1194,39 +1194,6 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
-        },
-        {
-            "name": "laracademy/interactive-make",
-            "version": "0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laracademy/interactive-make.git",
-                "reference": "8c2ffd526100cd494d7f384ec583eeee9ee42d1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laracademy/interactive-make/zipball/8c2ffd526100cd494d7f384ec583eeee9ee42d1a",
-                "reference": "8c2ffd526100cd494d7f384ec583eeee9ee42d1a",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Laracademy\\Commands\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael McMullen",
-                    "email": "packages@laracademy.co"
-                }
-            ],
-            "description": "Interactive make CLI replacement for Laravel",
-            "time": "2017-05-04 17:51:28"
         },
         {
             "name": "laracasts/flash",
@@ -2572,16 +2539,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.3",
+            "version": "v0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/17cf432bb80d9198df239b80d00a29155bd74d82",
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
                 "shasum": ""
             },
             "require": {
@@ -2641,7 +2608,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-19 21:40:44"
+            "time": "2017-05-12 15:41:55"
         },
         {
             "name": "ramsey/uuid",
@@ -4122,6 +4089,39 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "laracademy/interactive-make",
+            "version": "0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracademy/interactive-make.git",
+                "reference": "8c2ffd526100cd494d7f384ec583eeee9ee42d1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracademy/interactive-make/zipball/8c2ffd526100cd494d7f384ec583eeee9ee42d1a",
+                "reference": "8c2ffd526100cd494d7f384ec583eeee9ee42d1a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracademy\\Commands\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael McMullen",
+                    "email": "packages@laracademy.co"
+                }
+            ],
+            "description": "Interactive make CLI replacement for Laravel",
+            "time": "2017-05-04 17:51:28"
         },
         {
             "name": "mockery/mockery",
