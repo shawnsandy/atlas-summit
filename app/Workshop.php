@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Workshop extends Model
 {
-    protected $fillable = [""];
+    protected $fillable = ["name", "description", "date", "start_time", "end_time", "room_id"];
 }

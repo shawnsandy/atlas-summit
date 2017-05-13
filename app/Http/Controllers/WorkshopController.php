@@ -24,7 +24,7 @@ class WorkshopController extends Controller
      */
     public function create()
     {
-        //
+        return view("assets.workshops.create");
     }
 
     /**
@@ -35,7 +35,7 @@ class WorkshopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
     /**
