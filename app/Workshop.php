@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sessions extends Model
+class Workshop extends Model
 {
-    //
+    protected $fillable = [""];
 }
