@@ -8,7 +8,7 @@
             @endcomponent
         </div>
         <div class="col-md-3">
-            @component("dash::components.panels.widget", ["title" => "Sponsors List"])
+            @component("dash::components.panels.widget", ["title" => "Regions Registered"])
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, vitae!
             @endcomponent
         </div>
