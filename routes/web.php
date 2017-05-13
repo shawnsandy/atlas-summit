@@ -30,3 +30,9 @@ Route::group(['prefix' => "extras"], function () {
 Route::resource("sponsors", "SponsorsController");
 
 Route::resource("regions", "RegionsController");
+
+Route::resource("workshops", "WorkshopController");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
