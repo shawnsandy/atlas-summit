@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="col-md-8 form-component">
             @component("dash::components.panels.dashboard", ["title" => "Add Workshops"])
-                {{ Form::createForm('App\Workshop', "workshops") }}
+                {{ Form::editForm('App\Workshop', "workshops") }}
             @endcomponent
         </div>
         <div class="col-md-4">
