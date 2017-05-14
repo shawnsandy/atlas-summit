@@ -15,3 +15,26 @@ header.landing h1, .headline {
     border-bottom: 5px solid $theme-green;
   }
 }
+
+.panel {
+  h1, h2, h3,h4,h5, .h1, .h2, .h3,.h4,.h5 {
+
+    i {
+      color: $theme-green;
+    }
+
+  }
+
+}
+
+#sidebar-wrapper {
+  background-color: darken($theme-green, 10%);
+
+  .sidebar-nav li a {
+    color: #fff;
+
+    &:hover {
+      background-color: darken($theme-green, 20%);
+    }
+  }
+}

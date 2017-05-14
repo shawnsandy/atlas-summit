@@ -19,11 +19,11 @@
 @stack("styles")
 <!-- Bootstrap Core CSS -->
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
-    <link rel="stylesheet" href="/assets/dash/css/dash.css">
-    <link rel="stylesheet" href="/css/admin.css">
-    <!-- Custom CSS -->
+<!-- Custom CSS -->
     <link href="/css/simple-sidebar.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/assets/dash/css/dash.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand menu-toggle">
                 <a href="#" class="">
-                    <i class="fa fa-ellipsis-h"></i> <span class="nav-text"> Dash.</span>
+                    <i class="fa fa-ellipsis-h"></i> <span class="nav-text">Dash</span>
                 </a>
             </li>
            @include("dash::partials.sidebar-menu")
@@ -51,7 +51,7 @@
     <div id="page-content-wrapper">
 
 
-        <nav class="navbar theme-border">
+        <nav class="navbar">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
