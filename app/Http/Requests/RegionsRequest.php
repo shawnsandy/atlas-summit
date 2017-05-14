@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class WorkshopRequest extends FormRequest
+class RegionsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,10 @@ class WorkshopRequest extends FormRequest
     {
         return [
             "name" => "required|min:10",
-            "date" => "sometimes|required|min:10",
-            "start_time" => "required",
-            "room_id" => "required",
+            "address" => "required|min:10",
+            "website" => "url",
+            "lat" => "sometimes|required",
+            "long" => "sometimes|required",
         ];
     }
 }
