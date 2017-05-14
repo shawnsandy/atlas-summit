@@ -49,9 +49,9 @@
 
     <!-- Page Navbar -->
     <div id="page-content-wrapper">
+<div class=" theme-border theme-border-green"></div>
 
-
-        <nav class="navbar theme-border theme-border-blue">
+        <nav class="navbar">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

@@ -19,6 +19,9 @@ header.landing h1, .headline {
   &-blue {
     border-top-color: $theme-blue;
   }
+  &-green {
+    border-top-color: darken($theme-green, 15%);
+  }
 }
 
 .panel-component {

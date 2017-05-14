@@ -33,7 +33,7 @@ Route::resource("regions", "RegionsController");
 
 Route::resource("workshops", "WorkshopController");
 
-Route::resource("attendees", "UserAdminController");
+Route::resource("users", "UserAdminController");
 
 Auth::routes();
 
