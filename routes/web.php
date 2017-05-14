@@ -33,6 +33,8 @@ Route::resource("regions", "RegionsController");
 
 Route::resource("workshops", "WorkshopController");
 
+Route::resource("attendees", "UserAdminController");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
