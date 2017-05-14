@@ -1,4 +1,5 @@
 $theme-green: #40AE48;
+$theme-blue: #005DA7;
 .form-component {
   label {
     font-weight: normal;
@@ -14,6 +15,9 @@ header.landing h1, .headline {
   &-bottom {
     border-bottom: 5px solid $theme-green;
   }
+  &-blue {
+    border-top-color: $theme-blue;
+  }
 }
 
 .panel {
@@ -25,16 +29,18 @@ header.landing h1, .headline {
 
   }
 
+  border-top: solid 3px #005DA7;
+
 }
 
 #sidebar-wrapper {
-  background-color: darken($theme-green, 10%);
+  background-color: darken($theme-green, 15%);
 
   .sidebar-nav li a {
     color: #fff;
 
     &:hover {
-      background-color: darken($theme-green, 20%);
+      background-color: darken($theme-green, 25%);
     }
   }
 }
