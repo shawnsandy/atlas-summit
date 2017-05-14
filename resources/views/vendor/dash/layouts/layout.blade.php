@@ -51,7 +51,7 @@
     <div id="page-content-wrapper">
 
 
-        <nav class="navbar">
+        <nav class="navbar theme-border">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -63,7 +63,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand menu-toggle" href="#"><span class="fa fa-bars"></span> </a>
-                    <a class="navbar-brand " href="#">Brand</a>
+                    <a class="navbar-brand " href="#">{{ config("pagekit.company_name", "Admin Center") }}</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,6 +72,7 @@
                        {{-- navbar here --}}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/" target="_blank">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

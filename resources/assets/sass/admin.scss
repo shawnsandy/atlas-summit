@@ -1,3 +1,4 @@
+$theme-green: #40AE48;
 .form-component {
   label {
     font-weight: normal;
@@ -6,4 +7,11 @@
 }
 header.landing h1, .headline {
   font-size: 90px;
+}
+
+.theme-border {
+  border-top: 5px solid $theme-green;
+  &-bottom {
+    border-bottom: 5px solid $theme-green;
+  }
 }
