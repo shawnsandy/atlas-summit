@@ -1,5 +1,4 @@
-$theme-green: #40AE48;
-$theme-blue: #005DA7;
+@import "variables";
 .form-component {
   label {
     font-weight: normal;
@@ -43,6 +42,8 @@ header.landing h1, .headline {
 
 }
 
+
+
 #sidebar-wrapper {
   background-color: darken($theme-green, 15%);
 
@@ -53,4 +54,7 @@ header.landing h1, .headline {
       background-color: darken($theme-green, 25%);
     }
   }
+}
+.navbar-static-top {
+  background-color: rgba(255, 255, 255, 0.26);
 }
