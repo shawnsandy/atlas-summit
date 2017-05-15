@@ -22,3 +22,19 @@ Route::group(['prefix' => "extras"], function () {
 Route::group(['prefix' => 'admin'], function(){
    Dash::routes();
 });
+
+Route::group(['prefix' => "extras"], function () {
+    Extras::routes();
+});
+
+Route::resource("sponsors", "SponsorsController");
+
+Route::resource("regions", "RegionsController");
+
+Route::resource("workshops", "WorkshopController");
+
+Route::resource("users", "UserAdminController");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
