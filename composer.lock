@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "655c90c27ed04d67216cb4f56e4e09f7",
-    "content-hash": "5d5ff70c9dda8edad6f30faa0b5a9c75",
+    "hash": "f7a10791a8aa8a212e15af56ad0883d2",
+    "content-hash": "39e0cf78d31a9e5a3aac4300cf05060a",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -2742,16 +2742,16 @@
         },
         {
             "name": "shawnsandy/dash",
-            "version": "v0.1.30",
+            "version": "v0.1.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/dash.git",
-                "reference": "d6aeb6937e2109daf3dcd4aeb441ee04451adc47"
+                "reference": "d420bebc40ffccb26f2851021f286a61636b3ac7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/d6aeb6937e2109daf3dcd4aeb441ee04451adc47",
-                "reference": "d6aeb6937e2109daf3dcd4aeb441ee04451adc47",
+                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/d420bebc40ffccb26f2851021f286a61636b3ac7",
+                "reference": "d420bebc40ffccb26f2851021f286a61636b3ac7",
                 "shasum": ""
             },
             "require": {
@@ -2791,7 +2791,7 @@
                 "dash",
                 "shawnsandy"
             ],
-            "time": "2017-05-11 20:23:48"
+            "time": "2017-05-15 01:44:30"
         },
         {
             "name": "shawnsandy/extras",
