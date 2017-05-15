@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SponsorsRequest extends FormRequest
+class WorkshopRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,10 @@ class SponsorsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
-            'contact_name' => 'required|max:255',
-            'contact_phone' => 'required|max:20|min:10',
-            'contact_email' => 'required|email',
-            'company_name' => 'required|max:255',
-            'company_name' => 'required|max:255',
+            "name" => "required|min:10",
+            "date" => "sometimes|required|min:10",
+            "start_time" => "required",
+            "room_id" => "required",
         ];
     }
 }

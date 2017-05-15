@@ -8,6 +8,8 @@ return [
 
     'page_slug' => 'Workforce Professional Development Summit October 23 – 25',
 
+    'title_slug' => 'Workforce Professional Development Summit October 23 – 25',
+
     'company_name' => 'WPDS 2017',
 
     'contact_number' => '000 000 0000',

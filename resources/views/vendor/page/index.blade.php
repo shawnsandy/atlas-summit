@@ -2,16 +2,14 @@
 @section('title', 'Laravel Pages')
 @section('body')
 
-
-
     @include('page::shared.cover-fold', ["class_name" => "landing bg-5"])
 
     <section class="sub-header text-center">
 
         <div class="container">
-            <h1>
+            <p class="h1">
                 2017 Workforce Professional Development Summit
-            </h1>
+            </p>
             <p class="lead">
                 The 2017 Workforce Professional Development Summit will be held October 23 – 25 at the Hyatt Regency
                 Grand Cypress in Orlando. We are working hard on a brand new website so please check back soon.
@@ -20,12 +18,12 @@
     </section>
     <hr>
     <section>
-        <div class="container"><p class="h1 text-center">
+        <div class="container">
+            <p class="h1 text-center">
                 Speakers
             </p>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam, aperiam deleniti deserunt dolorem
-                doloribus harum hic id magnam magni maxime neque perspiciatis quisquam quod reprehenderit.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
             </p>
         </div>
     </section>
@@ -35,8 +33,7 @@
                 Events
             </p>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam, aperiam deleniti deserunt dolorem
-                doloribus harum hic id magnam magni maxime neque perspiciatis quisquam quod reprehenderit.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
             </p>
         </div>
     </section>
@@ -46,8 +43,7 @@
                 Schedule
             </p>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam, aperiam deleniti deserunt dolorem
-                doloribus harum hic id magnam magni maxime neque perspiciatis quisquam quod reprehenderit.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
             </p>
         </div>
     </section>
@@ -58,8 +54,7 @@
                 2017 Sponsors
             </p>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam, aperiam deleniti deserunt dolorem
-                doloribus harum hic id magnam magni maxime neque perspiciatis quisquam quod reprehenderit.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
             </p>
         </div>
     </section>
@@ -69,9 +64,9 @@
         <div class="container"><p class="h1 text-center">
                 Venue
             </p>
+            <hr>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam, aperiam deleniti deserunt dolorem
-                doloribus harum hic id magnam magni maxime neque perspiciatis quisquam quod reprehenderit.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
             </p>
         </div>
     </section>

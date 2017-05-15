@@ -1,0 +1,60 @@
+@import "variables";
+.form-component {
+  label {
+    font-weight: normal;
+    text-transform: capitalize;
+  }
+}
+
+header.landing h1, .headline {
+  font-size: 90px;
+}
+
+.theme-border {
+  border-top: 5px solid $theme-green;
+  &-bottom {
+    border-bottom: 5px solid $theme-green;
+  }
+  &-blue {
+    border-top-color: $theme-blue;
+  }
+  &-green {
+    border-top-color: darken($theme-green, 15%);
+  }
+}
+
+.panel-component {
+
+  .panel {
+    h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+
+      i {
+        color: $theme-green;
+      }
+
+    }
+
+    border-top: solid 3px #005DA7;
+
+  }
+
+  border-top: solid 3px #005DA7;
+
+}
+
+
+
+#sidebar-wrapper {
+  background-color: darken($theme-green, 15%);
+
+  .sidebar-nav li a {
+    color: #fff;
+
+    &:hover {
+      background-color: darken($theme-green, 25%);
+    }
+  }
+}
+.navbar-static-top {
+  background-color: rgba(255, 255, 255, 0.26);
+}

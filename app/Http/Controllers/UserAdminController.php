@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Sessions;
+use App\Http\Requests\UserRequest;
+use App\Session;
+use App\User;
 use Illuminate\Http\Request;
 
-class SessionsController extends Controller
+class UserAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,8 @@ class SessionsController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view("dash::useradmin", compact("users"));
     }
 
     /**
@@ -33,41 +36,53 @@ class SessionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        //
+        $user = $request->all();
+        $user['region_id'] = 1;
+
+        if(!User::create($user)):
+        return back()->withErrors()->with("error", "Sorry you user was not saved");
+        endif;
+        return back()->with("success", "User created");
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sessions  $sessions
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Sessions $sessions)
+    public function show(User $user)
     {
-        //
+        $user = User::find($user);
+
+        if(count($user) < 1)
+            return back()->with('error', "User not found");
+
+        return view ("dash::useradmin-page", compact("user"));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Sessions  $sessions
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sessions $sessions)
+    public function edit(User $user)
     {
-        //
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sessions  $sessions
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sessions $sessions)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -75,10 +90,10 @@ class SessionsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sessions  $sessions
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sessions $sessions)
+    public function destroy(User $user)
     {
         //
     }
