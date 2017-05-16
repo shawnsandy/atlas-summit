@@ -30,8 +30,28 @@ header.landing {
 }
 
 p.h1 {
-  font-size: 71px;
+  font-size: 60px;
   padding-bottom: 20px;
   color: $theme-blue;
 }
 
+section.actions.signup {
+  background-color: darken($theme-green, 5%);
+  padding: 60px 0;
+
+  .panel {
+    border-radius: 15px;
+  }
+
+  .h1 {
+    color: #fff;
+
+  }
+}
+
+.btn {
+  border-radius: 40px;
+  radius-small  {
+    border-radius: 15px;
+  }
+}

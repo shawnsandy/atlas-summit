@@ -16,7 +16,40 @@
             </p>
         </div>
     </section>
-    <hr>
+    <section class="actions signup">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="h1 text-center">
+                        Register Now
+                    </p>
+
+                    <div id="register" class="panel panel-default">
+                        <div class="panel-body component">
+
+                            <h2 class="text-center">
+                                2017 Workforce Professional Development Summit
+                            </h2>
+                            <hr>
+                            {{ Form::open(["url" => '']) }}
+
+                            {{ Form::dashFields('App\User') }}
+                            <button class="h2 text-uppercase btn btn-block btn-lg btn-primary lead">
+                                Register For WPDS 2017
+                            </button>
+                            {{ Form::close() }}
+                            <hr>
+                            <div class="social-sign-in">
+                                {{ Html::networkLogin("Connect Via Social Media") }}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <section>
         <div class="container">
             <p class="h1 text-center">
@@ -91,7 +124,9 @@
         color: #fff;
     }
 </style>
+
 @endpush
+
 @push('scripts')
 <script>
     $(document).ready(function () {
