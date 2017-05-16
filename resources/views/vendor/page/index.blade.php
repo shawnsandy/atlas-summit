@@ -28,7 +28,7 @@
                         <div class="panel-body component">
 
                             <h2 class="text-center">
-                                2017 Workforce Professional Development Summit
+                                WPDS 2017
                             </h2>
                             <hr>
                             {{ Form::open(["url" => '']) }}
