@@ -35,7 +35,7 @@
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
-                                <button class="h2 text-uppercase btn btn-lg btn-primary lead">
+                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary lead">
                                     Register For WPDS 2017
                                 </button>
                             </p>
@@ -53,27 +53,7 @@
         </div>
 
     </section>
-    <section>
-        <div class="container">
-            <p class="h1 text-center">
-                Speakers
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
-    </section>
-    <hr>
-    <section>
-        <div class="container"><p class="h1 text-center">
-                Events
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
-    </section>
-    <hr>
+
     <section>
         <div class="container"><p class="h1 text-center">
                 Schedule
