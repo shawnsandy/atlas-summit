@@ -47,6 +47,21 @@ section.actions.signup {
     color: #fff;
 
   }
+
+  input {
+    border-radius: 7px;
+    height: 50px;
+  }
+
+  label {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .btn {
+    height: 50px;
+  }
 }
 
 .btn {

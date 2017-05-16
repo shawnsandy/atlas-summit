@@ -34,9 +34,12 @@
                             {{ Form::open(["url" => '']) }}
 
                             {{ Form::dashFields('App\User') }}
-                            <button class="h2 text-uppercase btn btn-block btn-lg btn-primary lead">
-                                Register For WPDS 2017
-                            </button>
+                            <p class="text-right">
+                                <button class="h2 text-uppercase btn btn-lg btn-primary lead">
+                                    Register For WPDS 2017
+                                </button>
+                            </p>
+
                             {{ Form::close() }}
                             <hr>
                             <div class="social-sign-in">
