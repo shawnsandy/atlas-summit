@@ -1,5 +1,6 @@
 @import "variables";
 @import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+
 .navbar-static-top {
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0.30);
@@ -45,7 +46,9 @@ section.actions.signup {
     background-color: darken($theme-green, 5%);
     @include linear-gradient(to top, darken($theme-green, 15%), $theme-green);
     padding: 60px 0;
+
     .panel {
+        padding: 0 40px;
         border-radius: 5px;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     }
@@ -56,8 +59,8 @@ section.actions.signup {
         border-radius: 2px;
     }
     label {
-        text-transform: capitalize;
-        font-size: 16px;
+
+        font-size: 12px;
         font-weight: normal;
     }
     .btn {
@@ -67,7 +70,7 @@ section.actions.signup {
 
 .btn {
     border-radius: 40px;
-    radius-small {
+    .radius-small {
         border-radius: 15px;
     }
 }
