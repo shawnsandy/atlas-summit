@@ -807,7 +807,7 @@ var app = new Vue({
 /* 11 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\n@import \"node_modules/bourbon/app/assets/stylesheets/_bourbon.scss\";\r\n^\r\n      File to import not found or unreadable: node_modules/bourbon/app/assets/stylesheets/_bourbon.scss.\nParent style sheet: stdin\r\n      in D:\\Apps\\atlas-summit\\resources\\assets\\sass\\theme.scss (line 2, column 1)\n    at runLoaders (D:\\Apps\\atlas-summit\\node_modules\\webpack\\lib\\NormalModule.js:192:19)\n    at D:\\Apps\\atlas-summit\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at D:\\Apps\\atlas-summit\\node_modules\\loader-runner\\lib\\LoaderRunner.js:230:18\n    at context.callback (D:\\Apps\\atlas-summit\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (D:\\Apps\\atlas-summit\\node_modules\\sass-loader\\lib\\loader.js:57:13)\n    at Object.<anonymous> (D:\\Apps\\atlas-summit\\node_modules\\sass-loader\\node_modules\\async\\dist\\async.js:2243:31)\n    at Object.callback (D:\\Apps\\atlas-summit\\node_modules\\sass-loader\\node_modules\\async\\dist\\async.js:906:16)\n    at options.error (D:\\Apps\\atlas-summit\\node_modules\\node-sass\\lib\\index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 12 */
