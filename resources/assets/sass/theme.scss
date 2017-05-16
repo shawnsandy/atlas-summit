@@ -1,72 +1,73 @@
 @import "variables";
-
+@import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
 .navbar-static-top {
-
-  border-radius: 0;
-  background-color: rgba(255, 255, 255, 0.30);
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.30);
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
 }
 
-h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-  font-family: 'Roboto Slab', serif;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    font-family: 'Roboto Slab', serif;
 }
 
 header.landing {
-  h1, .headline {
-    font-size: 101px;
-    font-family: 'Roboto Slab', serif;
-    text-shadow: #000 2px 3px 5px;
-    font-weight: 400;
-  }
-  .lead {
-    text-shadow: #000 2px 3px 5px;
-    font-size: 36px;
-  }
+    h1,
+    .headline {
+        font-size: 101px;
+        font-family: 'Roboto Slab', serif;
+        text-shadow: #000 2px 3px 5px;
+        font-weight: 400;
+    }
+    .lead {
+        text-shadow: #000 2px 3px 5px;
+        font-size: 36px;
+    }
 }
 
 p.h1 {
-  font-size: 54px;
-  padding-bottom: 20px;
-  color: $theme-blue;
+    font-size: 54px;
+    padding-bottom: 20px;
+    color: $theme-blue;
 }
 
 section.actions.signup {
-  background-color: darken($theme-green, 5%);
-  padding: 60px 0;
-
-  .panel {
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-
-  .h1 {
-    color: #fff;
-
-  }
-
-  input {
-    border-radius: 2px;
-  }
-
-  label {
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: normal;
-  }
-
-  .btn {
-    height: 50px;
-  }
+    background-color: darken($theme-green, 5%);
+    @include linear-gradient(to top, darken($theme-green, 15%), $theme-green);
+    padding: 60px 0;
+    .panel {
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    .h1 {
+        color: #fff;
+    }
+    input {
+        border-radius: 2px;
+    }
+    label {
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .btn {
+        height: 50px;
+    }
 }
 
 .btn {
-  border-radius: 40px;
-  radius-small  {
-    border-radius: 15px;
-  }
+    border-radius: 40px;
+    radius-small {
+        border-radius: 15px;
+    }
 }
