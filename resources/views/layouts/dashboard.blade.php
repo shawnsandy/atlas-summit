@@ -1,5 +1,7 @@
 @include('assets.dashboard.header')
+@stack('styles')
 @include('assets.dashboard.nav')
 @include('assets.dashboard.side-bar')
 @yield('content')
 @include('assets.dashboard.footer')
+@stack('scripts')

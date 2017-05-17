@@ -18,7 +18,8 @@ class UserAdminController extends Controller
     public function index()
     {
         $users = User::all();
-        return view("dash::useradmin", compact("users"));
+
+        return view("users.index", compact('users'));
     }
 
     /**
