@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
+        $this->current_user();
     }
 
     /**
@@ -26,5 +28,16 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+
+    public function current_user(){
+
+        view()->composer([
+            'layouts.dashboard'
+        ], function($view){
+            $user = Auth::user();
+            view()->share('current_user', $user);
+        });
+
     }
 }
