@@ -31,12 +31,18 @@
                                 <img src="/img/wpds.png" alt="Logo">
                             </h2>
                             <hr>
+                            <div class="text-center">
+                                <h4 class="text-uppercase theme-blue">Conference Registration $125 <br> <small>*$225 out of state</small></h4>
+                                <h4 class="text-uppercase theme-blue">Hotel Reservation $229 <br> <small>*$225 out of state</small></h4>
+                            </div>
+
+                            <hr>
                             {{ Form::open(["url" => '']) }}
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
                                 <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register">
-                                    Register For WPDS 2017
+                                    Register Now
                                 </button>
                             </p>
 

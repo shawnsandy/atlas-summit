@@ -78,3 +78,13 @@ section.actions.signup {
     padding-top: 10px;
     background-color: #ffffff;
 }
+
+.theme {
+    &-blue {
+        color: $theme-blue;
+    }
+
+    &-green {
+        color: $theme-green;
+    }
+}
