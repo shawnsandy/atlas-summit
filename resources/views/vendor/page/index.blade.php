@@ -28,14 +28,14 @@
                         <div class="panel-body component">
 
                             <h2 class="text-center">
-                                2017 Workforce Professional Development Summit
+                                <img src="/img/wpds.png" alt="Logo">
                             </h2>
                             <hr>
                             {{ Form::open(["url" => '']) }}
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
-                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary lead">
+                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register">
                                     Register For WPDS 2017
                                 </button>
                             </p>

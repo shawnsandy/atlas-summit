@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserRequest;
 use App\Session;
 use App\User;
+use Hash;
 use Illuminate\Http\Request;
 
 class UserAdminController extends Controller
@@ -39,12 +40,13 @@ class UserAdminController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $user = $request->all();
-        $user['region_id'] = 1;
+        $data = $request->all();
+        $data['password'] = Hash::make($request->password);
 
-        if(!User::create($user)):
+        if(!User::create($data)):
         return back()->withErrors()->with("error", "Sorry you user was not saved");
         endif;
+
         return back()->with("success", "User created");
 
     }
