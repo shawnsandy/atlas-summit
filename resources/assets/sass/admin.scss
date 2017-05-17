@@ -58,3 +58,11 @@ header.landing h1, .headline {
 .navbar-static-top {
   background-color: rgba(255, 255, 255, 0.26);
 }
+
+.navbar-brand {
+  padding-top: 25px;
+  background-color: #ffffff;
+  .fa {
+    font-size: 21px;
+  }
+}
