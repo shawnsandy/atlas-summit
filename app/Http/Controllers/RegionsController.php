@@ -4,6 +4,7 @@
 
     use App\Regions;
     use Illuminate\Http\Request;
+    use Laracasts\Flash\Flash;
 
     class RegionsController extends Controller
     {
@@ -14,7 +15,9 @@
          */
         public function index()
         {
-            //
+            $regions = Regions::all();
+
+            return view("regions.index", compact('regions'));
         }
 
         /**
@@ -24,7 +27,7 @@
          */
         public function create()
         {
-            return view('assets.regions.create');
+            return view('regions.create');
         }
 
         /**
@@ -35,7 +38,29 @@
          */
         public function store(Request $request)
         {
-            //
+            $region = new Regions();
+
+            $region->name = $request->name;
+            $region->address = $request->address;
+            $region->lat = $request->lat;
+            $region->long = $request->long;
+            $region->phone = $request->phone;
+            $region->website = $request->website;
+            $region->region_number = $request->region_number;
+
+            if (!empty($request->file('logo'))):
+                $ext = $request->file('logo')->getClientOriginalExtension();
+                $file = $request->region_number . '.' . $ext;
+                $region->logo = $file;
+                $request->file('logo')->move(base_path() . '/public/img/regions/', $file);
+
+            endif;
+
+            $region->save();
+
+            Flash()->success('Region Created!');
+
+            return redirect('/admin/regions/');
         }
 
         /**
