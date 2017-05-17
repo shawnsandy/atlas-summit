@@ -20,7 +20,11 @@ Route::group(['prefix' => "extras"], function () {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
-    Dash::routes();
+    Route::get('/', 'AdminController@index');
+});
+
+Route::group(['prefix' => "extras"], function () {
+    Extras::routes();
 });
 
 Route::resource("sponsors", "SponsorsController");

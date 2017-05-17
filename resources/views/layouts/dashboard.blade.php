@@ -1,0 +1,5 @@
+@include('assets.dashboard.header')
+@include('assets.dashboard.nav')
+@include('assets.dashboard.side-bar')
+@yield('content')
+@include('assets.dashboard.footer')
