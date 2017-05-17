@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <hr>
-                            {{ Form::open(["url" => '']) }}
+                            {{ Form::open(["url" => '/admin/users']) }}
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
