@@ -14,7 +14,9 @@ class WorkshopController extends Controller
      */
     public function index()
     {
-        //
+        $workshops = Workshop::all();
+
+        return view("workshops.index", compact('workshops'));
     }
 
     /**
