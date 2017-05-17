@@ -63,9 +63,6 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand menu-toggle" href="#">
-                        <img src="/img/nav-icon.png" alt="navigation">
-                    </a>
-                    <a class="navbar-brand " href="/admin">
                         <img src="/img/wpds2017.png" alt="Logo">
                     </a>
                 </div>
