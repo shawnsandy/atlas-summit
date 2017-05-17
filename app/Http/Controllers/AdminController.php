@@ -4,8 +4,9 @@
 
     use App\Regions;
     use Illuminate\Http\Request;
+    use Auth;
 
-    class RegionsController extends Controller
+    class AdminController extends Controller
     {
         /**
          * Display a listing of the resource.
@@ -14,7 +15,7 @@
          */
         public function index()
         {
-            //
+            return view("admin.index");
         }
 
         /**
