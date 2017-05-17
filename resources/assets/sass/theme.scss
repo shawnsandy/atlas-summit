@@ -1,11 +1,12 @@
 @import "variables";
 @import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
 
+
 .navbar-static-top {
     border-radius: 0;
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: rgba(255, 255, 255, 0.1);
     &:hover {
-        background-color: rgba(255, 255, 255, 0.60);
+        background-color: rgba(255, 255, 255, 0.2);
     }
 }
 
@@ -88,3 +89,17 @@ section.actions.signup {
         color: $theme-green;
     }
 }
+
+
+    .oswald > li > a  {
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        &:hover {
+            color: $theme-blue;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+
+@import "includes";

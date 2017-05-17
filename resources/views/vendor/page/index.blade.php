@@ -19,7 +19,7 @@
     <section class="actions signup">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-8 col-md-offset-2">
                     <p class="h1 text-center">
                         Register Now
                     </p>
@@ -27,28 +27,33 @@
                     <div id="register" class="panel panel-default">
                         <div class="panel-body component">
 
-                            <h2 class="text-center">
+                            <h3 class="text-center">
                                 <img src="/img/wpds.png" alt="Logo">
-                            </h2>
+                            </h3>
                             <hr>
-                            <div class="text-center">
-                                <h4 class="text-uppercase theme-blue">Conference Registration $125 <br> <small>*$225 out of state</small></h4>
-                                <h4 class="text-uppercase theme-blue">Hotel Reservation $229 <br> <small>*$225 out of state</small></h4>
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <h3 class="text-uppercase theme-blue oswald">Registration $125 <br>
+                                        <small>*$225 out of state</small></h3>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <h3 class="text-uppercase theme-blue oswald">Hotel Reservation $229 <br>
+                                        <small>+$10 Resort Fee</small></h3>
+                                </div>
                             </div>
-
                             <hr>
                             {{ Form::open(["url" => '']) }}
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
-                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register">
+                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
                                     Register Now
                                 </button>
                             </p>
 
                             {{ Form::close() }}
                             <hr>
-                            <div class="social-sign-in">
+                            <div class="social-sign-in oswald">
                                 {{ Html::networkLogin("Connect Via Social Media") }}
                             </div>
 

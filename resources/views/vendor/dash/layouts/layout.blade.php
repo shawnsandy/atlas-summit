@@ -62,7 +62,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand menu-toggle" href="#">
+                    <a class="navbar-brand menu-toggle oswald" href="#">
                         <img src="/img/wpds2017.png" alt="Logo">
                     </a>
                 </div>
