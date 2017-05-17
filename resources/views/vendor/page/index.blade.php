@@ -16,28 +16,44 @@
             </p>
         </div>
     </section>
-    <hr>
-    <section>
+    <section class="actions signup">
         <div class="container">
-            <p class="h1 text-center">
-                Speakers
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="h1 text-center">
+                        Register Now
+                    </p>
+
+                    <div id="register" class="panel panel-default">
+                        <div class="panel-body component">
+
+                            <h2 class="text-center">
+                                2017 Workforce Professional Development Summit
+                            </h2>
+                            <hr>
+                            {{ Form::open(["url" => '']) }}
+
+                            {{ Form::dashFields('App\User') }}
+                            <p class="text-right">
+                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary lead">
+                                    Register For WPDS 2017
+                                </button>
+                            </p>
+
+                            {{ Form::close() }}
+                            <hr>
+                            <div class="social-sign-in">
+                                {{ Html::networkLogin("Connect Via Social Media") }}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </section>
-    <hr>
-    <section>
-        <div class="container"><p class="h1 text-center">
-                Events
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
-    </section>
-    <hr>
+
     <section>
         <div class="container"><p class="h1 text-center">
                 Schedule
@@ -91,7 +107,9 @@
         color: #fff;
     }
 </style>
+
 @endpush
+
 @push('scripts')
 <script>
     $(document).ready(function () {
