@@ -59,7 +59,7 @@ class WorkshopController extends Controller
      */
     public function edit(Workshop $workshop)
     {
-        return view('assets.workshops.edit');
+        return view('partials.workshops.edit');
     }
 
     /**

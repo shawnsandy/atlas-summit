@@ -34,6 +34,16 @@
     });
 
 
+    Route::resource("sponsors", "SponsorsController");
+
+    Route::resource("regions", "RegionsController");
+
+    Route::resource("rooms", "RoomsController");
+
+    Route::resource("workshops", "WorkshopController");
+    Route::resource("users", "UserAdminController");
+
+
 
     Route::group(['prefix' => "extras"], function () {
         Extras::routes();

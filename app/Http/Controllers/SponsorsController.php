@@ -18,7 +18,7 @@ class SponsorsController extends Controller
     {
         $sponsors = Sponsor::all();
 
-        return view("sponsors.index", compact('sponsors'));
+        return view("partials.sponsors.index", compact('sponsors'));
     }
 
     /**
@@ -28,7 +28,7 @@ class SponsorsController extends Controller
      */
     public function create()
     {
-        return view("assets.sponsors.create");
+        return view("partials.sponsors.create");
     }
 
     /**

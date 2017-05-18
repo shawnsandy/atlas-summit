@@ -17,6 +17,7 @@ class RoomsController extends Controller
         $rooms = Rooms::all();
 
         return view("rooms.index", compact('rooms'));
+
     }
 
     /**
