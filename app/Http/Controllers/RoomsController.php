@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Rooms;
 use Illuminate\Http\Request;
+use Laracasts\Flash\Flash;
 
 class RoomsController extends Controller
 {
@@ -26,7 +27,7 @@ class RoomsController extends Controller
      */
     public function create()
     {
-        //
+        return view('rooms.create');
     }
 
     /**
@@ -37,7 +38,15 @@ class RoomsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $room = new Rooms();
+
+        $room->name = $request->name;
+
+        $room->save();
+
+        flash()->success('Room Created!');
+
+        return redirect('/admin/rooms/');
     }
 
     /**
