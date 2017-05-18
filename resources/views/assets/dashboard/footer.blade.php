@@ -5,6 +5,8 @@
 <script src="/js/admin/easypiechart.js"></script>
 <script src="/js/admin/easypiechart-data.js"></script>
 <script src="/js/admin/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.js"></script>
+<script src="/js/flash.js"></script>
 <script>
     $('#calendar').datepicker({
     });

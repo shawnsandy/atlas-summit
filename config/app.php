@@ -177,6 +177,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         ShawnSandy\Dash\DashServicesProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -246,7 +247,8 @@ return [
         'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
         "Dash" => ShawnSandy\Dash\DashFacade::class,
         "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
-        "Twitter" => \Thujohn\Twitter\Facades\Twitter::class
+        "Twitter" => \Thujohn\Twitter\Facades\Twitter::class,
+        "Flash" => Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 

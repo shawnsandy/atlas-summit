@@ -8,6 +8,8 @@
     <link href="/css/admin/bootstrap.min.css" rel="stylesheet">
     <link href="/css/admin/datepicker3.css" rel="stylesheet">
     <link href="/css/admin/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger-theme-block.css">
 
     <!--Icons-->
     <script src="/js/admin/lumino.glyphs.js"></script>
