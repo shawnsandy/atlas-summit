@@ -28,7 +28,7 @@ class SponsorsController extends Controller
      */
     public function create()
     {
-        return view("assets.sponsors.create");
+        return view("sponsors.create");
     }
 
     /**
@@ -39,7 +39,45 @@ class SponsorsController extends Controller
      */
     public function store(SponsorsRequest $request)
     {
-        return $request->all();
+        $sponsor = new Sponsor();
+
+        $clean_sponsor_name = strtolower($this->seoUrl($request->company_name));
+
+        $sponsor->contact_name = $request->contact_name;
+        $sponsor->contact_email = $request->contact_email;
+        $sponsor->contact_phone = $request->contact_phone;
+        $sponsor->company_name = $request->company_name;
+        $sponsor->company_address = $request->address;
+        $sponsor->lat = $request->lat;
+        $sponsor->long = $request->long;
+        $sponsor->company_phone = $request->company_phone;
+        $sponsor->company_email = $request->company_email;
+        $sponsor->sponsor_description = $request->sponsor_description;
+        $sponsor->sponsor_slug = $clean_sponsor_name;
+        $sponsor->sponsor_url = $request->sponsor_url;
+        $sponsor->sponsor_level = $request->sponsor_level;
+
+        if (!empty($request->file('banner_image'))):
+            $ext = $request->file('banner_image')->getClientOriginalExtension();
+            $file = $clean_sponsor_name . '.' . $ext;
+            $sponsor->logo = $file;
+            $request->file('banner_image')->move(base_path() . '/public/img/sponsors/banners/', $file);
+
+        endif;
+
+        if (!empty($request->file('logo'))):
+            $ext = $request->file('logo')->getClientOriginalExtension();
+            $file = $clean_sponsor_name . '.' . $ext;
+            $sponsor->logo = $file;
+            $request->file('logo')->move(base_path() . '/public/img/sponsors/logos/', $file);
+
+        endif;
+
+        $sponsor->save();
+
+        Flash()->success('Sponsor Created!');
+
+        return redirect('/admin/sponsors/');
     }
 
     /**
@@ -85,5 +123,17 @@ class SponsorsController extends Controller
     public function destroy(Sponsor $sponsors)
     {
         //
+    }
+
+    public function seoUrl($string) {
+        //Lower case everything
+        $string = strtolower($string);
+        //Make alphanumeric (removes all other characters)
+        $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
+        //Clean up multiple dashes or whitespaces
+        $string = preg_replace("/[\s-]+/", " ", $string);
+        //Convert whitespaces and underscore to dash
+        $string = preg_replace("/[\s_]/", "_", $string);
+        return $string;
     }
 }
