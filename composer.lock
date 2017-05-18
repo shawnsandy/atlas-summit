@@ -1569,16 +1569,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.4.3",
+            "version": "v5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "023efce5fd8057cb3b5ce503f3391cc4effa7caa"
+                "reference": "4b493269d501485d4feb952cb380297290431680"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/023efce5fd8057cb3b5ce503f3391cc4effa7caa",
-                "reference": "023efce5fd8057cb3b5ce503f3391cc4effa7caa",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/4b493269d501485d4feb952cb380297290431680",
+                "reference": "4b493269d501485d4feb952cb380297290431680",
                 "shasum": ""
             },
             "require": {
@@ -1619,7 +1619,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2017-05-15 09:38:20"
+            "time": "2017-05-18 05:28:33"
         },
         {
             "name": "laravelcollective/remote",
@@ -2539,16 +2539,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.4",
+            "version": "v0.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/17cf432bb80d9198df239b80d00a29155bd74d82",
-                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/38a9d21406597a0440690eafbcb0222f528c8ac6",
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6",
                 "shasum": ""
             },
             "require": {
@@ -2608,7 +2608,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-05-12 15:41:55"
+            "time": "2017-05-17 06:49:19"
         },
         {
             "name": "ramsey/uuid",
@@ -2742,16 +2742,16 @@
         },
         {
             "name": "shawnsandy/dash",
-            "version": "v0.1.35",
+            "version": "v0.1.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/dash.git",
-                "reference": "e40b27a615b838476d246c99dbf5e0b6b005e9b0"
+                "reference": "84387ad813ac624584e791e52bf0f83b8330fe10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/e40b27a615b838476d246c99dbf5e0b6b005e9b0",
-                "reference": "e40b27a615b838476d246c99dbf5e0b6b005e9b0",
+                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/84387ad813ac624584e791e52bf0f83b8330fe10",
+                "reference": "84387ad813ac624584e791e52bf0f83b8330fe10",
                 "shasum": ""
             },
             "require": {
@@ -2791,7 +2791,7 @@
                 "dash",
                 "shawnsandy"
             ],
-            "time": "2017-05-16 00:10:56"
+            "time": "2017-05-18 19:58:08"
         },
         {
             "name": "shawnsandy/extras",
