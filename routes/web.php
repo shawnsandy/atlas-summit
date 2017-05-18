@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('page::index');
 });
 
+Route::group(['prefix' => "scans"], function () {
+    Route::get('/', 'ScansController@index');
+    Route::get('/{id}', 'ScansController@scans');
+    Route::post('/rfid', 'ScansController@store');
+    Route::post('/room', 'ScansController@room');
+});
+
 Route::group(['prefix' => "extras"], function () {
     Extras::routes();
 });
