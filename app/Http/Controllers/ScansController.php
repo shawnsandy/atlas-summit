@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Scans;
+use App\User;
 use Illuminate\Http\Request;
+use App\Rooms;
 
 class ScansController extends Controller
 {
@@ -14,7 +16,20 @@ class ScansController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Rooms::pluck('name', 'id');
+        return view("scans.index", compact('rooms'));
+    }
+
+    public function scans($id)
+    {
+        $room_id = $id;
+        return view("scans.scans", compact('room_id'));
+    }
+
+    public function room(Request $request)
+    {
+
+        return redirect('/scans/' . $request->room_id);
     }
 
     /**
@@ -35,7 +50,18 @@ class ScansController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::where('rfid', $request->rfid)->first();
+
+        $scan = new Scans();
+
+        $scan->user_id = $user->id;
+        $scan->room_id = $request->room_id;
+
+        $scan->save();
+
+        Flash()->success('Welcome ' . $user->first_name . '!');
+
+        return back();
     }
 
     /**
