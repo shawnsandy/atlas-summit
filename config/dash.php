@@ -17,7 +17,7 @@
 
             "users" => [
                 "field_types" => ["password" => "password", "id" => "hidden", "email" => "email"],
-                "labels" => ["password" => "Add account password", "email" => "Enter a valid em@il"
+                "labels" => ["password" => "Add account password", "email" => "Your em@il address"
                 ],
             ]
 

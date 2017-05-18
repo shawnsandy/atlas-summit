@@ -9,7 +9,6 @@
   @include linear-gradient(to top, darken($theme-green, 20%), $theme-green);
 }
 
-
 .gradient-blue {
   @include linear-gradient(to top, darken($theme-blue, 20%), $theme-blue);
 }
