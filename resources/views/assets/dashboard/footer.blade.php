@@ -2,9 +2,8 @@
 <script src="/js/admin/bootstrap.min.js"></script>
 <script src="/js/admin/chart.min.js"></script>
 <script src="/js/admin/chart-data.js"></script>
-<script src="/js/admin/easypiechart.js"></script>
-<script src="/js/admin/easypiechart-data.js"></script>
-<script src="/js/admin/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.js"></script>
 <script src="/js/flash.js"></script>
 <script>
