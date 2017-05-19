@@ -1618,7 +1618,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2017-05-18T05:28:33+00:00"
+            "time": "2017-05-18 05:28:33"
         },
         {
             "name": "laravelcollective/remote",
@@ -2607,7 +2607,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-05-17T06:49:19+00:00"
+            "time": "2017-05-17 06:49:19"
         },
         {
             "name": "ramsey/uuid",
@@ -2741,16 +2741,16 @@
         },
         {
             "name": "shawnsandy/dash",
-            "version": "v0.1.35",
+            "version": "v0.1.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/dash.git",
-                "reference": "e40b27a615b838476d246c99dbf5e0b6b005e9b0"
+                "reference": "84387ad813ac624584e791e52bf0f83b8330fe10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/e40b27a615b838476d246c99dbf5e0b6b005e9b0",
-                "reference": "e40b27a615b838476d246c99dbf5e0b6b005e9b0",
+                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/84387ad813ac624584e791e52bf0f83b8330fe10",
+                "reference": "84387ad813ac624584e791e52bf0f83b8330fe10",
                 "shasum": ""
             },
             "require": {
@@ -2790,7 +2790,7 @@
                 "dash",
                 "shawnsandy"
             ],
-            "time": "2017-05-16T00:10:56+00:00"
+            "time": "2017-05-18 19:58:08"
         },
         {
             "name": "shawnsandy/extras",

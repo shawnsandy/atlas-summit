@@ -6,7 +6,7 @@
      * Time: 6:13 PM
      */
 
-    return  [
+    return [
 
         /*
          *
@@ -17,8 +17,14 @@
 
             "users" => [
                 "field_types" => ["password" => "password", "id" => "hidden", "email" => "email"],
-                "labels" => ["password" => "Add account password", "email" => "Your em@il address"
+                "labels" => [
+                    "password" => "Add account password",
+                    "email" => "Enter a valid em@il",
+                    "region_id" => "Select Your Suncoast Region"
                 ],
+                "options" => [
+                    'password' => ['one', 'two', 'tree']
+                ]
             ]
 
         ]
