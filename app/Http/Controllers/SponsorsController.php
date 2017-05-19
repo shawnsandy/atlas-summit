@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Summit;
+namespace App\Http\Controllers;
 
 use App\Http\Requests\SponsorsRequest;
 use App\Sponsor;
-use App\Sponsors;
 use Illuminate\Http\Request;
 
 class SponsorsController extends Controller
