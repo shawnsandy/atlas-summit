@@ -6,6 +6,8 @@ use App\Scans;
 use App\User;
 use Illuminate\Http\Request;
 use App\Rooms;
+use Vinkla\Pusher\Facades\Pusher;
+use Kamaln7\Toastr\Facades\Toastr;
 
 class ScansController extends Controller
 {
@@ -52,6 +54,8 @@ class ScansController extends Controller
     {
         $user = User::where('rfid', $request->rfid)->first();
 
+        $room = Rooms::where('id', $request->room_id)->first();
+
         $scan = new Scans();
 
         $scan->user_id = $user->id;
@@ -59,8 +63,11 @@ class ScansController extends Controller
 
         $scan->save();
 
-        Flash()->success('Welcome ' . $user->first_name . '!');
+        $message = $user->first_name . ' ' .  $user->last_name . ' just entered ' . $room->name;
 
+        Pusher::trigger('admin', 'new_scan', ['message' => $message]);
+
+        Toastr::info('Welcome to ' . $room->name . ' ' . $user->first_name . ' ' .  $user->last_name, $title = 'Success!', $options = []);
         return back();
     }
 
