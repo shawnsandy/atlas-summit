@@ -24,6 +24,10 @@
         if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
     })
 </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::render() !!}
+
+@include('assets.pusher.pusher')
 </body>
 
 </html>
