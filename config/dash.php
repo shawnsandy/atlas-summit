@@ -22,6 +22,9 @@
                     "email" => "Enter a valid em@il",
                     "region_id" => "Select Your Suncoast Region"
                 ],
+                "options" => [
+                    'password' => ['one', 'two', 'tree']
+                ]
             ]
 
         ]
