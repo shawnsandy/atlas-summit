@@ -178,6 +178,8 @@ return [
         ShawnSandy\Dash\DashServicesProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Kamaln7\Toastr\ToastrServiceProvider::class,
+        Vinkla\Pusher\PusherServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -249,6 +251,7 @@ return [
         "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
         "Twitter" => \Thujohn\Twitter\Facades\Twitter::class,
         "Flash" => Laracasts\Flash\FlashServiceProvider::class,
+        'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
 
     ],
 
