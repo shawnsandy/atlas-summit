@@ -11,6 +11,7 @@
             @if ($errors->has('room_id'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('room_id')!!}</p>@endif
             {!! Form::select('room_id', $rooms, null, ['class' => 'form-control', 'placeholder' => 'Pick a room...']) !!}
             </p>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
             {!! Form::close() !!}
