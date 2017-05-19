@@ -34,15 +34,15 @@
         Route::resource("users", "UserAdminController");
     });
 
-    Route::resource("sponsors", "SponsorsController");
+    Route::resource("sponsors", 'Summit\SponsorsController');
 
-    Route::resource("regions", "RegionsController");
+    Route::resource("regions", 'Summit\RegionsController');
 
-    Route::resource("rooms", "RoomsController");
+    Route::resource("rooms", 'Summit\RoomsController');
 
-    Route::resource("workshops", "WorkshopController");
+    Route::resource("workshops", 'Summit\WorkshopController');
 
-    Route::resource("users", "UserAdminController");
+    Route::resource("users", 'Summit\UserAdminController');
 
     Route::group(['prefix' => "extras"], function () {
         Extras::routes();

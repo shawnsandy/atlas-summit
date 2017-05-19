@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Summit;
 
-use App\Http\Requests\SponsorsRequest;
-use App\Sponsor;
-use App\Sponsors;
+use App\Http\Controllers\Controller;
+use App\Workshop;
 use Illuminate\Http\Request;
 
-class SponsorsController extends Controller
+class WorkshopController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,9 @@ class SponsorsController extends Controller
      */
     public function index()
     {
-        $sponsors = Sponsor::all();
+        $workshops = Workshop::all();
 
-        return view("partials.sponsors.index", compact('sponsors'));
+        return view("workshops.index", compact('workshops'));
     }
 
     /**
@@ -28,27 +27,27 @@ class SponsorsController extends Controller
      */
     public function create()
     {
-        return view("partials.sponsors.create");
+        return view("assets.workshops.create");
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param SponsorsRequest $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SponsorsRequest $request)
+    public function store(Request $request)
     {
-        return $request->all();
+       //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sponsor  $sponsors
+     * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function show(Sponsor $sponsors)
+    public function show(Workshop $workshop)
     {
         //
     }
@@ -56,22 +55,22 @@ class SponsorsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Sponsor $sponsors
+     * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sponsor $sponsors)
+    public function edit(Workshop $workshop)
     {
-        //
+        return view('partials.workshops.edit');
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param Sponsor $sponsors
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sponsor $sponsors)
+    public function update(Request $request, Workshop $workshop)
     {
         //
     }
@@ -79,10 +78,10 @@ class SponsorsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Sponsor $sponsors
+     * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sponsor $sponsors)
+    public function destroy(Workshop $workshop)
     {
         //
     }

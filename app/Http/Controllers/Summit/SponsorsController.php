@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Summit;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\SponsorsRequest;
 use App\Sponsor;
 use App\Sponsors;

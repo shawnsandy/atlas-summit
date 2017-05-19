@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Summit;
 
-use App\Http\Requests\SponsorsRequest;
-use App\Sponsor;
-use App\Sponsors;
+use App\Http\Controllers\Controller;
+use App\Scans;
 use Illuminate\Http\Request;
 
-class SponsorsController extends Controller
+class ScansController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,7 @@ class SponsorsController extends Controller
      */
     public function index()
     {
-        $sponsors = Sponsor::all();
-
-        return view("partials.sponsors.index", compact('sponsors'));
+        //
     }
 
     /**
@@ -28,27 +25,27 @@ class SponsorsController extends Controller
      */
     public function create()
     {
-        return view("partials.sponsors.create");
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param SponsorsRequest $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SponsorsRequest $request)
+    public function store(Request $request)
     {
-        return $request->all();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sponsor  $sponsors
+     * @param  \App\Scans  $scans
      * @return \Illuminate\Http\Response
      */
-    public function show(Sponsor $sponsors)
+    public function show(Scans $scans)
     {
         //
     }
@@ -56,10 +53,10 @@ class SponsorsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Sponsor $sponsors
+     * @param  \App\Scans  $scans
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sponsor $sponsors)
+    public function edit(Scans $scans)
     {
         //
     }
@@ -67,11 +64,11 @@ class SponsorsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param Sponsor $sponsors
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Scans  $scans
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sponsor $sponsors)
+    public function update(Request $request, Scans $scans)
     {
         //
     }
@@ -79,10 +76,10 @@ class SponsorsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Sponsor $sponsors
+     * @param  \App\Scans  $scans
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sponsor $sponsors)
+    public function destroy(Scans $scans)
     {
         //
     }
