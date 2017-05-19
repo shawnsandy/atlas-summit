@@ -2741,16 +2741,16 @@
         },
         {
             "name": "shawnsandy/dash",
-            "version": "v0.1.37",
+            "version": "v0.1.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/dash.git",
-                "reference": "10f8b86ad184ec05e5f2a7854a1d03e8c1892827"
+                "reference": "731d72b9dc37eacf9944d5d8db0283e956e9e315"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/10f8b86ad184ec05e5f2a7854a1d03e8c1892827",
-                "reference": "10f8b86ad184ec05e5f2a7854a1d03e8c1892827",
+                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/731d72b9dc37eacf9944d5d8db0283e956e9e315",
+                "reference": "731d72b9dc37eacf9944d5d8db0283e956e9e315",
                 "shasum": ""
             },
             "require": {
@@ -2790,7 +2790,7 @@
                 "dash",
                 "shawnsandy"
             ],
-            "time": "2017-05-19T03:37:27+00:00"
+            "time": "2017-05-19T15:15:55+00:00"
         },
         {
             "name": "shawnsandy/extras",

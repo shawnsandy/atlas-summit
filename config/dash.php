@@ -16,14 +16,14 @@
         'forms' => [
 
             "users" => [
-                "field_types" => ["password" => "password", "id" => "hidden", "email" => "email"],
+                "field_types" => ["password" => "password", "id" => "hidden", "email" => "email", 'region_id' => 'select'],
                 "labels" => [
-                    "password" => "Add account password",
-                    "email" => "Enter a valid em@il",
-                    "region_id" => "Select Your Suncoast Region"
+                    "password" => "Your Login Password",
+                    "email" => "Your Email",
+                    "region_id" => "Which CareerSource Region  Are You From"
                 ],
                 "options" => [
-                    'password' => ['one', 'two', 'tree']
+                    'region_id' => ['', 'suncoast', 'pascoHernando', 'Tampa', 'Miami']
                 ]
             ]
 

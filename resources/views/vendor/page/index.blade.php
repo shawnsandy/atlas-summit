@@ -52,10 +52,10 @@
                             </p>
 
                             {{ Form::close() }}
-                            <hr>
-                            <div class="social-sign-in oswald">
-                                {{ Html::networkLogin("Connect Via Social Media") }}
-                            </div>
+                            {{--<hr>--}}
+                            {{--<div class="social-sign-in oswald">--}}
+                                {{--{{ Html::networkLogin("Connect Via Social Media") }}--}}
+                            {{--</div>--}}
 
                         </div>
                     </div>
@@ -88,13 +88,22 @@
 
     <hr>
     <section>
-        <div class="container"><p class="h1 text-center">
-                Venue
-            </p>
-            <hr>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
+        <div class="container-fluid">
+            <div class="row">
+                <p class="h1 text-center">
+                    Venue
+                </p>
+                <div class="col-md-8">
+                    {{ Html::extrasMap() }}
+                </div>
+                <div class="col-md-4">
+                    <p class="lead">
+                        Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
+                    </p>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
