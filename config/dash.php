@@ -23,7 +23,7 @@
                     "region_id" => "Which CareerSource Region  Are You From"
                 ],
                 "options" => [
-                    'region_id' => ['', 'suncoast', 'pascoHernando', 'Tampa', 'Miami']
+                    'region_id' => ['', 'Suncoast', 'pascoHernando', 'Tampa', 'Miami']
                 ]
             ]
 
