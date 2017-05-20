@@ -2746,12 +2746,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/dash.git",
-                "reference": "6afcf7f2259607667a1f366299790475c1ad2db2"
+                "reference": "61761cd244e2e007afb1bb29e49a78a12713199c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/6afcf7f2259607667a1f366299790475c1ad2db2",
-                "reference": "6afcf7f2259607667a1f366299790475c1ad2db2",
+                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/61761cd244e2e007afb1bb29e49a78a12713199c",
+                "reference": "61761cd244e2e007afb1bb29e49a78a12713199c",
                 "shasum": ""
             },
             "require": {
@@ -2791,20 +2791,20 @@
                 "dash",
                 "shawnsandy"
             ],
-            "time": "2017-05-20 13:14:22"
+            "time": "2017-05-20 22:39:17"
         },
         {
             "name": "shawnsandy/extras",
-            "version": "v0.1.29",
+            "version": "v0.1.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/extras.git",
-                "reference": "478b7372bd4f7077cc631af5e8a5e5412ca37a25"
+                "reference": "a44b616a3835ca463355cff397b171ca22ddacf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/478b7372bd4f7077cc631af5e8a5e5412ca37a25",
-                "reference": "478b7372bd4f7077cc631af5e8a5e5412ca37a25",
+                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/a44b616a3835ca463355cff397b171ca22ddacf4",
+                "reference": "a44b616a3835ca463355cff397b171ca22ddacf4",
                 "shasum": ""
             },
             "require": {
@@ -2862,7 +2862,7 @@
                 "Extras",
                 "shawnsandy"
             ],
-            "time": "2017-05-16 00:12:30"
+            "time": "2017-05-20 22:42:53"
         },
         {
             "name": "shawnsandy/pagekit",

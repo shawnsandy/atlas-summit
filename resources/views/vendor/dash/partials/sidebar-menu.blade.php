@@ -1,21 +1,21 @@
 <li>
-    <a href="#"><i class="fa fa-tachometer"></i> <span class="nav-text">Dashboard</span></a>
+    <a href="#">{{ Html::entypoFont("vinyl") }} <span class="nav-text">Dashboard</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-pencil-square"></i> <span class="nav-text"> Articles</span></a>
+    <a href="#">{{ Html::entypoFont("news") }}  <span class="nav-text"> Articles</span></a>
 </li>
 <li>
-    <a href="/admin/pages"><i class="fa fa-file-text"></i> <span class="nav-text"> Pages</span></a>
+    <a href="/admin/pages">{{ Html::entypoFont("text-document") }}  <span class="nav-text"> Pages</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-download"></i> <span class="nav-text"> Media</span></a>
+    <a href="#">{{ Html::entypoFont("upload") }}  <span class="nav-text"> Media</span></a>
 </li>
 <li>
-    <a href="{{ url("/users") }}"><i class="fa fa-users"></i> <span class="nav-text"> Users</span></a>
+    <a href="{{ url("/users") }}">{{ Html::entypoFont("users") }}  <span class="nav-text"> Users</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-sliders"></i> <span class="nav-text"> Settings</span></a>
+    <a href="#">{{ Html::entypoFont("sound-mix") }}  <span class="nav-text"> Settings</span></a>
 </li>
 <li>
-    <a href="/admin/system"><i class="fa fa-cogs"></i> <span class="nav-text"> System</span></a>
+    <a href="/admin/system">{{ Html::entypoFont("cog") }}  <span class="nav-text"> System</span></a>
 </li>
