@@ -40,7 +40,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand menu-toggle">
                 <a href="#" class="">
-                    <i class="fa fa-ellipsis-h"></i> <span class="nav-text">Dash</span>
+                    {{ Html::entypoFont("popup") }}  <span class="nav-text"></span>
                 </a>
             </li>
            @include("dash::partials.sidebar-menu")
@@ -50,7 +50,7 @@
 
     <!-- Page Navbar -->
     <div id="page-content-wrapper">
-<div class=" theme-border theme-border-green"></div>
+<div class=""></div>
 
         <nav class="navbar">
             <div class="container-fluid">

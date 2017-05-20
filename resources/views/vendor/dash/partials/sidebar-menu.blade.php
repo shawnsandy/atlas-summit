@@ -1,5 +1,5 @@
 <li>
-    <a href="#">{{ Html::entypoFont("vinyl") }} <span class="nav-text">Dashboard</span></a>
+    <a href="#">{{ Html::entypoFont("network") }} <span class="nav-text">Dashboard</span></a>
 </li>
 <li>
     <a href="#">{{ Html::entypoFont("news") }}  <span class="nav-text"> Articles</span></a>
