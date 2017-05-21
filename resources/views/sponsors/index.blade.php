@@ -13,7 +13,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Form Elements</div>
+                    <div class="panel-heading">
+                        Sponsors Overview
+                        <a href="/admin/sponsors/create" class="btn btn-primary pull-right"><i class="fa fa-plus"> Add New</i></a>
+                    </div>
                     <div class="panel-body">
                         <table class="table datatables">
                             <thead>

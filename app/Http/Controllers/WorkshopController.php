@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rooms;
 use App\Workshop;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,9 @@ class WorkshopController extends Controller
      */
     public function create()
     {
-        return view("assets.workshops.create");
+        $rooms = Rooms::pluck('name', 'id');
+
+        return view("workshops.create", compact('rooms'));
     }
 
     /**
@@ -37,7 +40,20 @@ class WorkshopController extends Controller
      */
     public function store(Request $request)
     {
-       //
+        $workshop = new Workshop();
+
+        $workshop->name = $request->name;
+        $workshop->description = $request->description;
+        $workshop->date = $request->date;
+        $workshop->start_time = $request->start_time;
+        $workshop->end_time = $request->end_time;
+        $workshop->room_id = $request->room_id;
+
+        $workshop->save();
+
+        flash()->success('Workshop Created!');
+
+        return redirect('/admin/workshops/');
     }
 
     /**
