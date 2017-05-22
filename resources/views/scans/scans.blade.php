@@ -8,7 +8,7 @@
                 Please scan your badge.
             </h3>
             {!! Form::open(['url' => '/scans/rfid']) !!}
-                {!! Form::text('rfid', null, ['class' => 'form-control', 'autofocus' => 'autofocus']) !!}
+                {!! Form::text('rfid', null, ['class' => 'form-control rfid', 'autofocus' => 'autofocus']) !!}
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             {{ Form::hidden('room_id', $room_id) }}
 

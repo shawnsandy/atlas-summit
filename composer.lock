@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e4066e21ab2291b8a08fc8cc6df5537a",
     "content-hash": "499f589192b3dcdf7ed07a9a5992a2b5",
     "packages": [
         {
@@ -873,7 +872,7 @@
                 "laravel",
                 "manager"
             ],
-            "time": "2017-01-01 13:08:54"
+            "time": "2017-01-01T13:08:54+00:00"
         },
         {
             "name": "greggilbert/recaptcha",
@@ -2406,7 +2405,7 @@
                 "php",
                 "toastr"
             ],
-            "time": "2017-01-28 17:37:02"
+            "time": "2017-01-28T17:37:02+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2760,7 +2759,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2016-12-22 10:46:28"
+            "time": "2016-12-22T10:46:28+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -4106,7 +4105,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2017-01-01 13:46:34"
+            "time": "2017-01-01T13:46:34+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
