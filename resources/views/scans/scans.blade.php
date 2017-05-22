@@ -1,8 +1,8 @@
 @extends('layouts.auth')
 @section('content')
     <div class="login-page">
-        <div class="form">
-            <img class="" src="http://workforcesummit.org/wp-content/uploads/2017/02/WPDS-horizontal-web-1024x144.png" width="265px" style="padding-bottom: 20px">
+        <div class="form oswald">
+            <img class="" src="/img/wpds@200.png" width="265px" style="padding-bottom: 20px">
                 <h1>Welcome</h1>
             <h3>
                 Please scan your badge.

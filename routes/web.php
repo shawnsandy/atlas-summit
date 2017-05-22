@@ -55,4 +55,8 @@ Route::group(['prefix' => "extras"], function () {
         Extras::routes();
     });
 
+    Route::group(['prefix' => 'dashboard'], function() {
+       Route::get('/', 'Summit\AdminController@index');
+    });
+
     Auth::routes();
