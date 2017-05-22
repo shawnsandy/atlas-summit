@@ -16,7 +16,7 @@
          */
         public function index()
         {
-            return view("admin.index");
+            return view("partials.administrator.index");
         }
 
         /**

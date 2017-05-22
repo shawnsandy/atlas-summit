@@ -19,7 +19,7 @@ class UserAdminController extends Controller
     {
         $users = User::all();
 
-        return view("partials.users.index", compact('users'));
+        return view("users.index", compact('users'));
     }
 
     /**

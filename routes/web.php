@@ -1,19 +1,19 @@
 <?php
 
-    /*
-    |--------------------------------------------------------------------------
-    | Web Routes
-    |--------------------------------------------------------------------------
-    |
-    | Here is where you can register web routes for your application. These
-    | routes are loaded by the RouteServiceProvider within a group which
-    | contains the "web" middleware group. Now create something great!
-    |
-    */
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-    Route::get('/', function () {
-        return view('page::index');
-    });
+Route::get('/', function () {
+    return view('page::index');
+});
 
 Route::group(['prefix' => "scans"], function () {
     Route::get('/', 'ScansController@index');
@@ -26,20 +26,28 @@ Route::group(['prefix' => "extras"], function () {
     Extras::routes();
 });
 
-    Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-        Route::get('/', 'AdminController@index');
+    Route::get('/', 'AdminController@index');
 
-        Route::resource("sponsors", "SponsorsController");
+    Route::resource("sponsors", "SponsorsController");
 
-        Route::resource("regions", "RegionsController");
+    Route::resource("regions", "RegionsController");
 
-        Route::resource("rooms", "RoomsController");
+    Route::resource("rooms", "RoomsController");
 
-        Route::resource("workshops", "WorkshopController");
+    Route::resource("workshops", "WorkshopController");
 
-        Route::resource("users", "UserAdminController");
-    });
+    Route::resource("users", "UserAdminController");
+});
+
+Route::group(['prefix' => "extras"], function () {
+    Extras::routes();
+});
+
+Route::group(['prefix' => 'dashboard'], function () {
+    Route::get('/', 'Summit\AdminController@index');
+
 
     Route::resource("sponsors", 'Summit\SponsorsController');
 
@@ -51,12 +59,6 @@ Route::group(['prefix' => "extras"], function () {
 
     Route::resource("users", 'Summit\UserAdminController');
 
-    Route::group(['prefix' => "extras"], function () {
-        Extras::routes();
-    });
+});
 
-    Route::group(['prefix' => 'dashboard'], function() {
-       Route::get('/', 'Summit\AdminController@index');
-    });
-
-    Auth::routes();
+Auth::routes();

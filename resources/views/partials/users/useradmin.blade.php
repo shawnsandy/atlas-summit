@@ -40,14 +40,18 @@
 
             <div class="col-md-3">
 
+                @component("components.widgets", ["title" => "Sponsors"])
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                @endcomponent
+
                 @component("dash::components.panels.info", ["title" => "Users"])
-                   <h3>{{ count($users) }} Registered Users</h3>
+                    <h3>{{ count($users) }} Registered Users</h3>
                 @endcomponent
 
                 @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
 
-                        {{ config(["dash.forms.users.field_types.password" => "text"]) }}
-                        {{ Form::createForm('App\User', "admin/users") }}
+                    {{ config(["dash.forms.users.field_types.password" => "text"]) }}
+                    {{ Form::createForm('App\User', "admin/users") }}
 
                 @endcomponent
 
