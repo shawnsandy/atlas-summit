@@ -5,7 +5,7 @@
     <a href="/dashboard/articles">{{ Html::entypoFont("news") }}  <span class="nav-text"> Articles</span></a>
 </li>
 <li>
-    <a href="/dashboard/pages">{{ Html::entypoFont("text-document") }}  <span class="nav-text"> Pages</span></a>
+    <a href="/dashboard/workshops">{{ Html::entypoFont("blackboard") }}  <span class="nav-text"> Workshops</span></a>
 </li>
 <li>
     <a href="#">{{ Html::entypoFont("location") }}  <span class="nav-text"> Regions</span></a>
