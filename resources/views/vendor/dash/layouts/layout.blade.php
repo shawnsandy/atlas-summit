@@ -45,7 +45,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand menu-toggle">
                 <a href="#" class="">
-                    {{ Html::entypoFont("dots-three-horizontal") }}  <span class="nav-text"></span>
+                    {{ Html::entypoFont("circular-graph") }}  <span class="nav-text">Summit 2017</span>
                 </a>
             </li>
            @include("dash::partials.sidebar-menu")
