@@ -8,13 +8,13 @@
 
             <div class="col-md-3 text-primary">
                 @component("components.widgets", ["title" => "Registrations", "icon" => "users"])
-                    <p class=""><a href="/users" class="btn btn-primary btn-xs">Registration Admin</a></p>
+                    <p class=""><a href="/users" class="btn btn-primary btn-xs">Manage Registrations</a></p>
                 @endcomponent
             </div>
 
             <div class="col-md-3">
                 @component("components.widgets", ["title" => "Sponsors" ])
-                    <p class=""><a href="/users" class="btn btn-primary btn-xs">Sponsors Admin</a></p>
+                    <p class=""><a href="/users" class="btn btn-primary btn-xs">Manage Sponsors</a></p>
                 @endcomponent
             </div>
 
@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="col-md-9 form-component">
-                @component("dash::components.panels.dashboard", ["title" => "Administrator"])
+                @component("dash::components.panels.dashboard", ["title" => "Workshop Analytics"])
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda deleniti nihil.</p>
                     <div class="canvas-wrapper">
                         <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
