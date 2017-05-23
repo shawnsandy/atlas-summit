@@ -2897,12 +2897,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/dash.git",
-                "reference": "61761cd244e2e007afb1bb29e49a78a12713199c"
+                "reference": "3b556139dd550309199c377e3dff04e150c9971e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/61761cd244e2e007afb1bb29e49a78a12713199c",
-                "reference": "61761cd244e2e007afb1bb29e49a78a12713199c",
+                "url": "https://api.github.com/repos/shawnsandy/dash/zipball/3b556139dd550309199c377e3dff04e150c9971e",
+                "reference": "3b556139dd550309199c377e3dff04e150c9971e",
                 "shasum": ""
             },
             "require": {
@@ -2942,7 +2942,7 @@
                 "dash",
                 "shawnsandy"
             ],
-            "time": "2017-05-20T22:39:17+00:00"
+            "time": "2017-05-23T17:54:07+00:00"
         },
         {
             "name": "shawnsandy/extras",
