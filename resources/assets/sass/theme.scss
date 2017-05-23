@@ -45,7 +45,7 @@ p.h1 {
 
 section.actions.signup {
     background-color: darken($theme-green, 5%);
-    @include linear-gradient(to top, darken($theme-green, 20%), $theme-green);
+    @include linear-gradient(to top, darken($theme-green, 15%), $theme-green);
     padding: 60px 0;
 
     .panel {
@@ -101,4 +101,8 @@ section.actions.signup {
         }
     }
 
+    footer {
+        background-color: transparent;
+        color: darkgrey;
+    }
 @import "shared";

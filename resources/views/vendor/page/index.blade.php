@@ -19,9 +19,9 @@
     <section class="actions signup">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-6 col-md-offset-3">
                     <p class="h1 text-center">
-                        Register Now
+                        Account Activation
                     </p>
 
                     <div id="register" class="panel panel-default">
@@ -31,23 +31,12 @@
                                 <img src="/img/wpds.png" alt="Logo">
                             </h3>
                             <hr>
-                            <div class="row">
-                                <div class="col-md-6 text-center">
-                                    <h3 class="text-uppercase theme-blue oswald">Registration $125 <br>
-                                        <small>*$225 out of state</small></h3>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <h3 class="text-uppercase theme-blue oswald">Hotel Reservation $229 <br>
-                                        <small>+$10 Resort Fee</small></h3>
-                                </div>
-                            </div>
-                            <hr>
                             {{ Form::open(["url" => '/admin/users']) }}
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
                                 <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
-                                    Register Now
+                                    Activate Your Account
                                 </button>
                             </p>
 
@@ -84,27 +73,7 @@
                 Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
             </p>
         </div>
-    </section>
-
-    <hr>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <p class="h1 text-center">
-                    Venue
-                </p>
-                <div class="col-md-8">
-                    {{ Html::extrasMap() }}
-                </div>
-                <div class="col-md-4">
-                    <p class="lead">
-                        Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-                    </p>
-                </div>
-            </div>
-
-
-        </div>
+        <hr>
     </section>
 
     @include('page::shared.footer')
