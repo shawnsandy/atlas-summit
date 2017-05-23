@@ -13,7 +13,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/img/wpds@200.png" style="" alt="Logo">
+                <img src="/img/wpds@200.png" alt="Logo">
             </a>
         </div>
 

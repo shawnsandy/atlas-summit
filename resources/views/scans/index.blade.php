@@ -2,7 +2,8 @@
 @section('content')
     <div class="login-page">
         <div class="form">
-            <img class="" src="http://workforcesummit.org/wp-content/uploads/2017/02/WPDS-horizontal-web-1024x144.png" width="265px" style="padding-bottom: 20px">
+            <p><img src="/img/wpds@200.png" alt="Logo"></p>
+
             {!! Form::open(['url' => '/scans/room']) !!}
             <p>
                 <label class="required" for="room_id">
