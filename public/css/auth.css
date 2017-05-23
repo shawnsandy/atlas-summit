@@ -55,6 +55,12 @@
 .form .register-form {
     display: none;
 }
+
+.form .rfid {
+    background-color: transparent;
+    box-shadow: none !important;
+    opacity: 0;
+}
 .container {
     position: relative;
     z-index: 1;

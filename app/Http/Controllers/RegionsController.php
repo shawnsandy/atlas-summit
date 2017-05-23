@@ -27,7 +27,7 @@
          */
         public function create()
         {
-            return view('regions.create');
+            return view('partials.regions.create');
         }
 
         /**

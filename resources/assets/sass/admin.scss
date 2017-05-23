@@ -33,7 +33,6 @@ header.landing h1, .headline {
       }
 
     }
-
     border-top: solid 3px #005DA7;
 
   }
@@ -42,16 +41,28 @@ header.landing h1, .headline {
 
 }
 
+.panel {
+  &.dashboard {
+    h2  {
+      font-size: 28px;
+      color: $theme-blue;
+    }
+
+    .fa {
+      color: $theme-green;
+    }
+  }
+}
 
 
 #sidebar-wrapper {
-  background-color: darken($theme-green, 15%);
+  background-color: darken($theme-blue, 15%);
 
   .sidebar-nav li a {
     color: #fff;
 
     &:hover {
-      background-color: darken($theme-green, 25%);
+      background-color: darken($theme-blue, 15%);
     }
   }
 }
@@ -66,3 +77,14 @@ header.landing h1, .headline {
     font-size: 21px;
   }
 }
+
+.sidebar-nav li:first-child {
+  line-height: 50px;
+  background-color: darken($theme-blue, 15%);
+  a:hover, a {
+    background-color: darken($theme-blue, 8%);
+  }
+}
+
+
+@import "shared";

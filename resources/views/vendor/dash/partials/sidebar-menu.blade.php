@@ -1,21 +1,24 @@
 <li>
-    <a href="#"><i class="fa fa-tachometer"></i> <span class="nav-text">Dashboard</span></a>
+    <a href="/dashboard">{{ Html::entypoFont("network") }} <span class="nav-text">Dashboard</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-pencil-square"></i> <span class="nav-text"> Articles</span></a>
+    <a href="/dashboard/articles">{{ Html::entypoFont("text-document-inverted") }}  <span class="nav-text"> Articles</span></a>
 </li>
 <li>
-    <a href="/admin/pages"><i class="fa fa-file-text"></i> <span class="nav-text"> Pages</span></a>
+    <a href="/dashboard/workshops">{{ Html::entypoFont("blackboard") }}  <span class="nav-text"> Workshops</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-download"></i> <span class="nav-text"> Media</span></a>
+    <a href="/dashboard/regions">{{ Html::entypoFont("location") }}  <span class="nav-text"> Regions</span></a>
 </li>
 <li>
-    <a href="{{ url("/users") }}"><i class="fa fa-users"></i> <span class="nav-text"> Users</span></a>
+    <a href="{{ url("/dashboard/users") }}">{{ Html::entypoFont("users") }}  <span class="nav-text"> Users</span></a>
 </li>
 <li>
-    <a href="#"><i class="fa fa-sliders"></i> <span class="nav-text"> Settings</span></a>
+    <a href="/dashboard/rooms">{{ Html::entypoFont("shop") }}  <span class="nav-text"> Rooms</span></a>
 </li>
 <li>
-    <a href="/admin/system"><i class="fa fa-cogs"></i> <span class="nav-text"> System</span></a>
+    <a href="/dashboard/sponsors">{{ Html::entypoFont("star") }}  <span class="nav-text"> Sponsors</span></a>
 </li>
+{{--<li>--}}
+    {{--<a href="/dashboard/system">{{ Html::entypoFont("cog") }}  <span class="nav-text"> System</span></a>--}}
+{{--</li>--}}

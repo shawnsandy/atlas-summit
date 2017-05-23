@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SponsorsRequest;
 use App\Sponsor;
-use App\Sponsors;
 use Illuminate\Http\Request;
 
 class SponsorsController extends Controller
@@ -18,7 +17,7 @@ class SponsorsController extends Controller
     {
         $sponsors = Sponsor::all();
 
-        return view("sponsors.index", compact('sponsors'));
+        return view("partials.sponsors.index", compact('sponsors'));
     }
 
     /**

@@ -21,30 +21,26 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <p class="h1 text-center">
-                        Register Now
+                        Account Activation
                     </p>
 
                     <div id="register" class="panel panel-default">
                         <div class="panel-body component">
 
-                            <h2 class="text-center">
+                            <h3 class="text-center">
                                 <img src="/img/wpds.png" alt="Logo">
-                            </h2>
+                            </h3>
                             <hr>
-                            {{ Form::open(["url" => '']) }}
+                            {{ Form::open(["url" => '/admin/users']) }}
 
                             {{ Form::dashFields('App\User') }}
                             <p class="text-right">
-                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register">
-                                    Register For WPDS 2017
+                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
+                                    Activate Your Account
                                 </button>
                             </p>
 
                             {{ Form::close() }}
-                            <hr>
-                            <div class="social-sign-in">
-                                {{ Html::networkLogin("Connect Via Social Media") }}
-                            </div>
 
                         </div>
                     </div>
@@ -55,12 +51,38 @@
     </section>
 
     <section>
-        <div class="container"><p class="h1 text-center">
-                Schedule
+        <div class="container">
+            <p class="h1 text-center">
+                Workshops
             </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
+            <div class="workshops">
+
+                @component("components.workshop-collections")
+                    Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+            </div>
+
+
         </div>
     </section>
 
@@ -70,21 +92,12 @@
                 2017 Sponsors
             </p>
             <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly
+                drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite
+                technically sound services with client-centered.
             </p>
         </div>
-    </section>
-
-    <hr>
-    <section>
-        <div class="container"><p class="h1 text-center">
-                Venue
-            </p>
-            <hr>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
+        <hr>
     </section>
 
     @include('page::shared.footer')
