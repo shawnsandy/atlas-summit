@@ -13,8 +13,9 @@
   @include linear-gradient(to top, darken($theme-blue, 20%), $theme-blue);
 }
 
-
 #sidebar-wrapper {
+
+  @include linear-gradient(to top, darken($theme-green, 25%), darken($theme-green, 8%));
 
   .entypo {
 font-size: 22px;
