@@ -3,6 +3,11 @@
     namespace App\Http\Controllers;
 
     use App\Regions;
+    use App\Rooms;
+    use App\Scans;
+    use App\Sponsor;
+    use App\User;
+    use App\Workshop;
     use Illuminate\Http\Request;
     use Auth;
 
@@ -15,7 +20,15 @@
          */
         public function index()
         {
-            return view("admin.index");
+
+            $regions = Regions::all();
+            $rooms = Rooms::all();
+            $scans = Scans::all();
+            $sponsors = Sponsor::all();
+            $users = User::all();
+            $workshops = Workshop::all();
+
+            return view("admin.index", compact('regions', 'rooms', 'scans', 'sponsors', 'users', 'workshops'));
         }
 
         /**
