@@ -18,7 +18,7 @@
         {
             $regions = Regions::all();
 
-            return view("regions.index", compact('regions'));
+            return view("partials.regions.index", compact('regions'));
         }
 
         /**

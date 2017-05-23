@@ -17,7 +17,7 @@ class WorkshopController extends Controller
     {
         $workshops = Workshop::all();
 
-        return view("workshops.index", compact('workshops'));
+        return view("partials.workshops.index", compact('workshops'));
     }
 
     /**
@@ -27,7 +27,7 @@ class WorkshopController extends Controller
      */
     public function create()
     {
-        return view("assets.workshops.create");
+        return view("partials.workshops.create");
     }
 
     /**

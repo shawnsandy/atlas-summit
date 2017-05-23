@@ -3,7 +3,7 @@
 @section("content")
     <div class="container-fluid">
         <div class="col-md-9">
-            @component("dash::components.panels.dashboard", ["title" => "Administrator"])
+            @component("dash::components.panels.dashboard", ["title" => "Sponsors"])
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda deleniti nihil.</p>
                 <div class="canvas-wrapper">
                     <canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>

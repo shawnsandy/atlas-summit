@@ -8,13 +8,13 @@
     <a href="/dashboard/workshops">{{ Html::entypoFont("blackboard") }}  <span class="nav-text"> Workshops</span></a>
 </li>
 <li>
-    <a href="#">{{ Html::entypoFont("location") }}  <span class="nav-text"> Regions</span></a>
+    <a href="/dashboard/regions">{{ Html::entypoFont("location") }}  <span class="nav-text"> Regions</span></a>
 </li>
 <li>
     <a href="{{ url("/dashboard/users") }}">{{ Html::entypoFont("users") }}  <span class="nav-text"> Users</span></a>
 </li>
 <li>
-    <a href="#">{{ Html::entypoFont("box") }}  <span class="nav-text"> Rooms</span></a>
+    <a href="/dashboard/rooms">{{ Html::entypoFont("box") }}  <span class="nav-text"> Rooms</span></a>
 </li>
 <li>
     <a href="/dashboard/sponsors">{{ Html::entypoFont("star") }}  <span class="nav-text"> Sponsors</span></a>
