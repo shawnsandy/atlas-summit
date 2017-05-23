@@ -2,9 +2,38 @@
 @import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
 .navbar-static-top {
     border-radius: 0;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 1);
     &:hover {
         background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.cover-fold {
+    .navbar-static-top {
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    .oswald>li>a {
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        &:hover {
+            color: $theme-blue;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+.oswald>li>a {
+    color: $theme-blue;
+    font-size: 18px;
+    text-transform: uppercase;
+    &:hover {
+        color: rgba(255, 255, 255, 0.4);
+        background-color: $theme-blue;
     }
 }
 
@@ -83,16 +112,6 @@ section.actions.signup {
     }
     &-blue {
         color: $theme-blue;
-    }
-}
-
-.oswald>li>a {
-    color: #fff;
-    font-size: 18px;
-    text-transform: uppercase;
-    &:hover {
-        color: $theme-blue;
-        background-color: rgba(255, 255, 255, 0.4);
     }
 }
 
