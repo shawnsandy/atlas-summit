@@ -23,6 +23,7 @@
                     38 Seats | 8 Available
                 </p>
             </div>
+
         </div>
     </div>
 
