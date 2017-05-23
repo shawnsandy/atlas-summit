@@ -41,10 +41,6 @@
                             </p>
 
                             {{ Form::close() }}
-                            {{--<hr>--}}
-                            {{--<div class="social-sign-in oswald">--}}
-                                {{--{{ Html::networkLogin("Connect Via Social Media") }}--}}
-                            {{--</div>--}}
 
                         </div>
                     </div>
@@ -55,12 +51,38 @@
     </section>
 
     <section>
-        <div class="container"><p class="h1 text-center">
-                Schedule
+        <div class="container">
+            <p class="h1 text-center">
+                Workshops
             </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
+            <div class="workshops">
+
+                @component("components.workshop-collections")
+                    Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+            </div>
+
+
         </div>
     </section>
 
@@ -70,7 +92,9 @@
                 2017 Sponsors
             </p>
             <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly
+                drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite
+                technically sound services with client-centered.
             </p>
         </div>
         <hr>

@@ -8,7 +8,11 @@ class Workshop extends Model
 {
     protected $fillable = ["name", "description", "date", "start_time", "end_time", "room_id"];
 
-    public function participants(){
+    public function room() {
+        return $this->belongsTo(Rooms::class);
+    }
+
+    public function users(){
         return $this->belongsToMany(User::class);
     }
 

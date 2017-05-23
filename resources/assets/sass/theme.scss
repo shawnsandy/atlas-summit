@@ -1,7 +1,5 @@
 @import "variables";
 @import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
-
-
 .navbar-static-top {
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0.1);
@@ -38,7 +36,7 @@ header.landing {
 }
 
 p.h1 {
-    font-size: 54px;
+    font-size: 61px;
     padding-bottom: 20px;
     color: $theme-blue;
 }
@@ -47,7 +45,6 @@ section.actions.signup {
     background-color: darken($theme-green, 5%);
     @include linear-gradient(to top, darken($theme-green, 15%), $theme-green);
     padding: 60px 0;
-
     .panel {
         padding: 40px 40px;
         border-radius: 5px;
@@ -60,12 +57,11 @@ section.actions.signup {
         border-radius: 2px;
     }
     label {
-
         font-size: 12px;
         font-weight: normal;
     }
     .btn.register {
-       font-size: 28px;
+        font-size: 28px;
     }
 }
 
@@ -75,13 +71,13 @@ section.actions.signup {
         border-radius: 15px;
     }
 }
+
 .navbar-brand {
     padding-top: 10px;
     background-color: #ffffff;
 }
 
 .theme {
-
     &-green {
         color: $theme-green;
     }
@@ -90,19 +86,32 @@ section.actions.signup {
     }
 }
 
-
-    .oswald > li > a  {
-        color: #fff;
-        font-size: 18px;
-        text-transform: uppercase;
-        &:hover {
-            color: $theme-blue;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
+.oswald>li>a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    &:hover {
+        color: $theme-blue;
+        background-color: rgba(255, 255, 255, 0.4);
     }
+}
 
-    footer {
-        background-color: transparent;
-        color: darkgrey;
+footer {
+    background-color: transparent;
+    color: darkgrey;
+}
+
+.workshops {
+    .wrapper {
+        margin-bottom: 40px;
     }
+    .cover {
+        height: 200px;
+        background-color: lightgray;
+    }
+    .details {
+        padding: 12px;
+    }
+}
+
 @import "shared";
