@@ -80,6 +80,10 @@ header.landing h1, .headline {
 
 .sidebar-nav li:first-child {
   line-height: 50px;
+  background-color: darken($theme-blue, 8%);
+  a:hover, a {
+    background-color: darken($theme-blue, 8%);
+  }
 }
 
 

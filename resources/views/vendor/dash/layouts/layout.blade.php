@@ -45,7 +45,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand menu-toggle">
                 <a href="#" class="">
-                    {{ Html::entypoFont("popup") }}  <span class="nav-text"></span>
+                    {{ Html::entypoFont("dots-three-horizontal") }}  <span class="nav-text"></span>
                 </a>
             </li>
            @include("dash::partials.sidebar-menu")
