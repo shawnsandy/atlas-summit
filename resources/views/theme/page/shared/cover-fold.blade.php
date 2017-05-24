@@ -9,9 +9,9 @@
                         @if(config('pakgekit.branding') && config('pakgekit.brand.logo'))
                         <img src="/img/{{ config('pagekit.brand.logo' )}}" title="{{ config('pagekit.company_name') }}" />                        @endif
 
-                        <h1>{{ config('pagekit.company_name', 'Laravel.PageKit' ) }}</h1>
+                        <h1 class="oswald" style="font-family: Oswald">ENGAGE.EDUCATE.EMPOWER.</h1>
 
-                        <p class="lead"> {{ config('pagekit.title_slug', 'Quick start pages for Laravel.' )}} </p>
+                        <p class="lead text-uppercase oswald"> Building Tomorrows Workforce </p>
 
                     </div>
                 </div>

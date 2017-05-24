@@ -2,7 +2,7 @@
 @section('title', 'Laravel Pages')
 @section('body')
 
-    @include('page::shared.cover-fold', ["class_name" => "landing bg-5"])
+    @include('theme.page.shared.cover-fold', ["class_name" => "landing bg-5"])
 
     <section class="sub-header text-center">
 
@@ -33,7 +33,10 @@
                             <hr>
                             {{ Form::open(["url" => '/admin/users']) }}
 
-                            {{ Form::dashFields('App\User') }}
+                            {{ Form::dashCustomFields([
+                            "email" => ["label" => "Your email address", "type" => "email"],
+                            "password" => ["label" => "Your Password", "type" => "password"],
+                            ], 'users') }}
                             <p class="text-right">
                                 <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
                                     Activate Your Account
@@ -112,7 +115,7 @@
     }
 
     .cover-fold {
-        background-image: url("/img/Hyatt-Regency.jpg");
+        /*background-image: url("/img/Hyatt-Regency.jpg");*/
         background-size: cover;
     }
 
