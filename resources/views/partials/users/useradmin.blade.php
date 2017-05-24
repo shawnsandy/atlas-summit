@@ -9,7 +9,10 @@
                     <div class="col-md-12">
                         <div class="row">
                             @component("dash::components.panels.dashboard", ['title' => "User Admin"])
-                                {{ Html::dataTable($users, ["id", "first_name", "last_name", "email", "created_at"],  ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'], ['class' => 'data-table'] ) }}
+                                {{ Html::dataTable($users, [
+                                "id", "first_name", "last_name", "email", "created_at"],
+                                ['page_length' => 15, 'order' => "desc", "edit_url" => '/admin/users/'],
+                                 ['class' => 'data-table'] ) }}
                             @endcomponent
                         </div>
                     </div>
@@ -28,9 +31,9 @@
                     'last_name' => ["label" => "Last Name"],
                     'email' => ["label" => "Email"],
                     ]) }}
-                <p class="text-right">
-                    <button type="submit" class="btn btn-primary">Register User</button>
-                </p>
+                    <p class="text-right">
+                        <button type="submit" class="btn btn-primary">Register User</button>
+                    </p>
 
                     {{ Form::close() }}
                 @endcomponent
