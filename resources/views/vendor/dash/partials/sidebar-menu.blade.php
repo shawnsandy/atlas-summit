@@ -5,6 +5,9 @@
     <a href="/dashboard/articles">{{ Html::entypoFont("text-document-inverted") }}  <span class="nav-text"> Articles</span></a>
 </li>
 <li>
+    <a href="/dashboard/sponsors">{{ Html::entypoFont("price-ribbon") }}  <span class="nav-text"> Sponsors</span></a>
+</li>
+<li>
     <a href="/dashboard/workshops">{{ Html::entypoFont("blackboard") }}  <span class="nav-text"> Workshops</span></a>
 </li>
 <li>
@@ -15,9 +18,6 @@
 </li>
 <li>
     <a href="/dashboard/rooms">{{ Html::entypoFont("shop") }}  <span class="nav-text"> Rooms</span></a>
-</li>
-<li>
-    <a href="/dashboard/sponsors">{{ Html::entypoFont("star") }}  <span class="nav-text"> Sponsors</span></a>
 </li>
 {{--<li>--}}
     {{--<a href="/dashboard/system">{{ Html::entypoFont("cog") }}  <span class="nav-text"> System</span></a>--}}
