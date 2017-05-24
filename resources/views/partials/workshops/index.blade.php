@@ -7,6 +7,13 @@
         <div class="row">
 
             <div class="col-md-9 form-component">
+                @component("dash::components.panels.dashboard", ["title" => "Workshops"])
+                    <a href="/dashboard/workshops/create" class="btn btn-primary">Create a Workshop</a>
+
+                @endcomponent
+            </div>
+
+            <div class="col-md-9 form-component">
                 @component("dash::components.panels.dashboard", ["title" => "Workshop Analytics"])
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda deleniti nihil.</p>
                     <div class="canvas-wrapper">

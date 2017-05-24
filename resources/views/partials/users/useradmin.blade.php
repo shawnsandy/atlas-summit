@@ -4,7 +4,22 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Dashboard content -->
+
             <div class="col-md-8">
+                    <section class="create-user">
+                        @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
+                            {{ Form::open(['url' => '/admin/users', "class" => "form-horizontal"]) }}
+                            {{ Form::dashCustomFields([
+                            'first_name' => ["label" => "First Name"],
+                            'last_name' => ["label" => "Last Name"],
+                            'email' => ["label" => "Email"],
+                            ]) }}
+                                <button type="submit" class="btn btn-primary">Register User</button>
+                            {{ Form::close() }}
+                        @endcomponent
+
+                    </section>
+
                 <section class="widgets">
                     <div class="col-md-12">
                         <div class="row">
@@ -22,26 +37,9 @@
             <!--  side bar -->
 
             <div class="col-md-4">
-
-                @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
-                    {{ config(["dash.forms.users.field_types.password" => "text"]) }}
-                    {{ Form::open(['url' => '/admin/users']) }}
-                    {{ Form::dashCustomFields([
-                    'first_name' => ["label" => "First Name"],
-                    'last_name' => ["label" => "Last Name"],
-                    'email' => ["label" => "Email"],
-                    ]) }}
-                    <p class="text-right">
-                        <button type="submit" class="btn btn-primary">Register User</button>
-                    </p>
-
-                    {{ Form::close() }}
-                @endcomponent
-
                 @component("dash::components.panels.info", ["title" => "Users"])
                     <h3>{{ count($users) }} Registered Users</h3>
                 @endcomponent
-
             </div>
         </div>
     </div>
