@@ -27,7 +27,7 @@ return [
             ]
         ],
         "workshops" => [
-            "field_types" => ["date" => "date", 'cover_image' => 'file'],
+            "field_types" => ["date" => "date", 'cover_image' => 'file', 'start_time' => "time", 'end_time' => "time", ],
             "labels" => ["cover_image" => "Cover Image (jpg, png, Max (20mb)"]
         ]
 
