@@ -15,6 +15,7 @@
                 Grand Cypress in Orlando. We are working hard on a brand new website so please check back soon.
             </p>
         </div>
+
     </section>
     <section class="actions signup">
         <div class="container">
@@ -84,8 +85,6 @@
                         Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
                 @endcomponent
             </div>
-
-
         </div>
     </section>
 

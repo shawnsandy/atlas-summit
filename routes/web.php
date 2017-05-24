@@ -62,7 +62,11 @@ Route::group(['prefix' => 'dashboard'], function () {
 });
 
 Route::group(["prefix" => "summit"], function() {
+
    Route::resource('/u', 'Summit\WshopController');
+
+   Route::get("/activation", 'Summit\ActivationController');
+
 });
 
 Auth::routes();
