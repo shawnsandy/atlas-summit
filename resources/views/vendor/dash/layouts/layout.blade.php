@@ -125,7 +125,7 @@
         crossorigin="anonymous">
 </script>
 
-@stack('inline-scripts')
+
 <script src="/js/admin/chart.min.js"></script>
 <script src="/js/admin/chart-data.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
@@ -133,7 +133,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.js"></script>
 <script src="/js/flash.js"></script>
 @stack('scripts')
-
+@stack('inline-scripts')
 <!-- Menu Toggle Script -->
 <script>
     $(".menu-toggle").click(function (e) {
