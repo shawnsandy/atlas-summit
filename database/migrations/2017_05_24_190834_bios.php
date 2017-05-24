@@ -13,9 +13,10 @@ class Bios extends Migration
      */
     public function up()
     {
-        Schema::table("bios", function(Blueprint $blueprint) {
+        Schema::create("bios", function(Blueprint $blueprint) {
            $blueprint->increments("id");
-           $blueprint->foreign("user_id")->rederences("id")->on("users");
+           $blueprint->integer("user_id")->unsigned();
+           $blueprint->foreign("user_id")->references("id")->on("users");
            $blueprint->string("avatar");
            $blueprint->string('job_title');
            $blueprint->text('biography');
