@@ -2,6 +2,7 @@
 <script src="/js/admin/bootstrap.min.js"></script>
 <script src="/js/admin/chart.min.js"></script>
 <script src="/js/admin/chart-data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.6/raphael.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.js"></script>
