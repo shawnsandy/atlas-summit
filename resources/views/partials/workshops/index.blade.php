@@ -3,7 +3,33 @@
 @section("content")
 
     <div class="container-fluid">
+        <div class="row">
 
+            <div class="col-md-3 text-success">
+                @component("components.widgets", ["title" => "Registrations", "icon" => "users"])
+                    <p class=""><a href="/users" class="btn btn-success btn-xs">Manage Registrations</a></p>
+                @endcomponent
+            </div>
+
+            <div class="col-md-3">
+                @component("components.widgets", ["title" => "Sponsors" ])
+                    <p class=""><a href="/users" class="btn btn-success btn-xs">Manage Sponsors</a></p>
+                @endcomponent
+            </div>
+
+            <div class="col-md-3">
+                @component("components.widgets", ["title" => "Workshops", "icon" => "tv"])
+                    <p class=""><a href="/users" class="btn btn-success btn-xs">Manage Workshops</a></p>
+                @endcomponent
+            </div>
+
+            <div class="col-md-3">
+                @component("components.widgets", ["title" => "Regions", "icon" => "location"])
+                    <p class=""><a href="/users" class="btn btn-success btn-xs">Manage Regions</a></p>
+                @endcomponent
+            </div>
+
+        </div>
         <div class="row">
 
 
