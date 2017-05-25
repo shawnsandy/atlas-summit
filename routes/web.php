@@ -46,6 +46,7 @@ Route::group(['prefix' => "extras"], function () {
 });
 
 Route::group(['prefix' => 'dashboard'], function () {
+
     Route::get('/', 'Summit\AdminController@index');
 
 

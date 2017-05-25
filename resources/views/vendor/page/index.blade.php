@@ -61,29 +61,16 @@
             </p>
             <div class="workshops">
 
-                @component("components.workshop-collections")
-                    Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
+                @foreach($workshops as $workshop)
 
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
+                    @component("components.workshop-collections", ["workshop" => $workshop])
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally
+                        orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative
+                        leadership through functionalized.
+                    @endcomponent
 
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
+                @endforeach
 
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
-
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
-
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
             </div>
         </div>
     </section>
