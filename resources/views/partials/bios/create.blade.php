@@ -13,12 +13,12 @@
                     </h2>
                     <hr>
                     <div class="form">
-                        {{ Form::open( ["url" => "/summit/bios/$bio->id", 'files' => true]) }}
+                        {{ Form::open( ["url" => "/summit/bios/", 'files' => true]) }}
 
                         {{ Form::dashFields('App\Bio') }}
 
                         <p class="text-right">
-                            <button class="btn btn-primary btn-lg">Create Your Bio</button>
+                            <button class="btn btn-primary">Create Your Bio</button>
                         </p>
 
                         {{ Form::close() }}

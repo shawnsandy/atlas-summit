@@ -15,7 +15,7 @@
 
                     {{ Form::dashFields('App\Bio') }}
                     <p class="text-right">
-                        <button class="btn btn-primary btn-lg">Update Your Bio</button>
+                        <button class="btn btn-primary">Update Your Bio</button>
                     </p>
 
 
