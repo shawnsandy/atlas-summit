@@ -12,7 +12,7 @@ class WorkshopRegController extends Controller
     public function __invoke($workshop_id)
     {
         $ws = Workshop::find($workshop_id);
-        $user = User::first();
+        $user = User::inRandomOrder()->first();
         $ws->users()->attach($user->id);
 
        return  back()->with("success", "You are registered for this workshop!");
