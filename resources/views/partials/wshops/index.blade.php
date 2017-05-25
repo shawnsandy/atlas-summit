@@ -2,26 +2,16 @@
 @section('title', "About us")
 @section('content')
     <div class="container">
-        <section>
-            <div class="container">
-                @include("extras::partials.messages")
-                <p class="h1 text-center">
-                    Workshops
-                </p>
-                <div class="workshops">
-
-                    @foreach($workshops as $workshop)
-
-                        @component("components.workshop-collections", ["workshop" => $workshop])
-                            Synergistically envisioneer emerging results rather than bleeding-edge services. Globally
-                            orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative
-                            leadership through functionalized.
-                        @endcomponent
-
-                    @endforeach
-
-                </div>
-            </div>
-        </section>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, harum incidunt inventore officiis porro
+                repellendus sint sunt vel. Aut autem eum harum illum labore, minima neque pariatur ut voluptate
+                voluptates?</p>
+            <p>Ab accusamus adipisci architecto cum eius eligendi eum fugit hic magni maiores minima minus mollitia
+                natus, neque obcaecati, officia possimus quaerat quia quibusdam quo ratione sed sit temporibus veniam
+                voluptas.</p>
+            <p>Accusamus adipisci asperiores atque blanditiis culpa deleniti doloremque dolores eaque eveniet fuga harum
+                inventore nihil nulla numquam optio placeat possimus qui quia quis quo quos, soluta suscipit unde
+                voluptates voluptatibus?</p>
+        </div>
     </div>
 @endsection
