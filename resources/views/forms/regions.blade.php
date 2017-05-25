@@ -13,6 +13,13 @@
 @if ($errors->has('name'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('name')!!}</p>@endif
 {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Region Name']) !!}
 </p>
+<?php
+if (isset($region)) {
+    $address = $region->address;
+} else {
+    $address = null;
+}
+?>
 @include('assets.dashboard.address')
 <p>
     <label class="required" for="phone">
