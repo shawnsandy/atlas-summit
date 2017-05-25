@@ -167,9 +167,14 @@ class SponsorsController extends Controller
      * @param Sponsor $sponsors
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sponsor $sponsors)
+    public function destroy($id)
     {
-        //
+        $sponsor = Sponsor::findOrFail($id);
+        $sponsor->delete();
+
+        Flash()->success('Sponsor Deleted!');
+
+        return redirect('/admin/sponsors');
     }
 
     public function seoUrl($string) {
