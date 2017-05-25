@@ -27,6 +27,13 @@
 @if ($errors->has('company_name'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('company_name')!!}</p>@endif
 {!! Form::text('company_name', null, ['class' => 'form-control', 'placeholder' => 'Contact Name']) !!}
 </p>
+<?php
+if (isset($sponsor)) {
+    $address = $sponsor->company_address;
+} else {
+    $address = null;
+}
+?>
 @include('assets.dashboard.address')
 <p>
     <label class="required" for="company_phone">
