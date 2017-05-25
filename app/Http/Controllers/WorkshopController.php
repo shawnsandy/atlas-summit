@@ -73,9 +73,12 @@ class WorkshopController extends Controller
      * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function edit(Workshop $workshop)
+    public function edit($id)
     {
-        return view('partials.workshops.edit');
+        $workshop = Workshop::find($id);
+        $rooms = Rooms::pluck('name', 'id');
+
+        return view('workshops.edit', compact('workshop', 'rooms'));
     }
 
     /**
@@ -85,9 +88,30 @@ class WorkshopController extends Controller
      * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Workshop $workshop)
+    public function update(Request $request, $id)
     {
-        //
+        $workshop = Workshop::find($id);
+
+        if ($workshop):
+
+            $workshop->name = $request->name;
+            $workshop->description = $request->description;
+            $workshop->date = $request->date;
+            $workshop->start_time = $request->start_time;
+            $workshop->end_time = $request->end_time;
+            $workshop->room_id = $request->room_id;
+
+            $workshop->save();
+
+            flash()->success('Workshop Updated!');
+
+            return redirect('/admin/workshops/');
+
+        endif;
+
+        Flash()->error('Something Went Wrong, Please Try Again.', $title = 'Updated Failed!', $options = []);
+
+        return back()->withInput();
     }
 
     /**
@@ -96,8 +120,13 @@ class WorkshopController extends Controller
      * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Workshop $workshop)
+    public function destroy($id)
     {
-        //
+        $workshop = Workshop::findOrFail($id);
+        $workshop->delete();
+
+        Flash()->success('Workshop Deleted!');
+
+        return redirect('/admin/workshops');
     }
 }
