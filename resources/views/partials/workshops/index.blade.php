@@ -11,34 +11,35 @@
                 @component("dash::components.panels.dashboard", ["title" => "Workshops"])
                     <a href="/dashboard/workshops/create" class="btn btn-primary">Create a Workshop</a>
                     <hr>
-                    <table class="table table-striped">
+                    <table class="table ">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th> Name</th>
+                            <th> Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th style="width: 200px"></th>
+
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach($workshops as $workshop)
+                            <tr>
+                                <th scope="row">{{ $workshop->id }}</th>
+                                <td>{{ $workshop->name }}</td>
+                                <td>{{ $workshop->date }}</td>
+                                <td>{{ $workshop->start_time }}</td>
+                                <td>{{ $workshop->end_time }}</td>
+                                <td class="text-right" style="width: 150px">
+                                    <a href="/dashboard/workshops/{{$workshop->id}}/edit"
+                                       class="btn btn-primary btn-xs">
+                                        Edit
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+
                         </tbody>
                     </table>
                 @endcomponent
