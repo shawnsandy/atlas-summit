@@ -1,6 +1,7 @@
 @extends('page::page-layouts.main-page')
 @section('title', "About us")
 @section('content')
+    <section>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -9,23 +10,36 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2>{{ $workshop->name }}</h2>
+
+                <h2 class="oswald text-uppercase">{{ $workshop->name }}</h2>
+                <hr>
                 <p>
                     {{ $workshop->description }}
                 </p>
                 <p>
-                    @if(Auth::user())
-                        <a href="/" class="btn btn-primary btn-lg oswald text-uppercase">
+                <hr>
+                <p class="small text-success">
+                  Date  {{ $workshop->dete }} |  38 Seats | 8 Available
+                </p>
+                <hr>
+
+                <p>
+                    @if(!Auth::user())
+                        <a href="/summit/ws/{{ $workshop->id }}" class="btn btn-primary btn-lg oswald text-uppercase">
                             Register for this workshop
                         </a>
                     @else
                         <a href="/" class="btn btn-success btn-lg oswald text-uppercase">
-                           Login or Register
+                           Login / Register to access this seminar
                         </a>
                     @endif
                 </p>
+
             </div>
 
         </div>
     </div>
+
+
+    </section>
 @endsection
