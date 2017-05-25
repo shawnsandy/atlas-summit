@@ -22,7 +22,7 @@
     <link href="/css/pagekit/fonts/social/style.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
     @stack('styles')
 
     @if(config('pagekit.branding'))

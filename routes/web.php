@@ -15,20 +15,54 @@ Route::get('/', function () {
     return view('page::index');
 });
 
+Route::group(['prefix' => "scans"], function () {
+    Route::get('/', 'ScansController@index');
+    Route::get('/{id}', 'ScansController@scans');
+    Route::post('/rfid', 'ScansController@store');
+    Route::post('/room', 'ScansController@room');
+});
+
 Route::group(['prefix' => "extras"], function () {
     Extras::routes();
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
-    Dash::routes();
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+
+    Route::get('/', 'AdminController@index');
+
+    Route::resource("sponsors", "SponsorsController");
+
+    Route::resource("regions", "RegionsController");
+
+    Route::resource("rooms", "RoomsController");
+
+    Route::resource("workshops", "WorkshopController");
+
+    Route::resource("users", "UserAdminController");
 });
 
-Route::resource("sponsors", "SponsorsController");
+Route::group(['prefix' => "extras"], function () {
+    Extras::routes();
+});
 
-Route::resource("regions", "RegionsController");
+Route::group(['prefix' => 'dashboard'], function () {
+    Route::get('/', 'Summit\AdminController@index');
 
-Route::resource("workshops", "WorkshopController");
 
-Route::resource("users", "UserAdminController");
+    Route::resource("sponsors", 'Summit\SponsorsController');
+
+    Route::resource("regions", 'Summit\RegionsController');
+
+    Route::resource("rooms", 'Summit\RoomsController');
+
+    Route::resource("workshops", 'Summit\WorkshopController');
+
+    Route::resource("users", 'Summit\UserAdminController');
+
+});
+
+Route::group(["prefix" => "summit"], function() {
+   Route::resource('/u', 'Summit\WshopController');
+});
 
 Auth::routes();

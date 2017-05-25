@@ -16,35 +16,73 @@
             </p>
         </div>
     </section>
-    <hr>
+    <section class="actions signup">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="h1 text-center">
+                        Account Activation
+                    </p>
+
+                    <div id="register" class="panel panel-default">
+                        <div class="panel-body component">
+
+                            <h3 class="text-center">
+                                <img src="/img/wpds.png" alt="Logo">
+                            </h3>
+                            <hr>
+                            {{ Form::open(["url" => '/admin/users']) }}
+
+                            {{ Form::dashFields('App\User') }}
+                            <p class="text-right">
+                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
+                                    Activate Your Account
+                                </button>
+                            </p>
+
+                            {{ Form::close() }}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <section>
         <div class="container">
             <p class="h1 text-center">
-                Speakers
+                Workshops
             </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
-    </section>
-    <hr>
-    <section>
-        <div class="container"><p class="h1 text-center">
-                Events
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
-    </section>
-    <hr>
-    <section>
-        <div class="container"><p class="h1 text-center">
-                Schedule
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
+            <div class="workshops">
+
+                @component("components.workshop-collections")
+                    Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+
+                @component("components.workshop-collections")
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
+                @endcomponent
+            </div>
+
+
         </div>
     </section>
 
@@ -54,21 +92,12 @@
                 2017 Sponsors
             </p>
             <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
+                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly
+                drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite
+                technically sound services with client-centered.
             </p>
         </div>
-    </section>
-
-    <hr>
-    <section>
-        <div class="container"><p class="h1 text-center">
-                Venue
-            </p>
-            <hr>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite technically sound services with client-centered.
-            </p>
-        </div>
+        <hr>
     </section>
 
     @include('page::shared.footer')
@@ -91,7 +120,9 @@
         color: #fff;
     }
 </style>
+
 @endpush
+
 @push('scripts')
 <script>
     $(document).ready(function () {
