@@ -179,6 +179,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Kamaln7\Toastr\ToastrServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -249,6 +250,7 @@ return [
         "Twitter" => \Thujohn\Twitter\Facades\Twitter::class,
         "Flash" => Laracasts\Flash\FlashServiceProvider::class,
         'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
 
     ],
 
