@@ -15,7 +15,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Edit A Sponsor</div>
                     <div class="panel-body">
-                        {!! Form::model($sponsor, ['url' => '/admin/sponsors/'. $sponsor->id, 'method' => 'put']) !!}
+                        {!! Form::model($sponsor, ['url' => '/admin/sponsors/'. $sponsor->id, 'method' => 'put', 'files' => true]) !!}
                             @include('forms.sponsors')
                         {!! Form::submit('Update', ['class' => 'btn btn-success']) !!}
                         {!! Form::close() !!}
