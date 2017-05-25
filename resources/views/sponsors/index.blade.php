@@ -21,15 +21,16 @@
                         <table class="table datatables">
                             <thead>
                             <tr>
-                                <td>ID</td>
+                                <td>Logo</td>
                                 <td>Company Name</td>
                                 <td>Created</td>
+                                <td>Edit\Delete</td>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($sponsors as $sponsor)
                                 <tr>
-                                    <td>{{ $sponsor->id }}</td>
+                                    <td><img src="/img/sponsors/logos/{{ $sponsor->logo }}" width="100px"></td>
                                     <td>{{ $sponsor->company_name }}</td>
                                     <td>{{ date('F d, Y g:i A', strtotime($sponsor->created_at)) }}</td>
                                     <td>
