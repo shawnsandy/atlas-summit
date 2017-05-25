@@ -25,7 +25,7 @@
                 <hr>
 
                 <p>
-                    @if(!Auth::user())
+                    @if(Auth::user())
                         <a href="/summit/ws/{{ $workshop->id }}" class="btn btn-primary btn-lg oswald text-uppercase">
                             Register for this workshop
                         </a>

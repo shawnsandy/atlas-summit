@@ -16,7 +16,7 @@ class WshopController extends Controller
     public function index()
     {
         $workshops = Workshop::all();
-        return view("partials.wshops.index");
+        return view("partials.wshops.index", compact("workshops"));
     }
 
     /**
