@@ -8,7 +8,7 @@
             <div class="col-md-8">
                     <section class="create-user">
                         @component("dash::components.panels.widget", ["title" => "Add New User(s)"])
-                            {{ Form::open(['url' => '/admin/users', "class" => "form-horizontal"]) }}
+                            {{ Form::open(['url' => '/dashboard/users', "class" => "form-horizontal"]) }}
                             {{ Form::dashCustomFields([
                             'first_name' => ["label" => "First Name"],
                             'last_name' => ["label" => "Last Name"],

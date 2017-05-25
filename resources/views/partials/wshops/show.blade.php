@@ -3,6 +3,7 @@
 @section('content')
     <section>
     <div class="container">
+        {{ Html::dashMessages() }}
         <div class="row">
             <div class="col-md-6">
                 <div class="card" style="width: 100%; height: 360px; overflow: hidden; background-color: lightgray">
