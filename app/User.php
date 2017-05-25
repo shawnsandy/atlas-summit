@@ -31,4 +31,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Workshop::class);
     }
 
+    public function bio() {
+        return $this->hasOne(Bio::class);
+    }
+
 }

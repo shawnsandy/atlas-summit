@@ -18,4 +18,5 @@ class WorkshopRegController extends Controller
        return  back()->with("success", "You are registered for this workshop!");
 
     }
+
 }
