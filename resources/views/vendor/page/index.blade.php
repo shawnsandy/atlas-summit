@@ -101,7 +101,7 @@
     }
 
     .cover-fold {
-        /*background-image: url("/img/Hyatt-Regency.jpg");*/
+        background-image: url("/img/Conferencespeaker.jpg");
         background-size: cover;
     }
 

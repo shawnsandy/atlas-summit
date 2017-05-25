@@ -26,7 +26,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right oswald">
                 <li>
-                    <a href="/md">Blog</a>
+                    <a href="/md">Workshops</a>
                 </li>
                 <li>
                     <a href="{{ url('/page/about') }}">About</a>
