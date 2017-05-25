@@ -66,6 +66,8 @@ Route::group(["prefix" => "summit"], function() {
 
    Route::resource('/u', 'Summit\WshopController');
 
+   Route::resource('/bios/{id}', 'Summit\BiosController');
+
    Route::get("/activation", 'Summit\ActivationController');
 
    Route::get('/ws/{workshop_id}', 'Summit\WorkshopRegController');
