@@ -53,7 +53,7 @@
                                                             <h3>Are you sure you want to remove {{ $room->name }}?</h3>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <form method="post" action="/admin/regions/{{ $room->id }}"> {{method_field('DELETE')}} {{csrf_field()}}
+                                                            <form method="post" action="/admin/rooms/{{ $room->id }}"> {{method_field('DELETE')}} {{csrf_field()}}
                                                                 <button type="button" class="btn btn-default"
                                                                         data-dismiss="modal">Go Back
                                                                 </button>

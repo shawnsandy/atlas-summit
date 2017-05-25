@@ -52,7 +52,7 @@
                                                             <h3>Are you sure you want to remove {{ $sponsor->company_name }}?</h3>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <form method="post" action="/admin/regions/{{ $sponsor->id }}"> {{method_field('DELETE')}} {{csrf_field()}}
+                                                            <form method="post" action="/admin/sponsors/{{ $sponsor->id }}"> {{method_field('DELETE')}} {{csrf_field()}}
                                                                 <button type="button" class="btn btn-default"
                                                                         data-dismiss="modal">Go Back
                                                                 </button>
