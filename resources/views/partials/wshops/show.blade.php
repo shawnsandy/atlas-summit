@@ -3,15 +3,29 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, harum incidunt inventore officiis porro
-                repellendus sint sunt vel. Aut autem eum harum illum labore, minima neque pariatur ut voluptate
-                voluptates?</p>
-            <p>Ab accusamus adipisci architecto cum eius eligendi eum fugit hic magni maiores minima minus mollitia
-                natus, neque obcaecati, officia possimus quaerat quia quibusdam quo ratione sed sit temporibus veniam
-                voluptas.</p>
-            <p>Accusamus adipisci asperiores atque blanditiis culpa deleniti doloremque dolores eaque eveniet fuga harum
-                inventore nihil nulla numquam optio placeat possimus qui quia quis quo quos, soluta suscipit unde
-                voluptates voluptatibus?</p>
+            <div class="col-md-6">
+                <div class="card" style="width: 100%; height: 360px; overflow: hidden; background-color: lightgray">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>{{ $workshop->name }}</h2>
+                <p>
+                    {{ $workshop->description }}
+                </p>
+                <p>
+                    @if(Auth::user())
+                        <a href="/" class="btn btn-primary btn-lg oswald text-uppercase">
+                            Register for this workshop
+                        </a>
+                    @else
+                        <a href="/" class="btn btn-success btn-lg oswald text-uppercase">
+                           Login or Register
+                        </a>
+                    @endif
+                </p>
+            </div>
+
         </div>
     </div>
 @endsection

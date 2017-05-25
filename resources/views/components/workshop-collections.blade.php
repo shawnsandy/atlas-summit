@@ -5,14 +5,15 @@
             <img src="" alt="">
         </div>
         <div class="details">
-            <h3 class="oswald text-uppercase">{{ $workshop["name"] or "Workshop Name" }}</h3>
+            <h3 class="oswald text-uppercase">
+                <a href="/summit/u/{{ $workshop['id'] }}">{{ $workshop["name"] or "Workshop Name" }}</a></h3>
             <hr>
             <p>
                 {{ $slot }}
             </p>
 
             <div class="action-call">
-                <p>
+                <p class="text-uppercase">
                     <a href="/summit/u/{{ $workshop['id'] }}" class="btn btn-block btn-primary btn-lg oswald">
                         Register Now
                     </a>
