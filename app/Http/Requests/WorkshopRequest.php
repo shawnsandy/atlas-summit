@@ -27,7 +27,7 @@ class WorkshopRequest extends FormRequest
             "name" => "required|min:10",
             "date" => "sometimes|required|min:10",
             "start_time" => "required",
-            "room_id" => "required",
+            "room_id" => "required|numeric",
         ];
     }
 }
