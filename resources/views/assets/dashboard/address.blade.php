@@ -3,25 +3,7 @@
 @if ($errors->has('address'))
     <p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('address')!!}</p>
 @endif
-
-@if ($errors->has('lat'))
-    <p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('lat')!!}
-    </p>
-@endif
-
-@if ($errors->has('long'))
-    <p class="alert alert-danger" style="font-weight: bold;">{!! $errors->first('long')!!}
-    </p>
-    @endif
-
-    <?php
-    if (isset($profile)) {
-        $address = $profile->address;
-    } else {
-        $address = null;
-    }
-    ?>
-
+    <p>
     {!! Form::text('address_info_temp', $address, ['class' => 'form-control', 'id' => 'address_info_temp']) !!}
     </p>
 
@@ -30,13 +12,13 @@
         {!! Form::hidden('lat', null, ['class' => 'lat']) !!}
         {!! Form::hidden('long', null, ['class' => 'long']) !!}
     </p>
+</p>
 
-
-    @push('styles')
-    @endpush
-    @push('scripts')
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIhNEuGvQSSoli7KVZFMhLvxSWZZeZxO0&libraries=places"></script>
-    <script type="text/javascript">
+   @push('styles')
+   @endpush
+   @push('scripts')
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIhNEuGvQSSoli7KVZFMhLvxSWZZeZxO0&libraries=places"></script>
+   <script type="text/javascript">
         $('#address_info_temp').keypress(function(e) {
             if(event.which == 13) {
                 event.preventDefault();
