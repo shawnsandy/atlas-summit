@@ -3,8 +3,10 @@
     namespace App\Http\Controllers;
 
     use App\Regions;
+    use App\User;
     use Illuminate\Http\Request;
     use Laracasts\Flash\Flash;
+    use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
 
     class RegionsController extends Controller
     {
@@ -27,7 +29,7 @@
          */
         public function create()
         {
-            return view('partials.regions.create');
+            return view('regions.create');
         }
 
         /**
@@ -69,9 +71,15 @@
          * @param  \App\Regions $regions
          * @return \Illuminate\Http\Response
          */
-        public function show(Regions $regions)
+        public function show($id)
         {
-            //
+            $region = Regions::find($id);
+
+            Mapper::map($region->lat, $region->long);
+
+            $users = User::where('region_id', $region->id)->get();
+
+            return view("regions.show", compact('region', 'users'));
         }
 
         /**
@@ -136,8 +144,13 @@
          * @param  \App\Regions $regions
          * @return \Illuminate\Http\Response
          */
-        public function destroy(Regions $regions)
+        public function destroy($id)
         {
-            //
+            $region = Regions::findOrFail($id);
+            $region->delete();
+
+            Flash()->success('Region Deleted!');
+
+            return redirect('/admin/regions');
         }
     }
