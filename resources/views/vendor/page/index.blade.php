@@ -32,12 +32,19 @@
                                 <img src="/img/wpds.png" alt="Logo">
                             </h3>
                             <hr>
+
                             {{ Form::open(["url" => '/admin/users']) }}
 
-                            {{ Form::dashCustomFields([
-                            "email" => ["label" => "Your email address", "type" => "email"],
-                            "password" => ["label" => "Your Password", "type" => "password"],
-                            ], 'users') }}
+                            <p class="form-group">
+                                <label for="email">Email</label>
+                                {{ Form::email('email', null, ["class" => "form-control"]) }}
+                            </p>
+
+                            <p class="form-group">
+                                <label for="password">Password</label>
+                                {{ Form::password("password", ["class" => "form-control"]) }}
+                            </p>
+
                             <p class="text-right">
                                 <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
                                     Activate Your Account
