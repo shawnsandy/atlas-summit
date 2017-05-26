@@ -17,11 +17,7 @@
 
                         <div class="form edit-bio">
                             {{ Form::model($bio, ["url" => "/summit/bios/$bio->id", 'files' => true]) }}
-
-                            {{ Form::dashFields('App\Bio') }}
-                            <p class="text-right">
-                                <button class="btn btn-primary">Update Your Bio</button>
-                            </p>
+                            @include("partials.bios.bois-form")
                             {{ Form::close() }}
 
                         </div>

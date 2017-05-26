@@ -24,11 +24,7 @@
                             <div class="form">
                                 {{ Form::open( ["url" => "/summit/bios/", 'files' => true]) }}
 
-                                {{ Form::dashFields('App\Bio') }}
-
-                                <p class="text-right">
-                                    <button class="btn btn-primary">Create Your Bio</button>
-                                </p>
+                                @include("partials.bios.bois-form")
 
                                 {{ Form::close() }}
                             </div>
