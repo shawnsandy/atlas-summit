@@ -10,7 +10,10 @@
                 <div class="panel-body">
 
                     <div class="col-md-8">
-                        <h2>Edit your Bio</h2>
+                        <h2>
+                            Edit your Bio
+                            <hr>
+                        </h2>
 
                         <div class="form edit-bio">
                             {{ Form::model($bio, ["url" => "/summit/bios/$bio->id", 'files' => true]) }}

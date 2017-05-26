@@ -18,6 +18,7 @@
                         <div class="col-md-8">
                             <h2>
                                 Create you bio
+                                <hr>
                             </h2>
 
                             <div class="form">
