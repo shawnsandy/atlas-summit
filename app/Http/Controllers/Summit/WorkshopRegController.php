@@ -16,14 +16,16 @@ class WorkshopRegController extends Controller
 
         $workshop = Workshop::find($workshop_id);
 
-        $check = $workshop->whereHas('users', function($query) use ($user){
+        $check = $workshop->where('id', $workshop_id)->whereHas('users', function($query) use ($user){
             return $query->where('id', $user->id);
         })->get();
 
-        if($check)
-        $user->workshops()->attach($workshop);
+        if(count($check) < 1):
+        $user->workshops()->attach($workshop_id);
+        return redirect("/summit/u/{$workshop_id}")->with("success", "You are registered for this workshop!");
+        endif;
 
-        return redirect("/summit/u/$workshop_id")->with("success", "You are registered for this workshop!");
+        return redirect("/summit/u/{$workshop_id}")->with("error", "It appears you are already registered for this workshop!");
 
     }
 

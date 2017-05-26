@@ -55,7 +55,6 @@ class WshopController extends Controller
         $workshop = Workshop::with("users")->withCount('users')->where("id", $id)->first();
         $users = collect($workshop->users);
         $registered = (count($users->where('id', Auth::id()) ) ) ? true : false;
-        dump($registered);
         return view("partials.wshops.show", compact("workshop", "registered"));
     }
 
