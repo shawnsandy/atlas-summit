@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="container">
+        @include("page::partials.messages")
         <div class="row">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, harum incidunt inventore officiis porro
                 repellendus sint sunt vel. Aut autem eum harum illum labore, minima neque pariatur ut voluptate
