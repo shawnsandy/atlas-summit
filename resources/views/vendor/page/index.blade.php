@@ -66,6 +66,7 @@
             <p class="h1 text-center">
                 Workshops
             </p>
+
             <div class="workshops">
 
                 @foreach($workshops as $workshop)
