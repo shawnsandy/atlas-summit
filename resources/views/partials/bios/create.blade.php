@@ -7,26 +7,36 @@
         <div class="container">
             @include("page::partials.messages")
             <div class="row">
-                <div class="col-md-8">
-                    <h2>
-                        Create you bio
-                    </h2>
-                    <hr>
-                    <div class="form">
-                        {{ Form::open( ["url" => "/summit/bios/", 'files' => true]) }}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <h2 class="oswald text-uppercase">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h2>
+                            <hr>
+                        </div>
 
-                        {{ Form::dashFields('App\Bio') }}
 
-                        <p class="text-right">
-                            <button class="btn btn-primary">Create Your Bio</button>
-                        </p>
+                        <div class="col-md-8">
+                            <h2>
+                                Create you bio
+                                <hr>
+                            </h2>
 
-                        {{ Form::close() }}
+                            <div class="form">
+                                {{ Form::open( ["url" => "/summit/bios/", 'files' => true]) }}
+
+                                {{ Form::dashFields('App\Bio') }}
+
+                                <p class="text-right">
+                                    <button class="btn btn-primary">Create Your Bio</button>
+                                </p>
+
+                                {{ Form::close() }}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            @include("components.bio-sidebar")
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    @include("components.bio-sidebar")
-
                 </div>
             </div>
         </div>
