@@ -45,22 +45,6 @@ Route::group(['prefix' => "extras"], function () {
     Extras::routes();
 });
 
-Route::group(['prefix' => 'dashboard'], function () {
-
-    Route::get('/', 'Summit\AdminController@index');
-
-
-    Route::resource("sponsors", 'Summit\SponsorsController');
-
-    Route::resource("regions", 'Summit\RegionsController');
-
-    Route::resource("rooms", 'Summit\RoomsController');
-
-    Route::resource("workshops", 'Summit\WorkshopController');
-
-    Route::resource("users", 'Summit\UserAdminController');
-
-});
 
 Route::group(["prefix" => "summit"], function() {
 
