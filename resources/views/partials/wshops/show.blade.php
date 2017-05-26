@@ -6,11 +6,6 @@
             <div class="row">
                 @include("page::partials.messages")
                 <div class="col-md-6">
-                    <div class="card" style="width: 100%; height: 360px; overflow: hidden; background-color: lightgray">
-
-                    </div>
-                </div>
-                <div class="col-md-6">
 
                     <h2 class="oswald text-uppercase">{{ $workshop->name }}</h2>
                     <hr>
@@ -19,10 +14,10 @@
                     </p>
                     <p>
                     <hr>
-                    <p class="small text-success">
-                        Date {{ $workshop->date }} | Seats 38 |
+                    <p class="text-success">
+                        Date {{ $workshop->date }} | Seats {{$workshop->seats}} |
                         Registered {{ $workshop->users_count }} |
-                        Available <?= 38 - $workshop->users_count; ?>
+                        Available <?= $workshop->seats - $workshop->users_count; ?>
                     </p>
                     <hr>
 
@@ -45,6 +40,13 @@
 
                     </p>
 
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="card" style="width: 100%; height: 360px; overflow: hidden; background-color: lightgray">
+
+                    </div>
                 </div>
 
             </div>
