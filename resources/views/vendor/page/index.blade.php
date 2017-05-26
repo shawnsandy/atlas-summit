@@ -95,7 +95,7 @@
                 technically sound services with client-centered.
             </p>
         </div>
-        <hr>
+
     </section>
 
     @include('page::shared.footer')
