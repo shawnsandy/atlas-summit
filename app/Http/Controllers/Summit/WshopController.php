@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Summit;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Workshop;
+use Auth;
 use Illuminate\Http\Request;
 
 class WshopController extends Controller
@@ -52,9 +53,10 @@ class WshopController extends Controller
 
 
         $workshop = Workshop::with("users")->withCount('users')->where("id", $id)->first();
-        $registered = $workshop->users->where('id', 22);
-        \Log::info($workshop);
-        return view("partials.wshops.show", compact("workshop"));
+        $users = collect($workshop->users);
+        $registered = (count($users->where('id', Auth::id()) ) ) ? true : false;
+        dump($registered);
+        return view("partials.wshops.show", compact("workshop", "registered"));
     }
 
     /**

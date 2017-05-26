@@ -27,17 +27,19 @@
                             <a href="/" class="btn btn-success btn-lg oswald text-uppercase">
                                 Login / Register to access this seminar
                             </a>
-                        @endif
 
-                        @if(empty($workshop->users->where('id', Auth::id())))
-                            <a href="/summit/ws/{{ $workshop->id }}"
-                               class="btn btn-primary btn-lg oswald text-uppercase">
-                                Register for this workshop
-                            </a>
                         @else
-                                <a href="/summit/bios" class="btn btn-success btn-lg oswald">Your Workshop to Agenda</a>
-                        @endif
 
+                            @if(!$registered)
+                                <a href="/summit/ws/{{ $workshop->id }}"
+                                   class="btn btn-primary btn-lg oswald text-uppercase">
+                                    Register for this workshop
+                                </a>
+                            @else
+                                <a href="/summit/bios" class="btn btn-success btn-lg oswald">Your Workshop to Agenda</a>
+                            @endif
+
+                        @endif
                     </p>
 
                 </div>
