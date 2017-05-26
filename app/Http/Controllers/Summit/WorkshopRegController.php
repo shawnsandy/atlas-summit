@@ -12,17 +12,18 @@ class WorkshopRegController extends Controller
 {
     public function __invoke($workshop_id)
     {
-        $ws = Workshop::find($workshop_id);
-        $user = User::inRandomOrder()->first();
-        try {
-            $ws->users()->attach($user->id);
-        } catch (Exception $exception) {
-            \Log::error($exception->getMessage());
-            return back("error", "You are already registered");
-        }
+        $user = User::find(\Auth::id());
 
+        $workshop = Workshop::find($workshop_id);
 
-       return  back()->with("success", "You are registered for this workshop!");
+        $check = $workshop->whereHas('users', function($query) use ($user){
+            return $query->where('id', $user->id);
+        })->get();
+
+        if($check)
+        $user->workshops()->attach($workshop);
+
+        return redirect("/summit/u/$workshop_id")->with("success", "You are registered for this workshop!");
 
     }
 
