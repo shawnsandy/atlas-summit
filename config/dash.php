@@ -32,6 +32,9 @@ return [
         ],
         "sponsors" => [
             "field_types" => ["banner_image" => "file", "logo" => "file"],
+        ],
+        "bios" => [
+            "field_types" => ["avatar" => "file" ],
         ]
 
     ]

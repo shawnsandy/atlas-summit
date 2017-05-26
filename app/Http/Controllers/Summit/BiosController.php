@@ -14,8 +14,8 @@ class BiosController extends Controller
     public function __construct()
     {
 
-//        $user = User::inRandomOrder()->first();
-//        Auth::loginUsingId($user->id, true);
+        $user = User::inRandomOrder()->first();
+        Auth::loginUsingId($user->id, true);
 
         $this->middleware('auth', ['except' => ['show']]);
     }
