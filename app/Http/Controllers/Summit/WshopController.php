@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Summit;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use App\Workshop;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class WshopController extends Controller
      */
     public function index()
     {
-        $workshops = Workshop::all();
+        $workshops = Workshop::with("users")->get();
         return view("partials.wshops.index");
     }
 
@@ -48,7 +49,11 @@ class WshopController extends Controller
      */
     public function show($id)
     {
-        $workshop = Workshop::find($id);
+
+
+        $workshop = Workshop::with("users")->withCount('users')->where("id", $id)->first();
+        $registered = $workshop->users->where('id', 22);
+        \Log::info($workshop);
         return view("partials.wshops.show", compact("workshop"));
     }
 

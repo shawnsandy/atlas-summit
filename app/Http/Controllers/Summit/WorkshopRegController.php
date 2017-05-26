@@ -6,6 +6,7 @@ use App\User;
 use App\Workshop;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Mockery\Exception;
 
 class WorkshopRegController extends Controller
 {
@@ -13,7 +14,13 @@ class WorkshopRegController extends Controller
     {
         $ws = Workshop::find($workshop_id);
         $user = User::inRandomOrder()->first();
-        $ws->users()->attach($user->id);
+        try {
+            $ws->users()->attach($user->id);
+        } catch (Exception $exception) {
+            \Log::error($exception->getMessage());
+            return back("error", "You are already registered");
+        }
+
 
        return  back()->with("success", "You are registered for this workshop!");
 
