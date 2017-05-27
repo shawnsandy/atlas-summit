@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Summit;
 
 use App\Bio;
+use App\Http\Requests\BioRequest;
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
@@ -52,10 +53,10 @@ class BiosController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \App\Http\Requests\BioRequest|\Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BioRequest $request)
     {
 
         $id = Auth::id();
