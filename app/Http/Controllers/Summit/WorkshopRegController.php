@@ -25,7 +25,7 @@ class WorkshopRegController extends Controller
         return redirect("/summit/u/{$workshop_id}")->with("success", "You are registered for this workshop!");
         endif;
 
-        return redirect("/summit/u/{$workshop_id}")->with("error", "It appears you are already registered for this workshop!");
+        return back()->with("error", "It appears you are already registered for this workshop!");
 
     }
 
