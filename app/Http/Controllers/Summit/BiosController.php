@@ -16,7 +16,7 @@ class BiosController extends Controller
     {
 
         $user = User::inRandomOrder()->first();
-        Auth::loginUsingId($user->id, true);
+        Auth::loginUsingId(Auth::id(), true);
 
         $this->middleware('auth', ['except' => ['show']]);
     }

@@ -21,9 +21,8 @@
             </div>
 
             <div class="meta small">
-
-                <p class="text-muted  small">
-                  {{ $workshop["date"] }} |  38 Seats | 8 Available
+                <p class="text-success  small text-center">
+                  {{ $workshop["date"] }} | Seats {{ $workshop['seats'] }}
                 </p>
             </div>
 

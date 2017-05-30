@@ -16,7 +16,6 @@
                     <hr>
                     <p class="text-success">
                         Date {{ $workshop->date }} | Seats {{$workshop->seats}} |
-                        Registered {{ $workshop->users_count }} |
                         Available <?= $workshop->seats - $workshop->users_count; ?>
                     </p>
                     <hr>
@@ -27,7 +26,6 @@
                             <a href="/" class="btn btn-success btn-lg oswald text-uppercase">
                                 Login / Register to access this seminar
                             </a>
-
                         @else
 
                             @if(!$registered)
