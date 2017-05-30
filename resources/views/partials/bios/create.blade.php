@@ -8,12 +8,10 @@
             @include("page::partials.messages")
             <div class="row">
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="oswald text-uppercase">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h2>
+                    </div>
                     <div class="panel-body">
-                        <div class="col-md-12">
-                            <h2 class="oswald text-uppercase">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h2>
-                            <hr>
-                        </div>
-
 
                         <div class="col-md-8">
                             <h2>

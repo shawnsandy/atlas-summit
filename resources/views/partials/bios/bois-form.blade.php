@@ -17,7 +17,6 @@
     {!! $errors->first('avatar', '<p class="text-danger">:message</p>') !!}
 </div>
 
-
 <p class="text-right">
     <button class="btn btn-primary">Save You Bio</button>
 </p>
