@@ -79,7 +79,9 @@ class BiosController extends Controller
      */
     public function show($id)
     {
-        //
+        $bio = Bio::with("user")->where("id", $id)->first();
+
+        return view('partials.bios.show', compact("bio"));
     }
 
     /**
