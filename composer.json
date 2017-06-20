@@ -9,7 +9,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "oriceon/toastr-5-laravel": "dev-master",
-        "shawnsandy/extras": "0.*",
+        "shawnsandy/extras": "dev-master",
         "shawnsandy/pagekit": "dev-master",
         "vinkla/pusher": "^2.5"
     },
