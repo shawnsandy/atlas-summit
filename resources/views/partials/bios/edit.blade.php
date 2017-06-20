@@ -18,6 +18,7 @@
                         </h2>
 
                         <div class="form edit-bio">
+
                             {{ Form::model($bio, ["url" => "/summit/bios/$bio->id", 'files' => true, "method" => "put"]) }}
                             @include("partials.bios.bois-form")
                             {{ Form::close() }}

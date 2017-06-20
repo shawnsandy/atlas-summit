@@ -16,5 +16,6 @@
                 voluptates voluptatibus?</p>
 
         </div>
+        {{ dump($user_info) }}
     </div>
 @endsection
