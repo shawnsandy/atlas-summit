@@ -22,10 +22,6 @@ Route::group(['prefix' => "scans"], function () {
     Route::post('/room', 'ScansController@room');
 });
 
-Route::group(['prefix' => "extras"], function () {
-    Extras::routes();
-});
-
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::get('/', 'AdminController@index');
