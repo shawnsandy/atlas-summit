@@ -18,7 +18,7 @@
                         <hr>
                     </div>
                     <p>
-                        {{ $bio->biography }}
+                        {!! $bio->biography !!}
                     </p>
 
                 </aside>
