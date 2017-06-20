@@ -1,4 +1,4 @@
-@extends('page::page-layouts.main-page')
+@extends('theme.page.page-layouts.main-page')
 
 @section('title', "User Bios")
 
@@ -6,15 +6,22 @@
     <div class="container">
         @include("page::partials.messages")
         <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, harum incidunt inventore officiis porro
-                repellendus sint sunt vel. Aut autem eum harum illum labore, minima neque pariatur ut voluptate
-                voluptates?</p>
-            <p>Ab accusamus adipisci architecto cum eius eligendi eum fugit hic magni maiores minima minus mollitia
-                natus, neque obcaecati, officia possimus quaerat quia quibusdam quo ratione sed sit temporibus veniam
-                voluptas.</p>
-            <p>Accusamus adipisci asperiores atque blanditiis culpa deleniti doloremque dolores eaque eveniet fuga harum
-                inventore nihil nulla numquam optio placeat possimus qui quia quis quo quos, soluta suscipit unde
-                voluptates voluptatibus?</p>
+            <div class="col-md-8 col-md-offset-2">
+                <aside class="bio">
+                    <div class="bio-header text-center" style="min-height: 120px">
+                         <p class="h1 oswald">
+                           <img class="img-rounded" src="/extras/glide/public/{{ $bio->avatar }}/?h=120" alt="">
+                        </p>
+                        <p class="h1 oswald">
+                            {{ $bio->user->full_name }}
+                        </p>
+                    </div>
+                    <p>
+                        {{ $bio->biography }}
+                    </p>
+
+                </aside>
+            </div>
         </div>
     </div>
 @endsection

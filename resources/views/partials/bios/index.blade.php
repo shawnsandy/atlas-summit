@@ -14,7 +14,7 @@
             <p>Accusamus adipisci asperiores atque blanditiis culpa deleniti doloremque dolores eaque eveniet fuga harum
                 inventore nihil nulla numquam optio placeat possimus qui quia quis quo quos, soluta suscipit unde
                 voluptates voluptatibus?</p>
-            {{ dump($bio) }}
+
         </div>
     </div>
 @endsection
