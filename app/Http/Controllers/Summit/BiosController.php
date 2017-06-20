@@ -61,7 +61,12 @@ class BiosController extends Controller
 
         $id = Auth::id();
         $user = User::find($id);
-        $save = $user->bio()->create($request->all());
+        $data = $request->input();
+
+        if($avatar = $request->uploads())
+            $data['avatar'] = $avatar;
+
+        $save = $user->bio()->create($data);
 
         return redirect("/summit/bios/{$save->id}/edit");
     }
@@ -97,16 +102,21 @@ class BiosController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param BioRequest|Request $request
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BioRequest $request, $id)
     {
         $bio = Bio::find($id);
 
-        if ($update = Bio::updateOrCreate(['id' => $bio->id, 'user_id' => Auth::id()], $request->all())):
-            Bio::updateOrCreate(['id' => $bio->id, 'user_id' => Auth::id()], $request->all());
+        $data = $request->input();
+
+        if($avatar = $request->uploads())
+            $data['avatar'] = $avatar;
+
+
+        if ($update = Bio::updateOrCreate(['id' => $bio->id, 'user_id' => Auth::id()], $data)):
             return back()->with('success', "Your Bio has been updated.");
         else :
             return back()->with('error', "Failed to update the Bio.");
