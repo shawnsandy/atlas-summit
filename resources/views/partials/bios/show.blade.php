@@ -17,9 +17,7 @@
                         </p>
                         <hr>
                     </div>
-                    <p>
-                        {!!  clean($bio->biography) !!}
-                    </p>
+                    <p> {!!  clean($bio->biography) !!} </p>
 
                 </aside>
             </div>
