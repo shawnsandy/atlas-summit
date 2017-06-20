@@ -11,7 +11,9 @@
 
                     <div class="col-md-8">
                         <h2>
-                            <img class="img-rounded" src="/extras/glide/public/{{ $bio->avatar }}/?w=60" alt="Avatar">   Edit your Bio
+                            <img class="img-circle" src="/extras/glide/public/{{ $bio->avatar }}/?w=60&h=60&fit=crop-center" alt="Avatar">
+
+                            Edit Your Bio!
                             <hr>
                         </h2>
 
