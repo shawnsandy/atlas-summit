@@ -133,4 +133,12 @@ footer {
     }
 }
 
+.center-elements {
+    display: flex;
+    align-items: center;
+    > * {
+        padding: 10px;
+    }
+}
+
 @import "shared";
