@@ -10,7 +10,7 @@
                 <aside class="bio">
                     <div class="bio-header text-center" style="min-height: 120px">
                          <p class="h1 oswald">
-                           <img class="img-rounded" src="/extras/glide/public/{{ $bio->avatar }}/?h=120" alt="">
+                           <img class="img-circle" src="/extras/glide/public/{{ $bio->avatar }}/?h=140&w=140&fit=crop-center" alt="">
                         </p>
                         <p class="h1 oswald">
                             {{ $bio->user->full_name }}
