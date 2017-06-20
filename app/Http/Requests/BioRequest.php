@@ -24,7 +24,7 @@ class BioRequest extends FormRequest
     public function rules()
     {
         return [
-            "biography" => "required|max:500",
+            "biography" => "required|max:1200",
             "job_title" => "required|max:200",
             "avatar" => "image:size:5000",
         ];
