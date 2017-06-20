@@ -15,6 +15,7 @@
                         <p class="h1 oswald">
                             {{ $bio->user->full_name }}
                         </p>
+                        <hr>
                     </div>
                     <p>
                         {{ $bio->biography }}

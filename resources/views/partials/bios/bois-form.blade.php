@@ -1,7 +1,7 @@
 
 <div class="form-group  {{ $errors->first("biography", "has-error") }}">
     <label for="biography">Biography</label>
-    {{ Form::textarea("biography", null, ["class" => "form-control"]) }}
+    {{ Form::textarea("biography", null, ["class" => "form-control biography"]) }}
     {!! $errors->first('biography', '<p class="text-danger">:message</p>') !!}
 </div>
 
@@ -28,4 +28,15 @@
         border-radius: 3px;
     }
 </style>
+<!-- include summernote css/js-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
+@endpush
+
+@push("scripts")
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.biography').summernote();
+    });
+</script>
 @endpush
