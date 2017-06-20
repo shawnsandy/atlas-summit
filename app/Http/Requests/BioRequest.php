@@ -29,4 +29,14 @@ class BioRequest extends FormRequest
             "avatar" => "image:size:5000",
         ];
     }
+
+    public function uploads()
+    {
+        if($this->hasFile("avatar")) :
+            return $this->file("avatar")->store("img", "public");
+        else:
+            return null;
+        endif;
+    }
+
 }
