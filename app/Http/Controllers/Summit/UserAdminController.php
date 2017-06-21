@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Summit;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Notifications\AccountActivation;
 use App\Session;
 use App\User;
 use Hash;
 use Illuminate\Http\Request;
+use Log;
+use Mockery\Exception;
+use Notification;
 
 class UserAdminController extends Controller
 {
@@ -41,12 +45,16 @@ class UserAdminController extends Controller
      */
     public function store(UserRequest $request)
     {
+        $password = str_random();
         $data = $request->all();
-        $data['password'] = Hash::make($request->password);
+        $data['password'] = Hash::make($password);
+        $data['is_activated'] = 0;
 
-        if(!User::create($data)):
-        return back()->withErrors()->with("error", "Sorry you user was not saved");
+        if (!$user = User::create($data)):
+            return back()->withErrors()->with("error", "Sorry you user was not saved");
         endif;
+
+            Notification::send($user, new AccountActivation($user, $password));
 
         return back()->with("success", "User created");
 

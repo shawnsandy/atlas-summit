@@ -1,26 +1,28 @@
 <aside class="col-md-4">
+
     <div class="wrapper">
         <div class="cover">
             <img src="" alt="">
         </div>
         <div class="details">
-            <h3 class="oswald text-uppercase">{{ $title or "Workshop Name" }}</h3>
+            <h3 class="oswald text-uppercase">
+                <a href="/summit/u/{{ $workshop['id'] }}">{{ $workshop["name"] or "Workshop Name" }}</a></h3>
             <hr>
             <p>
                 {{ $slot }}
             </p>
+
             <div class="action-call">
-                <p>
-                    <a href="" class="btn btn-block btn-primary btn-lg oswald">
+                <p class="text-uppercase">
+                    <a href="/summit/u/{{ $workshop['id'] }}" class="btn btn-block btn-primary btn-lg oswald">
                         Register Now
                     </a>
                 </p>
             </div>
 
-            <div class="meta small text-right">
-
-                <p class="oswald text-muted">
-                    38 Seats | 8 Available
+            <div class="meta small">
+                <p class="text-success  small text-center">
+                  {{ $workshop["date"] }} | Seats {{ $workshop['seats'] }}
                 </p>
             </div>
 

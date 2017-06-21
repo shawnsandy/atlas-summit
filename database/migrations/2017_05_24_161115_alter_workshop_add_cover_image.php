@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserWorkshopTable extends Migration
+class AlterWorkshopAddCoverImage extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateUserWorkshopTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_workshop', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->integer('workshop_id');
-            $table->primary('user_id', 'workshop_id');
+        Schema::table("workshops", function(Blueprint $blueprint){
+           $blueprint->string("cover_image")->nullable() ;
         });
     }
 
@@ -27,6 +25,8 @@ class CreateUserWorkshopTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_workshop');
+        Schema::table('workshops', function(Blueprint $blueprint) {
+           $blueprint->dropIfExists('cover_image');
+        });
     }
 }

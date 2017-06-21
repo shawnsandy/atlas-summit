@@ -27,7 +27,8 @@ class UserRequest extends FormRequest
             "first_name" => "required|min:5",
             "last_name" => "required|min:5",
             "email" => "required|email|unique:users",
-            "password" => "required|min:8"
+            "password" => "sometimes|required|min:8",
+            "password_verify" => "sometimes|required|same:password"
         ];
     }
 }

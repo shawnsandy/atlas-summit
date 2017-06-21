@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('page::index');
 });
@@ -20,10 +21,6 @@ Route::group(['prefix' => "scans"], function () {
     Route::get('/{id}', 'ScansController@scans');
     Route::post('/rfid', 'ScansController@store');
     Route::post('/room', 'ScansController@room');
-});
-
-Route::group(['prefix' => "extras"], function () {
-    Extras::routes();
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
@@ -49,24 +46,26 @@ Route::group(['prefix' => "extras"], function () {
     Extras::routes();
 });
 
-Route::group(['prefix' => 'dashboard'], function () {
-    Route::get('/', 'Summit\AdminController@index');
 
+Route::group(["prefix" => "summit"], function () {
 
-    Route::resource("sponsors", 'Summit\SponsorsController');
+    Route::resource('/u', 'Summit\WshopController');
 
-    Route::resource("regions", 'Summit\RegionsController');
+    Route::get('/wshops', 'Summit\WshopController@index');
 
-    Route::resource("rooms", 'Summit\RoomsController');
+    Route::resource('/bios', 'Summit\BiosController');
 
-    Route::resource("workshops", 'Summit\WorkshopController');
+    Route::get('/myscheulde', 'Summit\BiosController@index');
 
-    Route::resource("users", 'Summit\UserAdminController');
+    Route::get("/activation", 'Summit\ActivationController');
+
+    Route::get('/ws/{workshop_id}', 'Summit\WorkshopRegController');
 
 });
 
-Route::group(["prefix" => "summit"], function() {
-   Route::resource('/u', 'Summit\WshopController');
+Route::group(["prefix" => "page"], function () {
+    Pages::routes();
 });
+
 
 Auth::routes();

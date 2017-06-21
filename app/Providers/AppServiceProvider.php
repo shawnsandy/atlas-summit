@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Workshop;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Auth;
@@ -37,6 +38,11 @@ class AppServiceProvider extends ServiceProvider
         ], function($view){
             $user = Auth::user();
             view()->share('current_user', $user);
+        });
+
+        view()->composer(["page::index"], function() {
+            $workshops = Workshop::inRandomOrder()->take(9)->get();
+            view()->share('workshops', $workshops);
         });
 
     }

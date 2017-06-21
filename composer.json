@@ -11,8 +11,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "oriceon/toastr-5-laravel": "dev-master",
-        "shawnsandy/extras": "0.1.*",
-        "shawnsandy/pagekit": "^1.0",
+        "shawnsandy/extras": "dev-master",
+        "shawnsandy/pagekit": "dev-master",
         "simplesoftwareio/simple-qrcode": "^1.5",
         "vinkla/pusher": "^2.5"
     },

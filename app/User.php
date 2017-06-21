@@ -31,4 +31,12 @@ class User extends Authenticatable
         return $this->belongsToMany(Workshop::class);
     }
 
+    public function bio() {
+        return $this->hasOne(Bio::class);
+    }
+
+    public function getFullNameAttribute($value) {
+        return strtoupper($this->first_name . " " .$this->last_name );
+    }
+
 }

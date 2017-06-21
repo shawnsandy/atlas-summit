@@ -1,8 +1,8 @@
 @extends('page::page-layouts.default')
-@section('title', 'Laravel Pages')
+@section('title', 'Workforce Professional Development Summit 2017')
 @section('body')
 
-    @include('page::shared.cover-fold', ["class_name" => "landing bg-5"])
+    @include('theme.page.shared.cover-fold', ["class_name" => "landing bg-5"])
 
     <section class="sub-header text-center">
 
@@ -15,6 +15,7 @@
                 Grand Cypress in Orlando. We are working hard on a brand new website so please check back soon.
             </p>
         </div>
+
     </section>
     <section class="actions signup">
         <div class="container">
@@ -31,9 +32,19 @@
                                 <img src="/img/wpds.png" alt="Logo">
                             </h3>
                             <hr>
+
                             {{ Form::open(["url" => '/admin/users']) }}
 
-                            {{ Form::dashFields('App\User') }}
+                            <p class="form-group">
+                                <label for="email">Email</label>
+                                {{ Form::email('email', null, ["class" => "form-control"]) }}
+                            </p>
+
+                            <p class="form-group">
+                                <label for="password">Password</label>
+                                {{ Form::password("password", ["class" => "form-control"]) }}
+                            </p>
+
                             <p class="text-right">
                                 <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
                                     Activate Your Account
@@ -55,33 +66,20 @@
             <p class="h1 text-center">
                 Workshops
             </p>
+
             <div class="workshops">
 
-                @component("components.workshop-collections")
-                    Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
+                @foreach($workshops as $workshop)
 
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
+                    @component("components.workshop-collections", ["workshop" => $workshop])
+                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally
+                        orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative
+                        leadership through functionalized.
+                    @endcomponent
 
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
+                @endforeach
 
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
-
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
-
-                @component("components.workshop-collections")
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative leadership through functionalized.
-                @endcomponent
             </div>
-
 
         </div>
     </section>
@@ -97,7 +95,7 @@
                 technically sound services with client-centered.
             </p>
         </div>
-        <hr>
+
     </section>
 
     @include('page::shared.footer')
@@ -112,7 +110,7 @@
     }
 
     .cover-fold {
-        background-image: url("/img/Hyatt-Regency.jpg");
+        background-image: url("/img/Conferencespeaker.jpg");
         background-size: cover;
     }
 
