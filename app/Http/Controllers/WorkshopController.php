@@ -76,9 +76,10 @@ class WorkshopController extends Controller
     public function edit($id)
     {
         $workshop = Workshop::find($id);
+        $room = Workshop::join('rooms', 'rooms.id', '=', 'workshops.room_id')->where('workshops.id', $id)->first();
         $rooms = Rooms::pluck('name', 'id');
 
-        return view('workshops.edit', compact('workshop', 'rooms'));
+        return view('workshops.edit', compact('workshop', 'rooms', 'room'));
     }
 
     /**
