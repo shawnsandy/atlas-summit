@@ -77,7 +77,7 @@
 
             Mapper::map($region->lat, $region->long);
 
-            $users = User::where('region_id', $region->id)->get();
+            $users = User::where('region_id', $region->region_number)->get();
 
             return view("regions.show", compact('region', 'users'));
         }
