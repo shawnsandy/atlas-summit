@@ -10,7 +10,7 @@
                     <h2 class="oswald text-uppercase">{{ $workshop->name }}</h2>
                     <hr>
                     <p>
-                        {{ $workshop->description }}
+                        {!! $workshop->description !!}
                     </p>
                     <p>
                     <hr>
