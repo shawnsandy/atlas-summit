@@ -1,6 +1,6 @@
 @extends('theme.page.page-layouts.main-page')
 
-@section('title', "User Bios")
+@section('title', "Workshop Scheulde")
 
 @section('content')
     <div class="container">

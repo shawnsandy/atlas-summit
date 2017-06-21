@@ -1,4 +1,4 @@
-@extends('page::page-layouts.main-page')
+@extends('theme.page.page-layouts.main-page')
 @section('title', "Workshop : {$workshop->name}")
 @section('content')
     <section>
@@ -51,7 +51,5 @@
 
             </div>
         </div>
-
-
     </section>
 @endsection

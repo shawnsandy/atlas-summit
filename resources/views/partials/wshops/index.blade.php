@@ -1,5 +1,5 @@
 @extends('theme.page.page-layouts.main-page')
-@section('title', "About us")
+@section('title', "WorkShop Scheulde")
 @section('content')
     <div class="container">
         <div class="row">

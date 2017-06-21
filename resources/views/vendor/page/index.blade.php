@@ -1,5 +1,5 @@
 @extends('page::page-layouts.default')
-@section('title', 'Laravel Pages')
+@section('title', 'Workforce Professional Development Summit 2017')
 @section('body')
 
     @include('theme.page.shared.cover-fold', ["class_name" => "landing bg-5"])
