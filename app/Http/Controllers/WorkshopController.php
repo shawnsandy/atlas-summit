@@ -97,6 +97,7 @@ class WorkshopController extends Controller
             $workshop->name = $request->name;
             $workshop->description = $request->description;
             $workshop->date = $request->date;
+            $workshop->seats = $request->seats;
             $workshop->start_time = $request->start_time;
             $workshop->end_time = $request->end_time;
             $workshop->room_id = $request->room_id;
