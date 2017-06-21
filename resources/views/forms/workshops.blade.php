@@ -11,7 +11,13 @@
         Workshop Description
     </label>
 @if ($errors->has('description'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('description')!!}</p>@endif
-{!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Workshop Description']) !!}
+{!! Form::textarea('description', null, ['class' => 'form-control', 'name' => 'description', 'placeholder' => 'Workshop Description']) !!}
+@push('scripts')
+<script src="https://cdn.ckeditor.com/4.7.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'description' );
+</script>
+@endpush
 </p>
 
 <p>
@@ -34,6 +40,18 @@
     });
 </script>
 @endpush
+</p>
+<p>
+<p>
+    <label class="required" for="seats">
+        Seats Available<br>
+        <small>
+            This room has a maximum capacity of 10
+        </small>
+    </label>
+@if ($errors->has('seats'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('seats')!!}</p>@endif
+{!! Form::number('seats', null, ['class' => 'form-control']) !!}
+</p>
 </p>
 <div class="row">
     <div class="col-md-6">
