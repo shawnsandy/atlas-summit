@@ -135,7 +135,7 @@ class SponsorsController extends Controller
             if (!empty($request->file('banner_image'))):
                 $ext = $request->file('banner_image')->getClientOriginalExtension();
                 $file = $clean_sponsor_name . '.' . $ext;
-                $sponsor->logo = $file;
+                $sponsor->banner_image = $file;
                 $request->file('banner_image')->move(base_path() . '/public/img/sponsors/banners/', $file);
 
             endif;
