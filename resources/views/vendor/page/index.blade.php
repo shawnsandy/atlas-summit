@@ -72,9 +72,13 @@
                 @foreach($workshops as $workshop)
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
-                        Synergistically envisioneer emerging results rather than bleeding-edge services. Globally
-                        orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative
-                        leadership through functionalized.
+                        @if(strlen($workshop->description) > 250)
+                            {{ substr($workshop->description, 0, strpos($workshop->description, ' ', 250)) . '...' }}
+                        @else
+                            {{ $workshop->description }}
+                        @endif
+
+
                     @endcomponent
 
                 @endforeach
