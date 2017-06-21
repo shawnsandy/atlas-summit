@@ -45,9 +45,11 @@ Route::group(['prefix' => "extras"], function () {
 Route::group(["prefix" => "summit"], function() {
 
    Route::resource('/u', 'Summit\WshopController');
+
    Route::get('/wshops', 'Summit\WshopController@index');
 
    Route::resource('/bios', 'Summit\BiosController');
+
    Route::get('/scheulde', 'Summit\BiosController@index');
 
    Route::get("/activation", 'Summit\ActivationController');
