@@ -46,7 +46,9 @@
     <label class="required" for="seats">
         Seats Available<br>
         <small>
-            This room has a maximum capacity of 10
+            @if(isset($room))
+                {{ $room->name }} has a maximum capacity of {{ $room->capacity }} seats.
+            @endif
         </small>
     </label>
 @if ($errors->has('seats'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('seats')!!}</p>@endif
