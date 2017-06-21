@@ -73,9 +73,9 @@
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
                         @if(strlen($workshop->description) > 250)
-                            {{ substr($workshop->description, 0, strpos($workshop->description, ' ', 250)) . '...' }}
+                            {!! substr($workshop->description, 0, strpos($workshop->description, ' ', 250)) . '...' !!}
                         @else
-                            {{ $workshop->description }}
+                            {!! $workshop->description !!}
                         @endif
 
 
