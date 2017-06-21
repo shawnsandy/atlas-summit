@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('page::index');
 });
@@ -42,20 +43,25 @@ Route::group(['prefix' => "extras"], function () {
 });
 
 
-Route::group(["prefix" => "summit"], function() {
+Route::group(["prefix" => "summit"], function () {
 
-   Route::resource('/u', 'Summit\WshopController');
+    Route::resource('/u', 'Summit\WshopController');
 
-   Route::get('/wshops', 'Summit\WshopController@index');
+    Route::get('/wshops', 'Summit\WshopController@index');
 
-   Route::resource('/bios', 'Summit\BiosController');
+    Route::resource('/bios', 'Summit\BiosController');
 
-   Route::get('/scheulde', 'Summit\BiosController@index');
+    Route::get('/scheulde', 'Summit\BiosController@index');
 
-   Route::get("/activation", 'Summit\ActivationController');
+    Route::get("/activation", 'Summit\ActivationController');
 
-   Route::get('/ws/{workshop_id}', 'Summit\WorkshopRegController');
+    Route::get('/ws/{workshop_id}', 'Summit\WorkshopRegController');
 
 });
+
+Route::group(["prefix" => "page"], function () {
+    Pages::routes();
+});
+
 
 Auth::routes();

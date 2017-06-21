@@ -244,9 +244,10 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
-        'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
-        "Twitter" => \Thujohn\Twitter\Facades\Twitter::class,
+        'Extras' => ShawnSandy\Extras\ExtrasFacade::class,
+        'Gmap' => ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
+        'Pages' => ShawnSandy\PageKit\Facades\PageFacade::class,
+        "Twitter" => Thujohn\Twitter\Facades\Twitter::class,
         "Flash" => Laracasts\Flash\FlashServiceProvider::class,
         'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
 
