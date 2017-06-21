@@ -51,7 +51,7 @@ Route::group(["prefix" => "summit"], function () {
 
     Route::resource('/bios', 'Summit\BiosController');
 
-    Route::get('/scheulde', 'Summit\BiosController@index');
+    Route::get('/myscheulde', 'Summit\BiosController@index');
 
     Route::get("/activation", 'Summit\ActivationController');
 
