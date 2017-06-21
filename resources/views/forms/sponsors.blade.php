@@ -53,13 +53,19 @@ if (isset($sponsor)) {
     <label class="required" for="banner_image">
         Banner Image
     </label>
+@if(!empty($sponsor->banner_image) && file_exists(base_path().'/public/img/sponsors/banners/' .  $sponsor->banner_image))
+    <p><img src="/img/sponsors/banners/{{ $sponsor->banner_image }}" width="300px"></p>
+@endif
 @if ($errors->has('banner_image'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('banner_image')!!}</p>@endif
 {!! Form::file('banner_image', null, ['class' => 'form-control']) !!}
 </p>
 <p>
     <label class="required" for="logo">
-        Logo
+        Logo {{ $sponsor->logo }}
     </label>
+@if(!empty($sponsor->logo) && file_exists(base_path().'/public/img/sponsors/logos/' .  $sponsor->logo))
+    <p><img src="/img/sponsors/logos/{{ $sponsor->logo }}" width="300px"></p>
+@endif
 @if ($errors->has('logo'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('logo')!!}</p>@endif
 {!! Form::file('logo', null, ['class' => 'form-control']) !!}
 </p>
