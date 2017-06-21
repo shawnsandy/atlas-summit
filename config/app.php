@@ -180,6 +180,7 @@ return [
         Kamaln7\Toastr\ToastrServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -251,6 +252,7 @@ return [
         "Flash" => Laracasts\Flash\FlashServiceProvider::class,
         'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
 
     ],
 
