@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="/css/pagekit/app.css">
     <link rel="stylesheet" href="/css/pagekit/page.css">
     <link rel="stylesheet" href="/assets/aos/dist/aos.css"/>
-    <link href="/css/pagekit/fonts/material-icons/style.css" rel="stylesheet">
-    <link href="/css/pagekit/fonts/social/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/theme.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
