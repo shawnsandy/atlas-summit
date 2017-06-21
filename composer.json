@@ -13,6 +13,7 @@
         "oriceon/toastr-5-laravel": "dev-master",
         "shawnsandy/extras": "0.1.*",
         "shawnsandy/pagekit": "^1.0",
+        "simplesoftwareio/simple-qrcode": "^1.5",
         "vinkla/pusher": "^2.5"
     },
     "require-dev": {
