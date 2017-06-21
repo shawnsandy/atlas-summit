@@ -29,11 +29,13 @@ class BiosController extends Controller
     public function index()
     {
 
-        $bio = Bio::find(Auth::id());
+        if (!Auth::check())
+        return redirect('/summit/bios/create')->with('info', "Sorry, your bio was not found. Create your Bio now");
+
+
         $user_info = User::with("bio", "workshops")->where("id", Auth::id())->first();
 
-        if (is_null($bio))
-            return redirect('/summit/bios/create')->with('info', "Sorry, your bio was not found. Create your Bio now");
+
 
         return view('partials.bios.index', compact("bio", "user_info"));
 
