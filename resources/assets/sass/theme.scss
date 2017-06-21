@@ -97,6 +97,7 @@ section.actions.signup {
 .cover {
     @include linear-gradient(to top, darken($theme-blue, 15%), $theme-blue);
     color: #fff;
+
 }
 
 .landing .cover {
