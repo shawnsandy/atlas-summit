@@ -14,3 +14,4 @@ npm-debug.log
 .env
 /config/forms/
 public/img/workshops
+/public/img/.cache/
