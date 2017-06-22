@@ -44,7 +44,8 @@
 
 
                 <div class="col-md-6">
-                    <div class="card" style="width: 100%; height: 360px; overflow: hidden; background-color: lightgray">
+                    <div class="card" style="width: 100%; height: 360px; overflow: hidden;">
+                        <img class="img-responsive" src="{{ $workshop->workshop_image }}" alt="workshop image">
 
                     </div>
                 </div>
