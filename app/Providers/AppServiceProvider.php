@@ -41,7 +41,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->composer(["page::index"], function() {
-            $workshops = Workshop::inRandomOrder()->take(9)->get();
+            $workshops = Workshop::orderBy("date", "ASC")->get();
             view()->share('workshops', $workshops);
         });
 
