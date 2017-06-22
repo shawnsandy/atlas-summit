@@ -19,7 +19,6 @@
 </script>
 @endpush
 </p>
-
 <p>
     <label class="required" for="date">
         Date
@@ -75,6 +74,16 @@
         </p>
     </div>
 </div>
+<p>
+    <label class="required" for="cover_image">
+        Cover Image
+    </label>
+@if(!empty($workshop->cover_image) && file_exists(base_path().'/public/img/workshops/' .  $workshop->cover_image))
+    <p><img src="/img/workshops/{{ $workshop->cover_image }}" width="300px"></p>
+@endif
+@if ($errors->has('cover_image'))<p class="alert alert-danger" style="font-weight: bold;">{!!$errors->first('cover_image')!!}</p>@endif
+{!! Form::file('cover_image', null, ['class' => 'form-control']) !!}
+</p>
 <p>
     <label class="required" for="room_id">
         Room

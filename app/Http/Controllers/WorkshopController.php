@@ -94,7 +94,7 @@ class WorkshopController extends Controller
         $workshop = Workshop::find($id);
 
         if ($workshop):
-
+            $clean_cover_image_name = strtolower($this->seoUrl($request->name));
             $workshop->name = $request->name;
             $workshop->description = $request->description;
             $workshop->date = $request->date;
@@ -102,6 +102,13 @@ class WorkshopController extends Controller
             $workshop->start_time = $request->start_time;
             $workshop->end_time = $request->end_time;
             $workshop->room_id = $request->room_id;
+
+            if (!empty($request->file('cover_image'))):
+                $ext = $request->file('cover_image')->getClientOriginalExtension();
+                $file = $clean_cover_image_name . '.' . $ext;
+                $workshop->cover_image = $file;
+                $request->file('cover_image')->move(base_path() . '/public/img/workshops/', $file);
+            endif;
 
             $workshop->save();
 
@@ -122,6 +129,7 @@ class WorkshopController extends Controller
      * @param  \App\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
         $workshop = Workshop::findOrFail($id);
@@ -130,5 +138,17 @@ class WorkshopController extends Controller
         Flash()->success('Workshop Deleted!');
 
         return redirect('/admin/workshops');
+    }
+
+    public function seoUrl($string) {
+        //Lower case everything
+        $string = strtolower($string);
+        //Make alphanumeric (removes all other characters)
+        $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
+        //Clean up multiple dashes or whitespaces
+        $string = preg_replace("/[\s-]+/", " ", $string);
+        //Convert whitespaces and underscore to dash
+        $string = preg_replace("/[\s_]/", "_", $string);
+        return $string;
     }
 }
