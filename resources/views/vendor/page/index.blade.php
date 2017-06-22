@@ -94,15 +94,19 @@
             <p class="h1 text-center">
                 Hyatt Regency Grand Cypress
             </p>
+
+            <p class="lead text-center oswald">
+                1 Grand Cypress Blvd, Orlando, FL 32836
+            </p>
+
             {{ Html::extrasMap(
             "1 Grand Cypress Blvd, Orlando, FL 32836",
-["height" => '580px'], ['zoom' => 14, "scroll" => 'false'])
+["height" => '680px'], ['zoom' => 14, "scroll" => 'false'])
 }}
 
         </div>
     </section>
 
-    <hr>
     <section>
         <div class="container"><p class="h1 text-center">
                 2017 Sponsors
