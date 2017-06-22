@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "51b0ac0ef8d69a8a0f84e8d7ae409a99",
-=======
-    "content-hash": "7b78c802affb39083c1a96d80926f876",
->>>>>>> frontend
+    "content-hash": "0d07ebb3cce98a66e7b86846f1df43eb",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -115,6 +111,48 @@
                 "recaptcha"
             ],
             "time": "2017-06-08 14:56:52"
+        },
+        {
+            "name": "bacon/bacon-qr-code",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Bacon/BaconQrCode.git",
+                "reference": "031a2ce68c5794064b49d11775b2daf45c96e21c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/031a2ce68c5794064b49d11775b2daf45c96e21c",
+                "reference": "031a2ce68c5794064b49d11775b2daf45c96e21c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-gd": "to generate QR code images"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BaconQrCode": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Scholzen 'DASPRiD'",
+                    "email": "mail@dasprids.de",
+                    "homepage": "http://www.dasprids.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "BaconQrCode is a QR code generator for PHP.",
+            "homepage": "https://github.com/Bacon/BaconQrCode",
+            "time": "2016-01-09T22:55:35+00:00"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -335,7 +373,6 @@
             "time": "2017-05-07 05:39:47"
         },
         {
-<<<<<<< HEAD
             "name": "cornford/googlmapper",
             "version": "v2.25.0",
             "source": {
@@ -362,7 +399,30 @@
             "autoload": {
                 "psr-0": {
                     "Cornford\\Googlmapper": "src/"
-=======
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bradley Cornford",
+                    "email": "me@bradleycornford.co.uk"
+                }
+            ],
+            "description": "An easy way to integrate Google Maps with Laravel.",
+            "keywords": [
+                "google",
+                "laravel",
+                "map",
+                "mapping",
+                "maps",
+                "streetview"
+            ],
+            "time": "2017-04-20T08:30:20+00:00"
+        },
+        {
             "name": "davestewart/sketchpad",
             "version": "v1.2.8",
             "source": {
@@ -385,7 +445,6 @@
             "autoload": {
                 "psr-4": {
                     "davestewart\\sketchpad\\": "src"
->>>>>>> frontend
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -394,22 +453,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-                    "name": "Bradley Cornford",
-                    "email": "me@bradleycornford.co.uk"
-                }
-            ],
-            "description": "An easy way to integrate Google Maps with Laravel.",
-            "keywords": [
-                "google",
-                "laravel",
-                "map",
-                "mapping",
-                "maps",
-                "streetview"
-            ],
-            "time": "2017-04-20T08:30:20+00:00"
-=======
                     "name": "Dave Stewart",
                     "homepage": "http://davestewart.io",
                     "role": "Developer"
@@ -425,7 +468,6 @@
                 "tools"
             ],
             "time": "2017-05-30T18:00:04+00:00"
->>>>>>> frontend
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1015,6 +1057,54 @@
                 "html"
             ],
             "time": "2016-07-16 12:58:58"
+        },
+        {
+            "name": "fzaninotto/faker",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2016-04-29T12:21:54+00:00"
         },
         {
             "name": "graham-campbell/manager",
@@ -3207,18 +3297,6 @@
         },
         {
             "name": "shawnsandy/extras",
-<<<<<<< HEAD
-            "version": "v0.1.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/shawnsandy/extras.git",
-                "reference": "7ccaf85ddf6a23ed6053aab5e04757411a5b62e5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/7ccaf85ddf6a23ed6053aab5e04757411a5b62e5",
-                "reference": "7ccaf85ddf6a23ed6053aab5e04757411a5b62e5",
-=======
             "version": "dev-master",
             "source": {
                 "type": "git",
@@ -3229,7 +3307,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/shawnsandy/extras/zipball/f1076c0f4c5132981e68ddd15bda5072a7d66820",
                 "reference": "f1076c0f4c5132981e68ddd15bda5072a7d66820",
->>>>>>> frontend
                 "shasum": ""
             },
             "require": {
@@ -3291,11 +3368,7 @@
                 "Extras",
                 "shawnsandy"
             ],
-<<<<<<< HEAD
-            "time": "2017-05-25T14:19:55+00:00"
-=======
             "time": "2017-06-19T18:25:19+00:00"
->>>>>>> frontend
         },
         {
             "name": "shawnsandy/pagekit",
@@ -3303,12 +3376,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/ui-pages.git",
-                "reference": "2baff0d808756908ebe0ace119bc719ab7ca379a"
+                "reference": "b10fec80a32b2afd0f0b11bf7472bf8199b3d2f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/ui-pages/zipball/2baff0d808756908ebe0ace119bc719ab7ca379a",
-                "reference": "2baff0d808756908ebe0ace119bc719ab7ca379a",
+                "url": "https://api.github.com/repos/shawnsandy/ui-pages/zipball/b10fec80a32b2afd0f0b11bf7472bf8199b3d2f0",
+                "reference": "b10fec80a32b2afd0f0b11bf7472bf8199b3d2f0",
                 "shasum": ""
             },
             "require": {
@@ -3351,7 +3424,58 @@
                 "pagekit",
                 "shawnsandy"
             ],
-            "time": "2017-06-20 23:15:01"
+            "time": "2017-06-22T11:43:59+00:00"
+        },
+        {
+            "name": "simplesoftwareio/simple-qrcode",
+            "version": "1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SimpleSoftwareIO/simple-qrcode.git",
+                "reference": "0d8fbf73f7adc166ec5aabbf898b7327f6c69600"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SimpleSoftwareIO/simple-qrcode/zipball/0d8fbf73f7adc166ec5aabbf898b7327f6c69600",
+                "reference": "0d8fbf73f7adc166ec5aabbf898b7327f6c69600",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "1.0.*",
+                "ext-gd": "*",
+                "illuminate/support": ">=4.2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SimpleSoftwareIO\\QrCode\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Simple Software LLC",
+                    "email": "support@simplesoftware.io"
+                }
+            ],
+            "description": "Simple QrCode is a QR code generator made for Laravel.",
+            "homepage": "http://www.simplesoftware.io",
+            "keywords": [
+                "Simple",
+                "generator",
+                "laravel",
+                "qrcode",
+                "wrapper"
+            ],
+            "time": "2016-12-06T01:39:52+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4601,54 +4725,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
-        },
-        {
-            "name": "fzaninotto/faker",
-            "version": "v1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
-                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3|^7.0"
-            },
-            "require-dev": {
-                "ext-intl": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": []
-            },
-            "autoload": {
-                "psr-4": {
-                    "Faker\\": "src/Faker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "time": "2016-04-29 12:21:54"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -6056,13 +6132,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-<<<<<<< HEAD
-        "oriceon/toastr-5-laravel": 20
-=======
         "oriceon/toastr-5-laravel": 20,
         "shawnsandy/extras": 20,
         "shawnsandy/pagekit": 20
->>>>>>> frontend
     },
     "prefer-stable": false,
     "prefer-lowest": false,

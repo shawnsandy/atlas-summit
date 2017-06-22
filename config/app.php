@@ -251,6 +251,7 @@ return [
         'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        "Extras" => ShawnSandy\Extras\ExtrasFacade::class,
 
     ],
 
