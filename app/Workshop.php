@@ -16,5 +16,16 @@ class Workshop extends Model
         return $this->belongsToMany(User::class);
     }
 
+    public function getWorkshopThumbnailAttribute($val)
+    {
+        return "/extras/public/img/workshops/{$this->cover_image}/?w=350&h=210&fit=crop-center";
+    }
+
+
+    public function getWorkshopImageAttribute($val)
+    {
+        return "/extras/public/img/workshops/{$this->cover_image}/?w=720&h=380&fit=crop-center";
+    }
+
 
 }
