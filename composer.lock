@@ -4,8 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9505d7b0ca02220194fd273b0b0ac021",
+<<<<<<< HEAD
+    "content-hash": "51b0ac0ef8d69a8a0f84e8d7ae409a99",
+=======
     "content-hash": "7b78c802affb39083c1a96d80926f876",
+>>>>>>> frontend
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -332,6 +335,34 @@
             "time": "2017-05-07 05:39:47"
         },
         {
+<<<<<<< HEAD
+            "name": "cornford/googlmapper",
+            "version": "v2.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bradcornford/Googlmapper.git",
+                "reference": "4ad8ed16874143b475154a61f867af59bb1d4251"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bradcornford/Googlmapper/zipball/4ad8ed16874143b475154a61f867af59bb1d4251",
+                "reference": "4ad8ed16874143b475154a61f867af59bb1d4251",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "illuminate/view": "5.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.1",
+                "phpspec/phpspec": "2.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Cornford\\Googlmapper": "src/"
+=======
             "name": "davestewart/sketchpad",
             "version": "v1.2.8",
             "source": {
@@ -354,6 +385,7 @@
             "autoload": {
                 "psr-4": {
                     "davestewart\\sketchpad\\": "src"
+>>>>>>> frontend
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -362,6 +394,22 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
+                    "name": "Bradley Cornford",
+                    "email": "me@bradleycornford.co.uk"
+                }
+            ],
+            "description": "An easy way to integrate Google Maps with Laravel.",
+            "keywords": [
+                "google",
+                "laravel",
+                "map",
+                "mapping",
+                "maps",
+                "streetview"
+            ],
+            "time": "2017-04-20T08:30:20+00:00"
+=======
                     "name": "Dave Stewart",
                     "homepage": "http://davestewart.io",
                     "role": "Developer"
@@ -376,7 +424,8 @@
                 "testing",
                 "tools"
             ],
-            "time": "2017-05-30 18:00:04"
+            "time": "2017-05-30T18:00:04+00:00"
+>>>>>>> frontend
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3158,6 +3207,18 @@
         },
         {
             "name": "shawnsandy/extras",
+<<<<<<< HEAD
+            "version": "v0.1.32",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shawnsandy/extras.git",
+                "reference": "7ccaf85ddf6a23ed6053aab5e04757411a5b62e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/7ccaf85ddf6a23ed6053aab5e04757411a5b62e5",
+                "reference": "7ccaf85ddf6a23ed6053aab5e04757411a5b62e5",
+=======
             "version": "dev-master",
             "source": {
                 "type": "git",
@@ -3168,6 +3229,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/shawnsandy/extras/zipball/f1076c0f4c5132981e68ddd15bda5072a7d66820",
                 "reference": "f1076c0f4c5132981e68ddd15bda5072a7d66820",
+>>>>>>> frontend
                 "shasum": ""
             },
             "require": {
@@ -3229,7 +3291,11 @@
                 "Extras",
                 "shawnsandy"
             ],
-            "time": "2017-06-19 18:25:19"
+<<<<<<< HEAD
+            "time": "2017-05-25T14:19:55+00:00"
+=======
+            "time": "2017-06-19T18:25:19+00:00"
+>>>>>>> frontend
         },
         {
             "name": "shawnsandy/pagekit",
@@ -5990,9 +6056,13 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+<<<<<<< HEAD
+        "oriceon/toastr-5-laravel": 20
+=======
         "oriceon/toastr-5-laravel": 20,
         "shawnsandy/extras": 20,
         "shawnsandy/pagekit": 20
+>>>>>>> frontend
     },
     "prefer-stable": false,
     "prefer-lowest": false,

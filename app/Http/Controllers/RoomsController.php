@@ -42,6 +42,7 @@ class RoomsController extends Controller
         $room = new Rooms();
 
         $room->name = $request->name;
+        $room->capacity = $request->capacity;
 
         $room->save();
 
@@ -67,9 +68,12 @@ class RoomsController extends Controller
      * @param  \App\Rooms  $rooms
      * @return \Illuminate\Http\Response
      */
-    public function edit(Rooms $rooms)
+    public function edit($id)
     {
-        //
+
+        $room = Rooms::find($id);
+
+        return view("rooms.edit", compact('room'));
     }
 
     /**
@@ -79,9 +83,26 @@ class RoomsController extends Controller
      * @param  \App\Rooms  $rooms
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Rooms $rooms)
+    public function update(Request $request, $id)
     {
-        //
+        $room = Rooms::find($id);
+
+        if ($room):
+
+            $room->name = $request->name;
+            $room->capacity = $request->capacity;
+
+            $room->save();
+
+            Flash()->success('Room Updated!');
+
+            return redirect('/admin/rooms');
+
+        endif;
+
+        Flash()->error('Something Went Wrong, Please Try Again.', $title = 'Updated Failed!', $options = []);
+
+        return back()->withInput();
     }
 
     /**
@@ -90,8 +111,13 @@ class RoomsController extends Controller
      * @param  \App\Rooms  $rooms
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rooms $rooms)
+    public function destroy($id)
     {
-        //
+        $room = Rooms::findOrFail($id);
+        $room->delete();
+
+        Flash()->success('Room Deleted!');
+
+        return redirect('/admin/rooms');
     }
 }

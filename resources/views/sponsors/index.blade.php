@@ -21,17 +21,52 @@
                         <table class="table datatables">
                             <thead>
                             <tr>
-                                <td>ID</td>
+                                <td>Logo</td>
                                 <td>Company Name</td>
                                 <td>Created</td>
+                                <td>Edit\Delete</td>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($sponsors as $sponsor)
                                 <tr>
-                                    <td>{{ $sponsor->id }}</td>
+                                    <td><img src="/img/sponsors/logos/{{ $sponsor->logo }}" width="100px"></td>
                                     <td>{{ $sponsor->company_name }}</td>
-                                    <td>{{ $sponsor->created_at }}</td>
+                                    <td>{{ date('F d, Y g:i A', strtotime($sponsor->created_at)) }}</td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <a href="/admin/sponsors/{{ $sponsor->id }}/edit" type="button" class="btn btn-default">Edit</a>
+                                            <a data-target="#modal-{{ $sponsor->id }}" data-toggle="modal" type="button" class="btn btn-default">Delete</a>
+
+                                            <div class="modal fade" id="modal-{{ $sponsor->id }}"
+                                                 tabIndex="-1">
+                                                <div class="modal-dialog" style="width: 50%; height: 80%">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close"
+                                                                    data-dismiss="modal">
+                                                                ×
+                                                            </button>
+                                                            <h4 class="modal-title">Are you sure?</h4>
+                                                        </div>
+                                                        <div class="modal-body text-center">
+                                                            <h3>Are you sure you want to remove {{ $sponsor->company_name }}?</h3>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <form method="post" action="/admin/sponsors/{{ $sponsor->id }}"> {{method_field('DELETE')}} {{csrf_field()}}
+                                                                <button type="button" class="btn btn-default"
+                                                                        data-dismiss="modal">Go Back
+                                                                </button>
+                                                                <button class="btn btn-danger" type="submit">
+                                                                    Delete
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

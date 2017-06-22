@@ -38,6 +38,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource("users", "UserAdminController");
 });
 
+Route::group(['prefix' => 'api',], function () {
+    Route::get('/users/{start}/{end}', 'ApiController@users');
+});
+
 Route::group(['prefix' => "extras"], function () {
     Extras::routes();
 });

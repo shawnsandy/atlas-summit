@@ -179,6 +179,8 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Kamaln7\Toastr\ToastrServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -244,12 +246,11 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Extras' => ShawnSandy\Extras\ExtrasFacade::class,
-        'Gmap' => ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
         'Pages' => ShawnSandy\PageKit\Facades\PageFacade::class,
-        "Twitter" => Thujohn\Twitter\Facades\Twitter::class,
         "Flash" => Laracasts\Flash\FlashServiceProvider::class,
         'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
 
     ],
 

@@ -2,7 +2,7 @@
 
     <div class="wrapper">
         <div class="cover">
-            <img src="" alt="">
+            <img src="/img/workshops/{{$workshop->cover_image}}" alt="" width="100%">
         </div>
         <div class="details">
             <h3 class="oswald text-uppercase">

@@ -3,8 +3,10 @@
     namespace App\Http\Controllers;
 
     use App\Regions;
+    use App\User;
     use Illuminate\Http\Request;
     use Laracasts\Flash\Flash;
+    use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
 
     class RegionsController extends Controller
     {
@@ -27,7 +29,7 @@
          */
         public function create()
         {
-            return view('partials.regions.create');
+            return view('regions.create');
         }
 
         /**
@@ -69,9 +71,15 @@
          * @param  \App\Regions $regions
          * @return \Illuminate\Http\Response
          */
-        public function show(Regions $regions)
+        public function show($id)
         {
-            //
+            $region = Regions::find($id);
+
+            Mapper::map($region->lat, $region->long);
+
+            $users = User::where('region_id', $region->region_number)->get();
+
+            return view("regions.show", compact('region', 'users'));
         }
 
         /**
@@ -80,9 +88,12 @@
          * @param  \App\Regions $regions
          * @return \Illuminate\Http\Response
          */
-        public function edit(Regions $regions)
+        public function edit($id)
         {
-            return $this->view("assets.regions.edit");
+
+            $region = Regions::find($id);
+
+            return view("regions.edit", compact('region'));
         }
 
         /**
@@ -92,9 +103,39 @@
          * @param  \App\Regions             $regions
          * @return \Illuminate\Http\Response
          */
-        public function update(Request $request, Regions $regions)
+        public function update(Request $request, $id)
         {
-            //
+            $region = Regions::find($id);
+
+            if ($region):
+
+                $region->name = $request->name;
+                $region->address = $request->address;
+                $region->lat = $request->lat;
+                $region->long = $request->long;
+                $region->phone = $request->phone;
+                $region->website = $request->website;
+                $region->region_number = $request->region_number;
+
+                if (!empty($request->file('logo'))):
+                    $ext = $request->file('logo')->getClientOriginalExtension();
+                    $file = $request->region_number . '.' . $ext;
+                    $region->logo = $file;
+                    $request->file('logo')->move(base_path() . '/public/img/regions/', $file);
+
+                endif;
+
+                $region->save();
+
+                Flash()->success('Region Updated!');
+
+                return redirect('/admin/regions');
+                
+            endif;
+
+            Flash()->error('Something Went Wrong, Please Try Again.', $title = 'Updated Failed!', $options = []);
+
+            return back()->withInput();
         }
 
         /**
@@ -103,8 +144,13 @@
          * @param  \App\Regions $regions
          * @return \Illuminate\Http\Response
          */
-        public function destroy(Regions $regions)
+        public function destroy($id)
         {
-            //
+            $region = Regions::findOrFail($id);
+            $region->delete();
+
+            Flash()->success('Region Deleted!');
+
+            return redirect('/admin/regions');
         }
     }
