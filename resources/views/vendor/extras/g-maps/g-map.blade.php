@@ -7,7 +7,6 @@
          data-lat="{{ $map["lat"] }}" data-lng="{{ $map["lng"] }}" data-zoom="{{ $options["zoom"] or '15'}}"
          data-scroll="{{ $options["scroll"] or 'true'}}"></div>
 </div>
-<p>test</p>
 @push("scripts")
 <script src="/js/extras/g-maps.js"></script>
 <script async defer

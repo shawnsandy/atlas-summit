@@ -8,7 +8,7 @@ return [
     ],
 
     "keys" => [
-        "google_maps_api_key" => env("GOOGLE_MAPS_API_KEY", "https://developers.google.com/maps/documentation/javascript/get-api-key")
+        "google_maps_api_key" => env("GOOGLE_MAPS_API_KEY", null)
 
     ]
 ];

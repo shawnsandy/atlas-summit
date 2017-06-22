@@ -88,11 +88,11 @@
         </div>
     </section>
     <hr>
-
+@if(config("extras.settings.keys.google_maps_api_key"))
     <section class="location">
         <div class="container-">
             <p class="h1 text-center">
-                Hyatt Regency Grand Cypress
+               <span class="fa fa-map-marker"></span> Hyatt Regency Grand Cypress
             </p>
 
             <p class="lead text-center oswald">
@@ -106,7 +106,7 @@
 
         </div>
     </section>
-
+@endif
     <section>
         <div class="container"><p class="h1 text-center">
                 2017 Sponsors

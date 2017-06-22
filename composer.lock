@@ -3301,12 +3301,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/extras.git",
-                "reference": "e6ba59448199a5ee0a7c9e4440328fc0ca794b15"
+                "reference": "4b7934fdaba13f80e44a5ddae741d172d2ba1ee6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/e6ba59448199a5ee0a7c9e4440328fc0ca794b15",
-                "reference": "e6ba59448199a5ee0a7c9e4440328fc0ca794b15",
+                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/4b7934fdaba13f80e44a5ddae741d172d2ba1ee6",
+                "reference": "4b7934fdaba13f80e44a5ddae741d172d2ba1ee6",
                 "shasum": ""
             },
             "require": {
@@ -3368,7 +3368,7 @@
                 "Extras",
                 "shawnsandy"
             ],
-            "time": "2017-06-22T15:44:48+00:00"
+            "time": "2017-06-22T18:55:01+00:00"
         },
         {
             "name": "shawnsandy/pagekit",
