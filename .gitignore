@@ -15,3 +15,6 @@ npm-debug.log
 /config/forms/
 public/img/workshops
 /public/img/.cache/
+
+public/\.cache/workshops/another_workshop\.jpg/
+/public/.cache/

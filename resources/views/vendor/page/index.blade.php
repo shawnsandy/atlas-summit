@@ -87,6 +87,20 @@
 
         </div>
     </section>
+    <hr>
+
+    <section class="location">
+        <div class="container-">
+            <p class="h1 text-center">
+                Hyatt Regency Grand Cypress
+            </p>
+            {{ Html::extrasMap(
+            "1 Grand Cypress Blvd, Orlando, FL 32836",
+["height" => '580px'], ['zoom' => 14, "scroll" => 'false'])
+}}
+
+        </div>
+    </section>
 
     <hr>
     <section>
@@ -101,6 +115,7 @@
         </div>
 
     </section>
+
 
     @include('page::shared.footer')
 
@@ -126,6 +141,7 @@
 @endpush
 
 @push('scripts')
+
 <script>
     $(document).ready(function () {
         $('.logo').fadeToggle(5000, "linear");
