@@ -72,7 +72,7 @@
                 @foreach($workshops as $workshop)
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
-                            {!! str_limit($workshop->description, 250 ) !!}
+                            {!! $workshop->short_description !!}
                     @endcomponent
 
                 @endforeach
