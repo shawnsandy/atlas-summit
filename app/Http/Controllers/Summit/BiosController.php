@@ -29,12 +29,16 @@ class BiosController extends Controller
     public function index()
     {
 
-        if (!Auth::check())
-        return redirect('/summit/bios/create')->with('info', "Sorry, your bio was not found. Create your Bio now");
+
+        $bio = Bio::where("user_id", Auth::id())->first();
+        $bios = User::has("bio")->where("id", Auth::id())->first();
+
+        if (!$bios)
+            return redirect('/summit/bios/create')->with('info', "Sorry, your bio was not found. Create your Bio now");
 
         $user_info = User::with("bio", "workshops")->where("id", Auth::id())->first();
 
-        return view('partials.bios.index', compact("bio", "user_info"));
+        return view('partials.bios.index', compact("bios", "user_info"));
 
     }
 
@@ -63,7 +67,7 @@ class BiosController extends Controller
         $user = User::find($id);
         $data = $request->input();
 
-        if($avatar = $request->uploads())
+        if ($avatar = $request->uploads())
             $data['avatar'] = $avatar;
 
         $save = $user->bio()->create($data);
@@ -81,7 +85,7 @@ class BiosController extends Controller
     {
         $bio = Bio::with("user")->where("id", $id)->first();
 
-        if(!count($bio))
+        if (!count($bio))
             return redirect("/")->with("info", "Sorry user bio not found.");
 
         return view('partials.bios.show', compact("bio"));
@@ -116,7 +120,7 @@ class BiosController extends Controller
 
         $data = $request->input();
 
-        if($avatar = $request->uploads())
+        if ($avatar = $request->uploads())
             $data['avatar'] = $avatar;
 
 
