@@ -18,3 +18,4 @@ public/img/workshops
 
 public/\.cache/workshops/another_workshop\.jpg/
 /public/.cache/
+*.stackdump
