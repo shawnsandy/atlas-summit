@@ -43,7 +43,7 @@ Route::group(['prefix' => 'api',], function () {
 });
 
 Route::group(['prefix' => "extras"], function () {
-    Extras::routes();
+    // Extras::routes();
 });
 
 
