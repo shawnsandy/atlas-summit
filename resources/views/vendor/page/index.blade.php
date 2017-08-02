@@ -66,7 +66,7 @@
 
     </section>
 
-    <section>
+    <section class="">
         <div class="container">
             <p class="h1 text-center">
                 Workshops
