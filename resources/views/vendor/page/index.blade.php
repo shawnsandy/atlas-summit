@@ -29,7 +29,7 @@
                         <div class="panel-body component">
 
                             <h3 class="text-center">
-                                <img src="/img/wpds.png" alt="Logo">
+                                <img src="/img/wpds.png" class="img-responsive" alt="Workforce Professional Development Summit Logo" style="display: inline-block;">
                             </h3>
                             <hr>
 
