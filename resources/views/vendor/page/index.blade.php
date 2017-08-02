@@ -4,18 +4,21 @@
 
     @include('theme.page.shared.cover-fold', ["class_name" => "landing bg-5"])
 
-    <section class="sub-header text-center">
-
+    <section class="sub-header text-center visible-lg visible-md">
         <div class="container">
-            <p class="h1">
-                2017 Workforce Professional Development Summit
-            </p>
-            <p class="lead">
-                The 2017 Workforce Professional Development Summit will be held October 23 – 25 at the Hyatt Regency
-                Grand Cypress in Orlando. We are working hard on a brand new website so please check back soon.
-            </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h1">
+                        2017 Workforce Professional Development Summit
+                    </p>
+                    <p class="lead">
+                        The 2017 Workforce Professional Development Summit will be held October 23 – 25 at the Hyatt
+                        Regency
+                        Grand Cypress in Orlando. We are working hard on a brand new website so please check back soon.
+                    </p>
+                </div>
+            </div>
         </div>
-
     </section>
     <section class="actions signup">
         <div class="container">
@@ -29,7 +32,9 @@
                         <div class="panel-body component">
 
                             <h3 class="text-center">
-                                <img src="/img/wpds.png" class="img-responsive" alt="Workforce Professional Development Summit Logo" style="display: inline-block;">
+                                <img src="/img/wpds.png" class="img-responsive"
+                                     alt="Workforce Professional Development Summit Logo"
+                                     style="display: inline-block;">
                             </h3>
                             <hr>
 
@@ -72,7 +77,7 @@
                 @foreach($workshops as $workshop)
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
-                    {!! $workshop->short_description !!}
+                        {!! $workshop->short_description !!}
                     @endcomponent
 
                 @endforeach
@@ -83,7 +88,7 @@
     </section>
     <hr>
     @if(config("extras.settings.keys.google_maps_api_key"))
-        <section class="location">
+        <section class="location visible-md visible-lg">
             <div class="container-">
                 <p class="h1 text-center">
                     <span class="fa fa-map-marker"></span> Hyatt Regency Grand Cypress
@@ -123,28 +128,28 @@
 
 @push('styles')
 
-<style type="text/css">
-    .logo {
-        display: none;
-    }
+    <style type="text/css">
+        .logo {
+            display: none;
+        }
 
-    .cover-fold {
-        background-image: url("/img/Conferencespeaker.jpg");
-        background-size: cover;
-    }
+        .cover-fold {
+            background-image: url("/img/Conferencespeaker.jpg");
+            background-size: cover;
+        }
 
-    .cover .logo {
-        color: #fff;
-    }
-</style>
+        .cover .logo {
+            color: #fff;
+        }
+    </style>
 
 @endpush
 
 @push('scripts')
 
-<script>
-    $(document).ready(function () {
-        $('.logo').fadeToggle(5000, "linear");
-    })
-</script>
+    <script>
+        $(document).ready(function () {
+            $('.logo').fadeToggle(5000, "linear");
+        })
+    </script>
 @endpush

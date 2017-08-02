@@ -1,6 +1,8 @@
 @import "variables";
 @import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
 
+html { font-size: 62.5%; }
+
 .navbar-static-top {
     border-radius: 0;
     background-color: rgba(255, 255, 255, 1);
@@ -31,6 +33,7 @@
 .oswald>li>a {
     color: $theme-blue;
     font-size: 18px;
+    font-size: 1.8rem;
     text-transform: uppercase;
     &:hover {
         color: rgba(255, 255, 255, 0.4);
@@ -55,6 +58,7 @@ header.landing {
     h1,
     .headline {
         font-size: 101px;
+        font-size: 10.1rem;
         font-family: 'Roboto Slab', serif;
         text-shadow: #000 2px 3px 5px;
         font-weight: 400;
@@ -62,11 +66,13 @@ header.landing {
     .lead {
         text-shadow: #000 2px 3px 5px;
         font-size: 36px;
+        font-size: 3.6rem;
     }
 }
 
 p.h1 {
     font-size: 61px;
+    font-size: 6.1rem;
     padding-bottom: 20px;
     color: $theme-blue;
 }
@@ -92,6 +98,7 @@ section.actions.signup {
     }
     .btn.register {
         font-size: 28px;
+        font-size: 2.8rem;
     }
 }
 
@@ -100,6 +107,7 @@ section.actions.signup {
     color: #fff;
     h1 {
         font-size: 48px;
+        font-size: 4.8rem;
     }
 }
 
