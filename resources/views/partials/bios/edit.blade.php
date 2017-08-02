@@ -9,7 +9,7 @@
             <div class="">
 
 
-                    <div class="col-md-8 col-ms-offser-2">
+                    <div class="col-md-8 col-ms-offset-2">
                         <h2>
                             <img class="img-circle" src="/extras/glide/public/{{ $bio->avatar }}/?w=60&h=60&fit=crop-center" alt="Avatar">
 
