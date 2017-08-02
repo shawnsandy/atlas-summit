@@ -1,5 +1,5 @@
 @php
-    $map = Gmap::getMapData($address);
+    $map = Gmap::getMapData($address, config("extras.settings.keys.google_maps_api_key"));
 @endphp
 
 <div class="g-map">

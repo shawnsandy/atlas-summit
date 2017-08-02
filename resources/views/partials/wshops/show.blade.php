@@ -39,13 +39,12 @@
 
                         @endif
                     </p>
-
                 </div>
 
-
                 <div class="col-md-6">
-                    <div class="card" style="width: 100%; height: 360px; overflow: hidden;">
-                        <img class="img-responsive" src="{{ $workshop->workshop_image }}" alt="workshop image">
+                    <div class="card"
+                         style="width: 100%; height: 360px; overflow: hidden; background-image: url(/img/workshops/{{ $workshop->cover_image }}); background-position: center center; background-size: cover">
+
 
                     </div>
                 </div>

@@ -1,8 +1,10 @@
 <aside class="col-md-4">
 
     <div class="wrapper">
-        <div class="cover">
-            <img src="{{ $workshop->workshop_thumbnail }}" alt="" width="100%">
+        <div class="cover" style="background-image: url(/img/workshops/{{ $workshop->cover_image }}); background-position: center center; overflow: hidden; background-size: cover ">
+            {{--<img class="img-responsive" src="/img/workshops/{{ $workshop->cover_image }}" alt="workshop image">--}}
+
+
         </div>
         <div class="details">
             <h3 class="oswald text-uppercase">
