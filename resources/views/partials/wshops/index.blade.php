@@ -1,19 +1,25 @@
 @extends('theme.page.page-layouts.main-page')
 @section('title', "WorkShop Scheulde")
 @section('content')
-    <div class="container">
-        <div class="row">
+    <section class="">
+        <div class="container">
+            <p class="h1 text-center">
+                Workshops
+            </p>
 
-            @foreach($workshops as $workshop)
+            <div class="workshops">
 
-                @component("components.workshop-collections", ["workshop" => $workshop])
-                    Synergistically envisioneer emerging results rather than bleeding-edge services. Globally
-                    orchestrate distributed results vis-a-vis vertical ideas. Collaboratively create cooperative
-                    leadership through functionalized.
-                @endcomponent
+                @foreach($workshops as $workshop)
 
-            @endforeach
+                    @component("components.workshop-collections", ["workshop" => $workshop])
+                        {!! $workshop->short_description !!}
+                    @endcomponent
+
+                @endforeach
+
+            </div>
 
         </div>
-    </div>
+    </section>
+   
 @endsection
