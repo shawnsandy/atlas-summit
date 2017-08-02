@@ -1,16 +1,18 @@
 <aside class="col-md-4">
 
     <div class="wrapper">
-        <div class="cover">
-            <img src="/img/workshops/{{$workshop->cover_image}}" alt="" width="100%">
+        <div class="cover" style="background-image: url(/img/workshops/{{ $workshop->cover_image }}); background-position: center center; overflow: hidden; background-size: cover ">
+            {{--<img class="img-responsive" src="/img/workshops/{{ $workshop->cover_image }}" alt="workshop image">--}}
+
+
         </div>
         <div class="details">
             <h3 class="oswald text-uppercase">
                 <a href="/summit/u/{{ $workshop['id'] }}">{{ $workshop["name"] or "Workshop Name" }}</a></h3>
             <hr>
-            <p>
+            <div class="workshop-widget-description">
                 {{ $slot }}
-            </p>
+            </div>
 
             <div class="action-call">
                 <p class="text-uppercase">

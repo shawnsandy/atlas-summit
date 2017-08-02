@@ -144,6 +144,16 @@ footer {
     .details {
         padding: 12px;
     }
+
+    .workshop-widget-description {
+        height: 150px;
+        overflow: hidden;
+    }
+
+
 }
 
+.note-btn.btn {
+    border-radius: 3px;
+}
 @import "shared";

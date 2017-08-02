@@ -72,13 +72,7 @@
                 @foreach($workshops as $workshop)
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
-                        @if(strlen($workshop->description) > 250)
-                            {!! substr($workshop->description, 0, strpos($workshop->description, ' ', 250)) . '...' !!}
-                        @else
-                            {!! $workshop->description !!}
-                        @endif
-
-
+                    {!! $workshop->short_description !!}
                     @endcomponent
 
                 @endforeach
@@ -87,20 +81,41 @@
 
         </div>
     </section>
-
     <hr>
+    @if(config("extras.settings.keys.google_maps_api_key"))
+        <section class="location">
+            <div class="container-">
+                <p class="h1 text-center">
+                    <span class="fa fa-map-marker"></span> Hyatt Regency Grand Cypress
+                </p>
+
+                <p class="lead text-center oswald">
+                    1 Grand Cypress Blvd, Orlando, FL 32836
+                </p>
+
+                {{ Html::extrasMap("1600 Pennsylvania Ave NW, Washington, DC 20500",
+        ["height" => '680px'], ['zoom' => 16, "scroll" => 'false']) }}
+
+            </div>
+        </section>
+    @endif
     <section>
-        <div class="container"><p class="h1 text-center">
-                2017 Sponsors
-            </p>
-            <p class="lead">
-                Continually pontificate ubiquitous infomediaries rather than inexpensive best practices. Holisticly
-                drive progressive niche markets whereas go forward customer service. Phosfluorescently expedite
-                technically sound services with client-centered.
-            </p>
-        </div>
+
+        @if(count($sponsors))
+            <p class="text-center">Sponsors</p>
+        @else
+            <div class="container">
+                <p class="h1 text-center">
+                    2017 Sponsors
+                </p>
+                <p class="lead text-center">
+                    Coming Soon
+                </p>
+            </div>
+        @endif
 
     </section>
+
 
     @include('page::shared.footer')
 
@@ -126,6 +141,7 @@
 @endpush
 
 @push('scripts')
+
 <script>
     $(document).ready(function () {
         $('.logo').fadeToggle(5000, "linear");

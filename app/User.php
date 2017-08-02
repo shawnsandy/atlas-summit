@@ -39,4 +39,5 @@ class User extends Authenticatable
         return strtoupper($this->first_name . " " .$this->last_name );
     }
 
+
 }

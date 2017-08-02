@@ -6,10 +6,10 @@
     <div class="container">
         @include("extras::partials.messages")
         <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-body">
+            <div class="">
 
-                    <div class="col-md-8">
+
+                    <div class="col-md-8 col-ms-offser-2">
                         <h2>
                             <img class="img-circle" src="/extras/glide/public/{{ $bio->avatar }}/?w=60&h=60&fit=crop-center" alt="Avatar">
 
@@ -26,11 +26,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
-                        @include("components.bio-sidebar")
-                    </div>
 
-                </div>
             </div>
 
         </div>

@@ -13,7 +13,9 @@
 
 
 Route::get('/', function () {
-    return view('page::index');
+
+    $sponsors = [];
+    return view('page::index', compact("sponsors"));
 });
 
 Route::group(['prefix' => "scans"], function () {
