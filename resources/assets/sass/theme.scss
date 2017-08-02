@@ -153,6 +153,13 @@ footer {
 
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .note-btn.btn {
     border-radius: 3px;
 }
