@@ -4,7 +4,7 @@
         <div class="flex-center">
             <div class="text-center" style="color: #fff;">
                 <div class="row">
-                    <div class="col-md-12 visible-md visible-lg">
+                    <div class="col-md-12">
                         <h1 class="oswald" style="font-family: Oswald">ENGAGE . EDUCATE . EMPOWER .</h1>
                     </div>
                     <div class="col-md-12 ">
