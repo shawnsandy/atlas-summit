@@ -1,5 +1,6 @@
 @import "variables";
 @import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+
 .navbar-static-top {
     border-radius: 0;
     background-color: rgba(255, 255, 255, 1);
@@ -151,6 +152,21 @@ footer {
     }
 
 
+}
+
+@media (max-width: 768px) {
+  .header.landing h1 { font-size: 80px }
+
+  .cover-fold { background-position-x: 44% }
+
+  .cover-fold .navbar-static-top,
+  .cover-fold .navbar-static-top:hover { background-color: rgba(255, 255, 255, 1.0) !important }
+  .cover-fold .oswald > li > a { color: #333 }
+  .navbar-toggle { margin: 13px 15px 14px !important }
+
+  section.actions.signup .panel { padding: 10px 20px }
+  section.actions.signup .panel-body h3 { margin: 0 }
+  section.actions.signup .btn.register { font-size: 23px; }
 }
 
 .flex-center {
