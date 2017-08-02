@@ -20,52 +20,55 @@
             </div>
         </div>
     </section>
-    <section class="actions signup">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <p class="h1 text-center">
-                        Account Activation
-                    </p>
+    @if(!Auth::check())
+        <section class="actions signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <p class="h1 text-center">
+                            Account Login
+                        </p>
 
-                    <div id="register" class="panel panel-default">
-                        <div class="panel-body component">
+                        <div id="register" class="panel panel-default">
+                            <div class="panel-body component">
 
-                            <h3 class="text-center">
-                                <img src="/img/wpds.png" class="img-responsive"
-                                     alt="Workforce Professional Development Summit Logo"
-                                     style="display: inline-block;">
-                            </h3>
-                            <hr>
+                                <h3 class="text-center">
+                                    <img src="/img/wpds.png" class="img-responsive"
+                                         alt="Workforce Professional Development Summit Logo"
+                                         style="display: inline-block;">
+                                </h3>
+                                <hr>
 
-                            {{ Form::open(["url" => '/admin/users']) }}
+                                {{ Form::open(["url" => '/login']) }}
 
-                            <p class="form-group">
-                                <label for="email">Email</label>
-                                {{ Form::email('email', null, ["class" => "form-control"]) }}
-                            </p>
+                                <p class="form-group">
+                                    <label for="email">Email</label>
+                                    {{ Form::email('email', null, ["class" => "form-control"]) }}
+                                </p>
 
-                            <p class="form-group">
-                                <label for="password">Password</label>
-                                {{ Form::password("password", ["class" => "form-control"]) }}
-                            </p>
+                                <p class="form-group">
+                                    <label for="password">Password</label>
+                                    {{ Form::password("password", ["class" => "form-control"]) }}
+                                </p>
 
-                            <p class="text-right">
-                                <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
-                                    Activate Your Account
-                                </button>
-                            </p>
+                                <p class="text-right">
+                                    <button class="h2 text-uppercase btn btn-block btn-lg btn-primary register oswald">
+                                        Login To Your Account
+                                    </button>
+                                </p>
 
-                            {{ Form::close() }}
+                                {{ Form::close() }}
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </section>
-
+        </section>
+    @else
+        <hr>
+    @endif
     <section class="">
         <div class="container">
             <p class="h1 text-center">
@@ -77,7 +80,7 @@
                 @foreach($workshops as $workshop)
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
-                        {!! $workshop->short_description !!}
+                        <p>{!! $workshop->short_description !!}</p>
                     @endcomponent
 
                 @endforeach
