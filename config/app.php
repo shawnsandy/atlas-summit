@@ -181,7 +181,6 @@ return [
         Vinkla\Pusher\PusherServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
-        Spatie\Glide\GlideServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -253,7 +252,6 @@ return [
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         "Extras" => ShawnSandy\Extras\ExtrasFacade::class,
-        'GlideImage' => Spatie\Glide\GlideImageFacade::class,
 
     ],
 

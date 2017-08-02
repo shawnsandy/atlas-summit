@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "783fc1cf8e8cf2adcc2f2e275d0735dc",
+    "content-hash": "0d07ebb3cce98a66e7b86846f1df43eb",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -3280,12 +3280,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shawnsandy/extras.git",
-                "reference": "89dc87363b1968037a66a893ac7c57bedbd26014"
+                "reference": "41ce377aa241c5eadf9eb294e3473d56cbbf14c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/89dc87363b1968037a66a893ac7c57bedbd26014",
-                "reference": "89dc87363b1968037a66a893ac7c57bedbd26014",
+                "url": "https://api.github.com/repos/shawnsandy/extras/zipball/41ce377aa241c5eadf9eb294e3473d56cbbf14c3",
+                "reference": "41ce377aa241c5eadf9eb294e3473d56cbbf14c3",
                 "shasum": ""
             },
             "require": {
@@ -3347,7 +3347,7 @@
                 "Extras",
                 "shawnsandy"
             ],
-            "time": "2017-07-24T00:40:31+00:00"
+            "time": "2017-08-01T18:05:11+00:00"
         },
         {
             "name": "shawnsandy/pagekit",
@@ -3457,117 +3457,17 @@
             "time": "2016-12-06T01:39:52+00:00"
         },
         {
-            "name": "spatie/image",
-            "version": "1.3.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/image.git",
-                "reference": "61a43bd5a85257b30b58b6c5b9f0000fc1487bf8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/image/zipball/61a43bd5a85257b30b58b6c5b9f0000fc1487bf8",
-                "reference": "61a43bd5a85257b30b58b6c5b9f0000fc1487bf8",
-                "shasum": ""
-            },
-            "require": {
-                "league/glide": "^1.2",
-                "php": "^7.0",
-                "spatie/image-optimizer": "^1.0",
-                "spatie/temporary-directory": "^1.0.0",
-                "symfony/process": "^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0",
-                "symfony/var-dumper": "^3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Image\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Manipulate images with an expressive API",
-            "homepage": "https://github.com/spatie/image",
-            "keywords": [
-                "image",
-                "spatie"
-            ],
-            "time": "2017-07-25T18:32:37+00:00"
-        },
-        {
-            "name": "spatie/image-optimizer",
-            "version": "1.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/image-optimizer.git",
-                "reference": "77d920c2c47bce6b6bfcde906cb04045ead0a393"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/image-optimizer/zipball/77d920c2c47bce6b6bfcde906cb04045ead0a393",
-                "reference": "77d920c2c47bce6b6bfcde906cb04045ead0a393",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0",
-                "psr/log": "^1.0",
-                "symfony/process": "^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.2",
-                "symfony/var-dumper": "^3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\ImageOptimizer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Easily optimize images using PHP",
-            "homepage": "https://github.com/spatie/image-optimizer",
-            "keywords": [
-                "image-optimizer",
-                "spatie"
-            ],
-            "time": "2017-07-29T13:48:36+00:00"
-        },
-        {
             "name": "spatie/laravel-collection-macros",
-            "version": "2.3.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-collection-macros.git",
-                "reference": "2dea71e3373377ab53f2f38145e6dea30563f31e"
+                "reference": "eb34f43600294516567f233c76d7976eddfd4033"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-collection-macros/zipball/2dea71e3373377ab53f2f38145e6dea30563f31e",
-                "reference": "2dea71e3373377ab53f2f38145e6dea30563f31e",
+                "url": "https://api.github.com/repos/spatie/laravel-collection-macros/zipball/eb34f43600294516567f233c76d7976eddfd4033",
+                "reference": "eb34f43600294516567f233c76d7976eddfd4033",
                 "shasum": ""
             },
             "require": {
@@ -3620,96 +3520,7 @@
                 "laravel-collection-macros",
                 "spatie"
             ],
-            "time": "2017-07-11T08:43:42+00:00"
-        },
-        {
-            "name": "spatie/laravel-glide",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-glide.git",
-                "reference": "a75f9069a04a1337e7c5308fd4975821f8177f23"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-glide/zipball/a75f9069a04a1337e7c5308fd4975821f8177f23",
-                "reference": "a75f9069a04a1337e7c5308fd4975821f8177f23",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.3.0|~5.4.0",
-                "league/glide": "^1.0",
-                "php": "^7.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.3.0|~3.4.0",
-                "phpunit/phpunit": "5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Glide\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be"
-                }
-            ],
-            "description": "Easily convert images with Glide",
-            "homepage": "https://github.com/spatie/laravel-glide",
-            "time": "2017-01-24T10:51:47+00:00"
-        },
-        {
-            "name": "spatie/temporary-directory",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/temporary-directory.git",
-                "reference": "58e80a88c3fd463d502807614e88c1aec62e79dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/58e80a88c3fd463d502807614e88c1aec62e79dc",
-                "reference": "58e80a88c3fd463d502807614e88c1aec62e79dc",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\TemporaryDirectory\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Vanderbist",
-                    "email": "alex@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The `temporary-directory` package allows you to easily create, use and destroy temporary directories.",
-            "homepage": "https://github.com/spatie/temporary-directory",
-            "keywords": [
-                "spatie",
-                "temporary-directory"
-            ],
-            "time": "2017-02-02T13:08:42+00:00"
+            "time": "2017-08-02T12:20:39+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

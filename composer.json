@@ -14,8 +14,6 @@
         "shawnsandy/extras": "dev-master",
         "shawnsandy/pagekit": "dev-master",
         "simplesoftwareio/simple-qrcode": "^1.5",
-        "spatie/image": "^1.3",
-        "spatie/laravel-glide": "^3.1",
         "vinkla/pusher": "^2.5"
     },
     "require-dev": {
