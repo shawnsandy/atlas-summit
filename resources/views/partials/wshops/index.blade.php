@@ -12,7 +12,7 @@
                 @foreach($workshops as $workshop)
 
                     @component("components.workshop-collections", ["workshop" => $workshop])
-                        {!! $workshop->short_description !!}
+                      <p>{!! $workshop->short_description !!}</p>
                     @endcomponent
 
                 @endforeach
