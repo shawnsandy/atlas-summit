@@ -120,4 +120,5 @@ class RoomsController extends Controller
 
         return redirect('/admin/rooms');
     }
+
 }

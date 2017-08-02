@@ -1,4 +1,5 @@
 <nav class="navbar navbar-static-top">
+
     <div class="container-fluid">
         <div class="navbar-header">
 
@@ -30,4 +31,5 @@
             </ul>
         </div>
     </div>
+
 </nav>

@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container">
-        <div class="navbar-header">
 
+        <div class="navbar-header">
             <!-- Collapsed Hamburger -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#app-navbar-collapse">
@@ -35,5 +35,6 @@
             <ul class="nav navbar-nav navbar-right">
             </ul>
         </div>
+
     </div>
 </nav>
