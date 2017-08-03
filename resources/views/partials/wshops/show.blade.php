@@ -5,6 +5,14 @@
         <div class="container">
             <div class="row">
                 @include("page::partials.messages")
+
+                <div class="col-md-6">
+                    <div class="card"
+                         style="width: 100%; height: 360px; overflow: hidden; background-image: url(/img/workshops/{{ $workshop->cover_image }}); background-position: center center; background-size: cover">
+
+
+                    </div>
+                </div>
                 <div class="col-md-6">
 
                     <h2 class="oswald text-uppercase">{{ $workshop->name }}</h2>
@@ -41,13 +49,6 @@
                     </p>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="card"
-                         style="width: 100%; height: 360px; overflow: hidden; background-image: url(/img/workshops/{{ $workshop->cover_image }}); background-position: center center; background-size: cover">
-
-
-                    </div>
-                </div>
 
             </div>
         </div>
