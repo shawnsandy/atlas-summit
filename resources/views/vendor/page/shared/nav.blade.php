@@ -22,7 +22,7 @@
 
                 @if(Auth::check())
                     <li>
-                        <a href="{{ url('/summit/bios') }}">Agenda</a>
+                        <a href="{{ url('/summit/bios') }}">{{ $current_user->full_name }}</a>
                     </li>
                 @endif
 

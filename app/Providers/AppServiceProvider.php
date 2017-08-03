@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
     public function current_user(){
 
         view()->composer([
-            'layouts.dashboard'
+            '*'
         ], function($view){
             $user = Auth::user();
             view()->share('current_user', $user);
