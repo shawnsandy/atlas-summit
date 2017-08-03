@@ -93,7 +93,7 @@
     <section>
         <div class="container text-center">
             <div class="container text-center">
-                <a href="/summit/u" style="font-size: 36px; padding: 20px;" class="btn btn-lg btn-success lead oswald text-uppercase">
+                <a href="/summit/u" style="font-size: 36px; font-size: 3.6rem; padding: 20px;" class="btn btn-lg btn-success lead oswald text-uppercase">
                     Browse All Workshops
                 </a>
             </div>
