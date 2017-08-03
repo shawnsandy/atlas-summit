@@ -19,7 +19,7 @@
                     @endforeach
                 @else
                     <p class="alert alert-info lead text-center">
-                        The are no workshops available currently
+                        Sorry there are no workshops available currently
                     </p>
                 @endif
 
