@@ -19,6 +19,13 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right oswald">
+
+                @if(Auth::check())
+                    <li>
+                        <a href="{{ url('/summit/bios') }}">Agenda</a>
+                    </li>
+                @endif
+
                 <li>
                     <a href="/summit/u">Workshops</a>
                 </li>
@@ -28,6 +35,7 @@
                 <li>
                     <a href="{{ url('/page/contact') }}">Contact</a>
                 </li>
+
             </ul>
         </div>
 
