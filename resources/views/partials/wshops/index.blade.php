@@ -8,18 +8,24 @@
             </p>
 
             <div class="workshops">
+                @if(count($workshops))
 
-                @foreach($workshops as $workshop)
+                    @foreach($workshops as $workshop)
 
-                    @component("components.workshop-collections", ["workshop" => $workshop])
-                      <p>{!! $workshop->short_description !!}</p>
-                    @endcomponent
+                        @component("components.workshop-collections", ["workshop" => $workshop])
+                            <p>{!! $workshop->short_description !!}</p>
+                        @endcomponent
 
-                @endforeach
+                    @endforeach
+                @else
+                    <p class="alert alert-info lead text-center">
+                        The are no workshops available currently
+                    </p>
+                @endif
 
             </div>
 
         </div>
     </section>
-   
+
 @endsection
