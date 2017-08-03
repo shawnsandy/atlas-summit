@@ -88,8 +88,15 @@
             </div>
 
         </div>
-        <div class="container visible-sm visible-xs text-center">
-            <a href="/summit/u" class="btn btn-lg btn-primary lead">Browse Workshops</a>
+
+    </section>
+    <section>
+        <div class="container text-center">
+            <div class="container text-center">
+                <a href="/summit/u" style="font-size: 36px; padding: 20px;" class="btn btn-lg btn-success lead oswald text-uppercase">
+                    Browse All Workshops
+                </a>
+            </div>
         </div>
     </section>
 
