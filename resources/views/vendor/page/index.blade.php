@@ -70,7 +70,7 @@
         <hr>
     @endif
     <section class="">
-        <div class="container">
+        <div class="container visible-md visible-lg">
             <p class="h1 text-center">
                 Workshops
             </p>
@@ -88,7 +88,11 @@
             </div>
 
         </div>
+        <div class="container visible-sm visible-xs text-center">
+            <a href="/summit/u" class="btn btn-lg btn-primary lead">Browse Workshops</a>
+        </div>
     </section>
+
     <hr>
     @if(config("extras.settings.keys.google_maps_api_key"))
         <section class="location visible-md visible-lg">
