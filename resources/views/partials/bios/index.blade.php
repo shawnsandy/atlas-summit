@@ -13,6 +13,9 @@
                              src="/extras/glide/public/{{ $user_info->bio->avatar or "" }}/?h=140&w=140&fit=crop-center"
                              alt="">
                     </p>
+                    <p class="text-center">
+                        <a href="/summit/bios/{{ Auth::id() }}/edit" class="btn btn-default btn-sm">Edit Bios</a>
+                    </p>
                     <p class="h1 oswald">{{ $user_info->full_name }}</p>
                     <h3 class="oswald text-center text-uppercase">Summit Scheulde</h3>
 
