@@ -7,8 +7,11 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Auth;
 
+
 class AppServiceProvider extends ServiceProvider
 {
+
+
     /**
      * Bootstrap any application services.
      *
@@ -19,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
         $this->current_user();
+
     }
 
     /**
