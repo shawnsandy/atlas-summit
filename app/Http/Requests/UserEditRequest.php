@@ -8,7 +8,7 @@ use Hash;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Notification;
 
-class UserRequest extends FormRequest
+class UserEditRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,7 +30,7 @@ class UserRequest extends FormRequest
         return [
             "first_name" => "required|min:5",
             "last_name" => "required|min:5",
-            "email" => "required|email|unique:users",
+            "email" => "required|email",
             "password" => "sometimes|required|min:8",
             "password_verify" => "sometimes|required|same:password"
         ];
@@ -38,29 +38,16 @@ class UserRequest extends FormRequest
     }
 
 
-    public function register() {
+    public function updateUser($id)
+    {
 
-        $password = str_random();
-        $data = $this->input();
-        $data['password'] = Hash::make($password);
-        $data['is_activated'] = 0;
+        $this->input();
 
         if ($user = User::create($data)):
-            Notification::send($user, new AccountActivation($user, $password));
-         return $user;
+            return $user;
         endif;
 
         return false;
-
-    }
-
-    public function update($id)
-    {
-
-        if ($this->has('id'))
-            return $this->id.' dashboard';
-
-        return ' dashboard';
 
     }
 

@@ -18,7 +18,3 @@
     <label for="region">Career Source Region</label>
     {{ Form::select("region", [], null, ["class" => "form-control", "placeholder" => 'Select the user region']) }}
 </div>
-
-<div class="form-group text-right clearfix">
-    <button type="submit" class="btn btn-success">Register User</button>
-</div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserEditRequest;
 use App\Http\Requests\UserRequest;
 use App\Session;
 use App\User;
@@ -72,19 +73,28 @@ class UserAdminController extends Controller
      */
     public function edit(User $user)
     {
-
+        $users = User::latest()->take(10)->get();
+        return view("users.edit", compact('users', 'user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param UserEditRequest|UserRequest|Request $request
      * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UserEditRequest $request, User $user)
     {
-        //
+
+        if ($user->update($request->input())):
+            Flash()->success("Updated user info");
+            return back();
+        endif;
+
+        Flash()->error("Failed to update user info, please contact a system admin for info");
+        return back();
+
     }
 
     /**
