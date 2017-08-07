@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
-use App\Notifications\AccountActivation;
 use App\Session;
 use App\User;
-use Hash;
 use Illuminate\Http\Request;
-use Notification;
 
 class UserAdminController extends Controller
 {
@@ -37,24 +34,18 @@ class UserAdminController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param UserRequest|Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(UserRequest $request)
     {
-        $password = str_random();
-        $data = $request->all();
-        $data['password'] = Hash::make($password);
-        $data['is_activated'] = 0;
 
-        if (!$user = User::create($data)):
-            return back()->withErrors()->with("error", "Sorry you user was not saved");
+        if ($user = $request->register()):
+            Flash()->success('New user created');
+            return back()->with("success", "User created");
         endif;
-
-        Notification::send($user, new AccountActivation($user, $password));
-
-        return back()->with("success", "User created");
-
+        Flash()->error('Error creating user');
+        return back()->with("error", "Sorry you user was not saved");
     }
 
     /**
