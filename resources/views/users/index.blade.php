@@ -11,7 +11,7 @@
 
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">Form Elements</div>
                     <div class="panel-body">
@@ -38,7 +38,22 @@
                         </table>
                     </div>
                 </div>
-            </div><!-- /.col-->
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Register New Users</div>
+                    <div class="panel-body">
+
+                        {{ Form::open(["url" => "/admin/users"]) }}
+                        @include('forms.user-registraion')
+                        {{ Form::close() }}
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- /.col-->
         </div><!-- /.row -->
     </div>
     @include('assets.dashboard.data_tables')
