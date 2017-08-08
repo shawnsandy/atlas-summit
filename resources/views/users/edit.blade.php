@@ -24,6 +24,15 @@
                         </div>
 
                         {{ Form::close() }}
+                        <hr>
+                        @if(!count($user->workshops))
+                            <p class="alert alert-info text-center lead">{{ $user->full_name }} has not signed up for any workshops</p>
+                        @else
+                            @foreach($user->workkshops as $workshop)
+                            <p class="lead">{{$workshop->name}}</p>
+                                <hr>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

@@ -10,6 +10,14 @@
     <label for="email">Email Address</label>
     {{ Form::email("email", null, ["class" => "form-control", 'required', ]) }}
 </div>
+
+@if(!isset($user)):
+<div class="form-group">
+    <label for="email">Email Address</label>
+    {{ Form::email("email", null, ["class" => "form-control", 'required', ]) }}
+</div>
+@endif
+
 <div class="form-group">
     <label for="role">User Role</label>
     {{ Form::select("role", ["admin" => "Admin", "speaker" => "Speaker", "user" => "User"], null, ["class" => "form-control", "placeholder" => 'Select the user role']) }}
@@ -19,4 +27,3 @@
     {{ Form::select("region", $regions, null, ["class" => "form-control", "placeholder" => 'Select the user region']) }}
 </div>
 
-{{ dump($errors) }}

@@ -41,14 +41,6 @@ class UserEditRequest extends FormRequest
     public function updateUser($id)
     {
 
-        $this->input();
-
-        if ($user = User::create($data)):
-            return $user;
-        endif;
-
-        return false;
-
     }
 
 }
