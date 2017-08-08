@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserEditRequest;
 use App\Http\Requests\UserRequest;
+use App\Regions;
 use App\Session;
 use App\User;
 use Illuminate\Http\Request;
@@ -19,7 +20,9 @@ class UserAdminController extends Controller
     {
         $users = User::all();
 
-        return view("users.index", compact('users'));
+        $regions = Regions::regionsList();
+
+        return view("users.index", compact('users', 'regions'));
     }
 
     /**
@@ -46,7 +49,7 @@ class UserAdminController extends Controller
             return back()->with("success", "User created");
         endif;
         Flash()->error('Error creating user');
-        return back()->with("error", "Sorry you user was not saved");
+        return back()->with("error", "Sorry user was not saved");
     }
 
     /**
@@ -107,4 +110,6 @@ class UserAdminController extends Controller
     {
         //
     }
+
+
 }

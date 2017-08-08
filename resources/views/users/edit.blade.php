@@ -16,7 +16,7 @@
                     <div class="panel-heading">{{ $user->full_name }}</div>
                     <div class="panel-body">
                         {{ Form::model($user, ["url" => "/admin/users/$user->id", "method" => "put"] ) }}
-                        @include('forms.user-registraion')
+                        @include('forms.user-registration')
 
                         <div class="form-group text-right clearfix">
                             <button type="submit" class="btn btn-success">Update User Info</button>

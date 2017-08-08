@@ -49,7 +49,8 @@
                     <div class="panel-body">
 
                         {{ Form::open(["url" => "/admin/users"]) }}
-                        @include('forms.user-registraion')
+
+                        @include('forms.user-registration')
 
                         <div class="form-group text-right clearfix">
                             <button type="submit" class="btn btn-success">Register User</button>
