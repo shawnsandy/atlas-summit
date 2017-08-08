@@ -76,8 +76,10 @@ class UserAdminController extends Controller
      */
     public function edit(User $user)
     {
+        $user->load('workshops');
+        $regions = Regions::regionsList();
         $users = User::latest()->take(10)->get();
-        return view("users.edit", compact('users', 'user'));
+        return view("users.edit", compact('users', 'user', 'regions'));
     }
 
     /**
@@ -87,10 +89,10 @@ class UserAdminController extends Controller
      * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UserEditRequest $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
 
-        if ($user->update($request->input())):
+        if ($request->update($user->id)):
             Flash()->success("Updated user info");
             return back();
         endif;

@@ -16,6 +16,7 @@
                     <div class="panel-heading">{{ $user->full_name }}</div>
                     <div class="panel-body">
                         {{ Form::model($user, ["url" => "/admin/users/$user->id", "method" => "put"] ) }}
+                        {{ Form::hidden('edit', 1) }}
                         @include('forms.user-registration')
 
                         <div class="form-group text-right clearfix">
@@ -23,6 +24,15 @@
                         </div>
 
                         {{ Form::close() }}
+                        <hr>
+                        @if(!count($user->workshops))
+                            <p class="alert alert-info text-center lead">{{ $user->full_name }} has not signed up for any workshops</p>
+                        @else
+                            @foreach($user->workkshops as $workshop)
+                            <p class="lead">{{$workshop->name}}</p>
+                                <hr>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

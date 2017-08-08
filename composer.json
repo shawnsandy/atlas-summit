@@ -13,6 +13,7 @@
         "oriceon/toastr-5-laravel": "dev-master",
         "shawnsandy/extras": "dev-master",
         "shawnsandy/pagekit": "dev-master",
+        "silber/bouncer": "v1.0.0-beta.3",
         "simplesoftwareio/simple-qrcode": "^1.5",
         "spatie/laravel-permission": "^2.3",
         "vinkla/pusher": "^2.5"

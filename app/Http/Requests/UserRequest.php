@@ -4,9 +4,11 @@ namespace App\Http\Requests;
 
 use App\Notifications\AccountActivation;
 use App\User;
+use DB;
 use Hash;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Notification;
+use Silber\Bouncer\BouncerFacade as Bouncer;
 
 class UserRequest extends FormRequest
 {
@@ -27,6 +29,15 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
+        if ($this->input("_method") == "PUT")
+            return [
+                "first_name" => "required|min:5",
+                "last_name" => "required|min:5",
+                "update_email" => "required|email|sometimes:unique:users",
+                "password" => "sometimes|required|min:8",
+                "password_verify" => "sometimes|required|same:password"
+            ];
+
         return [
             "first_name" => "required|min:5",
             "last_name" => "required|min:5",
@@ -38,16 +49,18 @@ class UserRequest extends FormRequest
     }
 
 
-    public function register() {
+    public function register()
+    {
 
         $password = str_random();
         $data = $this->input();
         $data['password'] = Hash::make($password);
-        $data['is_activated'] = 0;
+        $data['is_activated'] = 1;
 
         if ($user = User::create($data)):
+            Bouncer::assign($this->input('role'))->to($user);
             Notification::send($user, new AccountActivation($user, $password));
-         return $user;
+            return $user;
         endif;
 
         return false;
@@ -57,10 +70,16 @@ class UserRequest extends FormRequest
     public function update($id)
     {
 
-        if ($this->has('id'))
-            return $this->id.' dashboard';
+        $password = str_random();
+        $data = $this->input();
 
-        return ' dashboard';
+        if(!empty($data['update_email']))
+            $data['email'] = $data['update_email'];
+
+        if ($user = User::updateOrCreate(["id" => $id], $data)):
+            return $user;
+        endif;
+        return false;
 
     }
 
