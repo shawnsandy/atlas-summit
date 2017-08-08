@@ -16,5 +16,5 @@
 </div>
 <div class="form-group">
     <label for="region">Career Source Region</label>
-    {{ Form::select("region", [], null, ["class" => "form-control", "placeholder" => 'Select the user region']) }}
+    {{ Form::select("region", $regions, null, ["class" => "form-control", "placeholder" => 'Select the user region']) }}
 </div>
