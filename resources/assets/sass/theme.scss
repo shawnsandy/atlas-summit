@@ -1,24 +1,74 @@
 @import "variables";
+@import "node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
 
-.navbar-static-top {
+html { font-size: 1.2vh; }
 
-  border-radius: 0;
-  background-color: rgba(255, 255, 255, 0.30);
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-
+body {
+  font-size: 62.5%;
+  font-size: 1.2vw;
 }
 
-h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-  font-family: 'Roboto Slab', serif;
+* {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
 
+.navbar-static-top {
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 1);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.cover-fold {
+  .navbar-static-top {
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .oswald > li > a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    &:hover {
+      color: $theme-blue;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.oswald > li > a {
+  color: $theme-blue;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  &:hover {
+    color: rgba(255, 255, 255, 0.4);
+    background-color: $theme-blue;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: 'Roboto Slab', serif;
 }
 
 header.landing {
-  h1, .headline {
+  h1,
+  .headline {
     font-size: 101px;
+    font-size: 10.1rem;
     font-family: 'Roboto Slab', serif;
     text-shadow: #000 2px 3px 5px;
     font-weight: 400;
@@ -26,12 +76,145 @@ header.landing {
   .lead {
     text-shadow: #000 2px 3px 5px;
     font-size: 36px;
+    font-size: 3.6rem;
   }
 }
 
 p.h1 {
-  font-size: 71px;
+  font-size: 61px;
+  font-size: 6.1rem;
   padding-bottom: 20px;
   color: $theme-blue;
 }
 
+section.actions.signup {
+  background-color: darken($theme-green, 5%);
+  @include linear-gradient(to top, darken($theme-green, 15%), $theme-green);
+  padding: 60px 0;
+  .panel {
+    padding: 40px 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  .h1 {
+    color: #fff;
+  }
+  input {
+    border-radius: 2px;
+  }
+  label {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .btn.register {
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
+}
+
+.cover {
+  @include linear-gradient(to top, darken($theme-blue, 15%), $theme-blue);
+  color: #fff;
+  h1 {
+    font-size: 48px;
+    font-size: 4.8rem;
+  }
+}
+
+.landing .cover {
+  background-color: transparent;
+  background-image: none;
+}
+
+.btn {
+  border-radius: 40px;
+  .radius-small {
+    border-radius: 15px;
+  }
+}
+
+.navbar-brand {
+  padding-top: 10px;
+  background-color: #ffffff;
+}
+
+.theme {
+  &-green {
+    color: $theme-green;
+  }
+  &-blue {
+    color: $theme-blue;
+  }
+}
+
+footer {
+  background-color: transparent;
+  color: darkgrey;
+}
+
+.workshops {
+  .wrapper {
+    margin-bottom: 40px;
+  }
+  .cover {
+    height: 200px;
+    background-color: lightgray;
+  }
+  .details {
+    padding: 12px;
+    h3 a {
+      font-size: 28px;
+      font-size: 2.8rem;
+    }
+  }
+
+  .workshop-widget-description {
+    height: 150px;
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header.landing h1 {
+    font-size: 80px
+  }
+
+  .cover-fold {
+    background-position-x: 44%
+  }
+
+  .cover-fold .navbar-static-top,
+  .cover-fold .navbar-static-top:hover {
+    background-color: rgba(255, 255, 255, 1.0) !important
+  }
+  .cover-fold .oswald > li > a {
+    color: #333
+  }
+  .navbar-toggle {
+    margin: 13px 15px 14px !important
+  }
+
+  section.actions.signup .panel {
+    padding: 10px 20px
+  }
+  section.actions.signup .panel-body h3 {
+    margin: 0
+  }
+  section.actions.signup .btn.register {
+    font-size: 23px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.note-btn.btn {
+  border-radius: 3px;
+}
+
+@import "shared";

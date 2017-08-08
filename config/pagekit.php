@@ -6,11 +6,11 @@ return [
 
     'page_title' => 'Laravel PageKit ',
 
-    'page_slug' => 'Workforce Professional Development Summit October 23 – 25',
+    'page_slug' => 'BUILDING TOMORROWS WORKFORCE',
 
-    'title_slug' => 'Workforce Professional Development Summit October 23 – 25',
+    'title_slug' => 'BUILDING TOMORROWS WORKFORCE',
 
-    'company_name' => 'WPDS 2017',
+    'company_name' => 'ENGAGE . EDUCATE . EMPOWER',
 
     'contact_number' => '000 000 0000',
 

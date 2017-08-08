@@ -13,9 +13,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger-theme-block.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    {!! Html::entypoStylesheet() !!}
 @stack("styles")
 <!-- Bootstrap Core CSS -->
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
@@ -39,7 +44,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand menu-toggle">
                 <a href="#" class="">
-                    <i class="fa fa-ellipsis-h"></i> <span class="nav-text">Dash</span>
+                    {{ Html::entypoFont("unread") }}  <span class="nav-text">Summit 2017</span>
                 </a>
             </li>
            @include("dash::partials.sidebar-menu")
@@ -49,7 +54,7 @@
 
     <!-- Page Navbar -->
     <div id="page-content-wrapper">
-<div class=" theme-border theme-border-green"></div>
+<div class=""></div>
 
         <nav class="navbar">
             <div class="container-fluid">
@@ -62,8 +67,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand menu-toggle" href="#"><span class="fa fa-bars"></span> </a>
-                    <a class="navbar-brand " href="#">{{ config("pagekit.company_name", "Admin Center") }}</a>
+                    <a class="navbar-brand menu-toggle oswald" href="#">
+                        <img src="/img/wpds2017.png" alt="Logo">
+                    </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -112,14 +118,22 @@
 <!-- Latest compiled and minified JavaScript -->
 
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="//unpkg.com/cleave.js@0.7.16/dist/cleave.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous">
 </script>
 
-@stack('scripts')
 
+<script src="/js/admin/chart.min.js"></script>
+<script src="/js/admin/chart-data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.js"></script>
+<script src="/js/flash.js"></script>
+@stack('scripts')
+@stack('inline-scripts')
 <!-- Menu Toggle Script -->
 <script>
     $(".menu-toggle").click(function (e) {
@@ -129,7 +143,28 @@
     });
 </script>
 
-@stack('inline-scripts')
+<script>
+    $('#calendar').datepicker({
+    });
+
+    !function ($) {
+        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+
+{!! Toastr::render() !!}
+
+@include('assets.pusher.pusher')
 
 </body>
 

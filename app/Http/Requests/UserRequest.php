@@ -2,7 +2,11 @@
 
 namespace App\Http\Requests;
 
+use App\Notifications\AccountActivation;
+use App\User;
+use Hash;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Notification;
 
 class UserRequest extends FormRequest
 {
@@ -27,7 +31,37 @@ class UserRequest extends FormRequest
             "first_name" => "required|min:5",
             "last_name" => "required|min:5",
             "email" => "required|email|unique:users",
-            "password" => "required|min:8"
+            "password" => "sometimes|required|min:8",
+            "password_verify" => "sometimes|required|same:password"
         ];
+
     }
+
+
+    public function register() {
+
+        $password = str_random();
+        $data = $this->input();
+        $data['password'] = Hash::make($password);
+        $data['is_activated'] = 0;
+
+        if ($user = User::create($data)):
+            Notification::send($user, new AccountActivation($user, $password));
+         return $user;
+        endif;
+
+        return false;
+
+    }
+
+    public function update($id)
+    {
+
+        if ($this->has('id'))
+            return $this->id.' dashboard';
+
+        return ' dashboard';
+
+    }
+
 }

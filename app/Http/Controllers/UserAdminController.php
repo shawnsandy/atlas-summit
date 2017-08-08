@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserEditRequest;
 use App\Http\Requests\UserRequest;
 use App\Session;
 use App\User;
@@ -17,7 +18,8 @@ class UserAdminController extends Controller
     public function index()
     {
         $users = User::all();
-        return view("dash::useradmin", compact("users"));
+
+        return view("users.index", compact('users'));
     }
 
     /**
@@ -33,64 +35,72 @@ class UserAdminController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param UserRequest|Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(UserRequest $request)
     {
-        $user = $request->all();
-        $user['region_id'] = 1;
 
-        if(!User::create($user)):
-        return back()->withErrors()->with("error", "Sorry you user was not saved");
+        if ($user = $request->register()):
+            Flash()->success('New user created');
+            return back()->with("success", "User created");
         endif;
-        return back()->with("success", "User created");
-
+        Flash()->error('Error creating user');
+        return back()->with("error", "Sorry you user was not saved");
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
     {
         $user = User::find($user);
 
-        if(count($user) < 1)
+        if (count($user) < 1)
             return back()->with('error', "User not found");
 
-        return view ("dash::useradmin-page", compact("user"));
+        return view("dash::useradmin-page", compact("user"));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
     {
-
+        $users = User::latest()->take(10)->get();
+        return view("users.edit", compact('users', 'user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param UserEditRequest|UserRequest|Request $request
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UserEditRequest $request, User $user)
     {
-        //
+
+        if ($user->update($request->input())):
+            Flash()->success("Updated user info");
+            return back();
+        endif;
+
+        Flash()->error("Failed to update user info, please contact a system admin for info");
+        return back();
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)

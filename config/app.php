@@ -175,8 +175,12 @@ return [
         ShawnSandy\Extras\ExtrasServicesProvider::class,
         Thujohn\Twitter\TwitterServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        ShawnSandy\Dash\DashServicesProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Kamaln7\Toastr\ToastrServiceProvider::class,
+        Vinkla\Pusher\PusherServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -242,11 +246,12 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Extras' => \ShawnSandy\Extras\ExtrasFacade::class,
-        'Gmap' => \ShawnSandy\Extras\Apps\Maps\MapsFacade::class,
-        "Dash" => ShawnSandy\Dash\DashFacade::class,
-        "DashForms" => ShawnSandy\Dash\Builder\GenerateFormFieldsFacade::class,
-        "Twitter" => \Thujohn\Twitter\Facades\Twitter::class
+        'Pages' => ShawnSandy\PageKit\Facades\PageFacade::class,
+        "Flash" => Laracasts\Flash\FlashServiceProvider::class,
+        'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        "Extras" => ShawnSandy\Extras\ExtrasFacade::class,
 
     ],
 
