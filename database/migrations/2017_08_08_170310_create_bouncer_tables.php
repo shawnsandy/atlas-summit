@@ -15,6 +15,8 @@ class CreateBouncerTables extends Migration
     public function up()
     {
         Schema::create(Models::table('abilities'), function (Blueprint $table) {
+
+           Schema::dropIfExists('abilities');
             $table->increments('id');
             $table->string('name', 150);
             $table->string('title')->nullable();
@@ -30,6 +32,7 @@ class CreateBouncerTables extends Migration
         });
 
         Schema::create(Models::table('roles'), function (Blueprint $table) {
+            Schema::dropIfExists('roles');
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('title')->nullable();
@@ -38,6 +41,8 @@ class CreateBouncerTables extends Migration
         });
 
         Schema::create(Models::table('assigned_roles'), function (Blueprint $table) {
+            Schema::dropIfExists('assigned_roles');
+
             $table->integer('role_id')->unsigned()->index();
             $table->morphs('entity');
 
@@ -46,6 +51,8 @@ class CreateBouncerTables extends Migration
         });
 
         Schema::create(Models::table('permissions'), function (Blueprint $table) {
+            Schema::dropIfExists('permissions');
+
             $table->integer('ability_id')->unsigned()->index();
             $table->morphs('entity');
             $table->boolean('forbidden')->default(false);
