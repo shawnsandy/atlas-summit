@@ -4,9 +4,11 @@ namespace App\Http\Requests;
 
 use App\Notifications\AccountActivation;
 use App\User;
+use DB;
 use Hash;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Notification;
+use Silber\Bouncer\BouncerFacade as Bouncer;
 
 class UserRequest extends FormRequest
 {
@@ -27,6 +29,7 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
+        dd($this->request);
         return [
             "first_name" => "required|min:5",
             "last_name" => "required|min:5",
@@ -45,10 +48,13 @@ class UserRequest extends FormRequest
         $data['password'] = Hash::make($password);
         $data['is_activated'] = 0;
 
-        if ($user = User::create($data)):
-            Notification::send($user, new AccountActivation($user, $password));
-         return $user;
-        endif;
+            if ($user = User::create($data)):
+                Bouncer::assign($this->input('role'))->to($user);
+                Notification::send($user, new AccountActivation($user, $password));
+                return $user;
+            endif;
+
+
 
         return false;
 
@@ -57,10 +63,7 @@ class UserRequest extends FormRequest
     public function update($id)
     {
 
-        if ($this->has('id'))
-            return $this->id.' dashboard';
 
-        return ' dashboard';
 
     }
 

@@ -180,6 +180,8 @@ return [
         Kamaln7\Toastr\ToastrServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        Silber\Bouncer\BouncerServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
@@ -252,6 +254,7 @@ return [
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         "Extras" => ShawnSandy\Extras\ExtrasFacade::class,
+        "Bouncer" => Silber\Bouncer\BouncerFacade::class,
 
     ],
 

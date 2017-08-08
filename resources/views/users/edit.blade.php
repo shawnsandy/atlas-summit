@@ -16,6 +16,7 @@
                     <div class="panel-heading">{{ $user->full_name }}</div>
                     <div class="panel-body">
                         {{ Form::model($user, ["url" => "/admin/users/$user->id", "method" => "put"] ) }}
+                        {{ Form::hidden('edit', 1) }}
                         @include('forms.user-registration')
 
                         <div class="form-group text-right clearfix">
