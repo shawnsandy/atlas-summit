@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name',  'email', 'region_id', 'password',
+        'first_name', 'last_name', 'email', 'region_id', 'password',
     ];
 
     /**
@@ -29,16 +29,24 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function workshops() {
+    public function workshops()
+    {
         return $this->belongsToMany(Workshop::class);
     }
 
-    public function bio() {
+    public function bio()
+    {
         return $this->hasOne(Bio::class);
     }
 
-    public function getFullNameAttribute($value) {
-        return strtoupper($this->first_name . " " .$this->last_name );
+    public function getFullNameAttribute($value)
+    {
+        return strtoupper($this->first_name . " " . $this->last_name);
+    }
+
+    public function scans()
+    {
+        return $this->hasMany(Scans::class);
     }
 
 
