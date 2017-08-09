@@ -9,6 +9,7 @@ use Hash;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Notification;
 use Silber\Bouncer\BouncerFacade as Bouncer;
+use Silber\Bouncer\Database\Role;
 
 class UserRequest extends FormRequest
 {
@@ -59,7 +60,9 @@ class UserRequest extends FormRequest
 
         if ($user = User::create($data)):
 
+            if(!Role::where('name', $this->input('role'))->count())
             Bouncer::allow($this->input('role'))->to('ability-' . $this->input('role'));
+
             Bouncer::assign($this->input('role'))->to($user);
             Notification::send($user, new AccountActivation($user, $password));
             return $user;
