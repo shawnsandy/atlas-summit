@@ -32,7 +32,7 @@
             endif;
 
             Flash()->error("You are not authorised to perform this action");
-            return back()->with('error', "Ooops and error occurred processing your account");
+            return back()->with('error', "Ooops an error occurred processing your account");
 
         }
 
