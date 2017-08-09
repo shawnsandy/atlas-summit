@@ -58,7 +58,8 @@ class UserRequest extends FormRequest
         $data['is_activated'] = 1;
 
         if ($user = User::create($data)):
-            Bouncer::assign($this->input('role'))->to($user);
+//            Bouncer::assign($this->input('role'))->to($user);
+            Bouncer::allow($this->input('role'))->to('ability-' . $this->input('role'));
             Notification::send($user, new AccountActivation($user, $password));
             return $user;
         endif;
@@ -73,7 +74,7 @@ class UserRequest extends FormRequest
         $password = str_random();
         $data = $this->input();
 
-        if(!empty($data['update_email']))
+        if (!empty($data['update_email']))
             $data['email'] = $data['update_email'];
 
         if ($user = User::updateOrCreate(["id" => $id], $data)):
