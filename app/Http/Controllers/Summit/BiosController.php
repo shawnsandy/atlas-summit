@@ -29,9 +29,7 @@ class BiosController extends Controller
     public function index()
     {
 
-
-        $bio = Bio::where("user_id", Auth::id())->first();
-        $bios = User::has("bio")->where("id", Auth::id())->first();
+        $bios = Auth::user()->bio()->first();
 
         if (!$bios)
             return redirect('/summit/bios/create')->with('info', "Sorry, your bio was not found. Create your Bio now");
@@ -49,9 +47,7 @@ class BiosController extends Controller
      */
     public function create()
     {
-
         return view("partials.bios.create");
-
     }
 
     /**
@@ -63,14 +59,14 @@ class BiosController extends Controller
     public function store(BioRequest $request)
     {
 
-        $id = Auth::id();
-        $user = User::find($id);
+
         $data = $request->input();
 
         if ($avatar = $request->uploads())
             $data['avatar'] = $avatar;
 
-        $save = $user->bio()->create($data);
+        if(!$save = Auth::user()->bio()->create($data))
+            return back()->with("error", "Sorry there was an error creating your Bio. Please contact a system admin");
 
         return redirect("/summit/bios/{$save->id}/edit");
     }
@@ -99,8 +95,8 @@ class BiosController extends Controller
      */
     public function edit($id)
     {
-        $bio = Bio::find($id);
-        if (Auth::id() == $bio->user_id):
+
+        if ($bio = Auth::user()->bio()->find($id)):
             return view("partials.bios.edit", compact("bio"));
         endif;
         return redirect('/')->with('error', "Sorry you are unauthorized to perform this action");
@@ -116,15 +112,14 @@ class BiosController extends Controller
      */
     public function update(BioRequest $request, $id)
     {
-        $bio = Bio::find($id);
+        $bio = Auth::user()->bio()->find($id);
 
         $data = $request->input();
-
         if ($avatar = $request->uploads())
             $data['avatar'] = $avatar;
 
 
-        if ($update = Bio::updateOrCreate(['id' => $bio->id, 'user_id' => Auth::id()], $data)):
+        if ($update = $bio->update($data)):
             return back()->with('success', "Your Bio has been updated.");
         else :
             return back()->with('error', "Failed to update the Bio.");

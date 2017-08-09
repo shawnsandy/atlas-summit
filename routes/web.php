@@ -48,8 +48,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 });
 
-
-
 Route::group(['prefix' => 'api',], function () {
     Route::get('/users/{start}/{end}', 'ApiController@users');
 });
@@ -58,10 +56,9 @@ Route::group(['prefix' => "extras"], function () {
      Extras::routes();
 });
 
-
 Route::group(["prefix" => "summit"], function () {
 
-    Route::resource('/u', 'Summit\WshopController');
+    Route::resource('/u', 'Summit\WshopController', ['only' => ['show', 'index']]);
 
     Route::get('/wshops', 'Summit\WshopController@index');
 
