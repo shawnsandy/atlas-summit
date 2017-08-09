@@ -25,7 +25,7 @@ Route::group(['prefix' => "scans"], function () {
     Route::post('/room', 'ScansController@room');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:admin-ability'] ], function () {
 
     Route::get('/', 'AdminController@index');
 
@@ -39,9 +39,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource("users", "UserAdminController");
 
-    Route::get('auth/setup', 'Auth\AuthSetupController');
 
 });
+
+Route::group(['prefix' => 'admin'], function () {
+
+    Route::get("auth/setup", "Auth\AuthSetupController");
+
+});
+
+
 
 Route::group(['prefix' => 'api',], function () {
     Route::get('/users/{start}/{end}', 'ApiController@users');
