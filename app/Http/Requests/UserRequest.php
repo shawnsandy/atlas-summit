@@ -61,7 +61,7 @@ class UserRequest extends FormRequest
         if ($user = User::create($data)):
 
             if(!Role::where('name', $this->input('role'))->count())
-            Bouncer::allow($this->input('role'))->to('ability-' . $this->input('role'));
+            Bouncer::allow($this->input('role'))->to($this->input('role').'-ability');
 
             Bouncer::assign($this->input('role'))->to($user);
             Notification::send($user, new AccountActivation($user, $password));

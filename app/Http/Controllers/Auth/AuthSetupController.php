@@ -21,11 +21,12 @@
         {
 
             if (count(Role::where('name', 'superadmin')->get())):
-                Flash()->error("You are not authorised to perform this action");
+                Flash()->error("You are not authorized to perform this action");
                 return back()->with('Error', "You are not authorised to perform this action");
             endif;
 
             if (Bouncer::allow(["superadmin", "admin"])->to(Auth::user())):
+                Bouncer::allow(["superadmin", "admin"])->to(["superadmin-ability", "admin-ability"]);
                 Flash()->success("Super admin created");
                 return back()->with('success', 'Super admin created');
             endif;
