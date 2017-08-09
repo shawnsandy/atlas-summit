@@ -18,8 +18,14 @@ class ScansController extends Controller
      */
     public function index()
     {
+
+        $room_id = null;
+
+        if(request()->has("room_id"))
+            $room_id = request('room_id');
+
         $rooms = Rooms::pluck('name', 'id');
-        return view("scans.index", compact('rooms'));
+        return view("scans.index", compact('rooms', 'room_id'));
     }
 
     public function scans($id)

@@ -5,15 +5,17 @@ namespace App\Http\Controllers\Summit;
 use App\Http\Controllers\Controller;
 use App\Scans;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ScansController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param null $room
+     * @return Response
      */
-    public function index()
+    public function index($room = null)
     {
         //
     }
@@ -21,7 +23,7 @@ class ScansController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -32,7 +34,7 @@ class ScansController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -43,7 +45,7 @@ class ScansController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Scans  $scans
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Scans $scans)
     {
@@ -54,7 +56,7 @@ class ScansController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Scans  $scans
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(Scans $scans)
     {
@@ -66,7 +68,7 @@ class ScansController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Scans  $scans
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Scans $scans)
     {
@@ -77,7 +79,7 @@ class ScansController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Scans  $scans
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Scans $scans)
     {
