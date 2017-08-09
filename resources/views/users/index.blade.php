@@ -44,6 +44,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
+                @if($current_user->isAn('admin'))
                 <div class="panel panel-default">
                     <div class="panel-heading">Register New Users</div>
                     <div class="panel-body">
@@ -59,6 +60,7 @@
                         {{ Form::close() }}
 
                     </div>
+                    @endif
                 </div>
             </div>
 

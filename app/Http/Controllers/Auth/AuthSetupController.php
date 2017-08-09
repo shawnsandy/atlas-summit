@@ -21,7 +21,7 @@
         {
 
             if (count(Role::where('name', 'superadmin')->get())):
-                Flash()->error("You are not authorised to perform this action")
+                Flash()->error("You are not authorised to perform this action");
                 return back()->with('Error', "You are not authorised to perform this action");
             endif;
 
