@@ -38,6 +38,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource("workshops", "WorkshopController");
 
     Route::resource("users", "UserAdminController");
+
+    Route::get('auth/setup', 'Auth\AuthSetupController');
+
 });
 
 Route::group(['prefix' => 'api',], function () {
