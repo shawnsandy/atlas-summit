@@ -58,8 +58,9 @@ class UserRequest extends FormRequest
         $data['is_activated'] = 1;
 
         if ($user = User::create($data)):
-//            Bouncer::assign($this->input('role'))->to($user);
+
             Bouncer::allow($this->input('role'))->to('ability-' . $this->input('role'));
+            Bouncer::assign($this->input('role'))->to($user);
             Notification::send($user, new AccountActivation($user, $password));
             return $user;
         endif;

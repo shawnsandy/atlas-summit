@@ -25,7 +25,7 @@
                 return back()->with('Error', "You are not authorised to perform this action");
             endif;
 
-            if (Bouncer::assign(["superadmin", "admin"])->to(Auth::user())):
+            if (Bouncer::allow(["superadmin", "admin"])->to(Auth::user())):
                 Flash()->success("Super admin created");
                 return back()->with('success', 'Super admin created');
             endif;
