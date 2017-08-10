@@ -25,10 +25,11 @@
                 return back()->with('Error', "You are not authorised to perform this action");
             endif;
 
-            if (Bouncer::allow(["superadmin", "admin"])->to(Auth::user())):
-                Bouncer::allow(["superadmin", "admin"])->to(["superadmin-ability", "admin-ability"]);
+            if (Bouncer::assign(["superadmin", "admin"])->to(Auth::user())):
+                Bouncer::allow("superadmin")->to(["superadmin-ability", "admin-ability"]);
+                Bouncer::allow("admin")->to(["admin-ability"]);
                 Flash()->success("Super admin created");
-                return back()->with('success', 'Super admin created');
+                return redirect("/admin");
             endif;
 
             Flash()->error("You are not authorised to perform this action");
