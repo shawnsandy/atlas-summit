@@ -20,9 +20,9 @@
         public function __invoke()
         {
 
-            if (count(Role::where('name', 'superadmin')->get())):
+            if (!config("settings.setup") ):
                 Flash()->error("You are not authorized to perform this action");
-                return back()->with('Error', "You are not authorised to perform this action");
+                return redirect("/")->with('Error', "You are not authorised to perform this action");
             endif;
 
             if (Bouncer::assign(["superadmin", "admin"])->to(Auth::user())):
