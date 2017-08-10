@@ -16,5 +16,5 @@ return [
             'Sliver' => "Sliver",
         ]
     ],
-    "setup" => true,
+    "setup" => env('AUTH_SETUP', 'false'),
 ];
