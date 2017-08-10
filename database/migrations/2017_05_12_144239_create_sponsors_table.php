@@ -33,6 +33,7 @@ class CreateSponsorsTable extends Migration
             $table->string('sponsor_slug', 255)->nullable();
             $table->string('sponsor_url', 255)->nullable();
             $table->string('sponsor_level', 55)->nullable();
+            $table->timestamps();
 
             
 
