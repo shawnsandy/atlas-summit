@@ -180,7 +180,6 @@ return [
         Kamaln7\Toastr\ToastrServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
-        Spatie\Permission\PermissionServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
