@@ -13,7 +13,7 @@
                     </div>
                     <div class="panel-body">
 
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-md-offset-2">
                             <h2>
                                 Create you bio
                                 <hr>
@@ -27,9 +27,7 @@
                                 {{ Form::close() }}
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            @include("components.bio-sidebar")
-                        </div>
+
                     </div>
                 </div>
             </div>
