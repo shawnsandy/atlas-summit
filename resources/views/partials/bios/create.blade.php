@@ -8,24 +8,26 @@
             @include("page::partials.messages")
             <div class="row">
 
-                <h2 class="oswald text-uppercase">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h2>
-            </div>
-
-
-            <div class="col-md-8 col-md-offset-2">
-                <h2>
-                    Create you bio
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="oswald text-uppercase text-center">
+                        {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
+                    </h2>
                     <hr>
-                </h2>
+                    <h3 class="text-center">
+                        Create you bio
+                        <hr>
+                    </h3>
 
-                <div class="form">
-                    {{ Form::open( ["url" => "/summit/bios/", 'files' => true]) }}
+                    <div class="form">
+                        {{ Form::open( ["url" => "/summit/bios/", 'files' => true]) }}
 
-                    @include("partials.bios.bois-form")
+                        @include("partials.bios.bois-form")
 
-                    {{ Form::close() }}
+                        {{ Form::close() }}
+                    </div>
+
+
                 </div>
-
             </div>
         </div>
     </section>
