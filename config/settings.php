@@ -8,12 +8,13 @@
 
 
 return [
-  'sponsors' => [
-      'levels' => [
-          'Premiere' => "Premier",
-          'Titanium' => "Titanium",
-          'Gold' => "Gold",
-          'Sliver' => "Sliver",
-      ]
-  ]
+    'sponsors' => [
+        'levels' => [
+            'Premiere' => "Premier",
+            'Titanium' => "Titanium",
+            'Gold' => "Gold",
+            'Sliver' => "Sliver",
+        ]
+    ],
+    "setup" => true,
 ];
