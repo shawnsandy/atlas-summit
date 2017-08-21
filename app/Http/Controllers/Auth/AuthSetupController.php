@@ -26,7 +26,7 @@
             endif;
 
             if (Bouncer::assign(["superadmin", "admin"])->to(Auth::user())):
-                Bouncer::allow("superadmin")->to(["superadmin-ability", "admin-ability"]);
+                Bouncer::allow("superadmin")->to(array_values(["superadmin-ability", "admin-ability"]));
                 Bouncer::allow("admin")->to(["admin-ability"]);
                 Flash()->success("Super admin created");
                 return redirect("/admin");
