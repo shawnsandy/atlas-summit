@@ -125,7 +125,7 @@ class BiosController extends Controller
             return back()->with('error', "Failed to update the Bio.");
         endif;
 
-        back()->with('error', "Sorry your bio wan not found");
+        back()->with('error', "Sorry your bio was not found");
     }
 
     /**

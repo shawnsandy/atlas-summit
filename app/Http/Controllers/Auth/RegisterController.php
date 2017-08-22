@@ -36,6 +36,9 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        if(!config("settings.setup"))
+        $this->middleware('auth');
+
         $this->middleware('guest');
     }
 
