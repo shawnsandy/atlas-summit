@@ -33,7 +33,8 @@
                                     <td>{{ $user->region_id }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td class="text-right">
-                                        <a href="/admin/users/{{ $user->id }}/edit" type="button" class="btn btn-primary btn-sm text-right" data-toggle="modal">Edit</a>
+                                        <a href="/admin/users/{{ $user->id }}/edit" type="button"
+                                           class="btn btn-primary btn-sm text-right" data-toggle="modal">Edit</a>
 
                                     </td>
                                 </tr>
@@ -45,23 +46,28 @@
             </div>
             <div class="col-lg-4">
                 @if($current_user->isAn('admin'))
-                <div class="panel panel-default">
-                    <div class="panel-heading">Register New Users</div>
-                    <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Register New Users</div>
 
-                        {{ Form::open(["url" => "/admin/users"]) }}
+                        <div class="panel-body">
+                            <p class="lead">Import user from CVS</p>
+                            <hr>
+                            @include("imports.form", ["url" => "/admin/cvs"])
+                            <hr>
 
-                        @include('forms.user-registration')
+                            {{ Form::open(["url" => "/admin/users"]) }}
 
-                        <div class="form-group text-right clearfix">
-                            <button type="submit" class="btn btn-success">Register User</button>
+                            @include('forms.user-registration')
+
+                            <div class="form-group text-right clearfix">
+                                <button type="submit" class="btn btn-success">Register User</button>
+                            </div>
+
+                            {{ Form::close() }}
+
                         </div>
-
-                        {{ Form::close() }}
-
+                        @endif
                     </div>
-                    @endif
-                </div>
             </div>
 
 

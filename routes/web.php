@@ -45,6 +45,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:admin-ability']
 
     Route::resource("users", "UserAdminController");
 
+    Route::resource("cvs", "ImportCvsController", ["only", [""]]);
+
 
 });
 

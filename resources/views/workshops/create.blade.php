@@ -16,6 +16,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add A Workshop</div>
                     <div class="panel-body">
+                        <p class="lead">Import Workshops from CVS</p>
+                        <hr>
+                        @include("imports.form", ['url' => '/admin/cvs'])
+                        <hr>
                         {!! Form::open(['url' => '/admin/workshops']) !!}
                             @include('forms.workshops')
                         {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
