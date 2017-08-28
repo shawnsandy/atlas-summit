@@ -182,7 +182,7 @@ return [
         Cornford\Googlmapper\MapperServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
-
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -254,6 +254,7 @@ return [
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         "Extras" => ShawnSandy\Extras\ExtrasFacade::class,
         "Bouncer" => Silber\Bouncer\BouncerFacade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
