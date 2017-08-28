@@ -52,7 +52,7 @@
                         <div class="panel-body">
                             <p class="lead">Import user from CVS</p>
                             <hr>
-                            @include("imports.form", ["url" => "/admin/cvs"])
+                            @include("imports.form", ["url" => "/admin/workshops-cvs"])
                             <hr>
 
                             {{ Form::open(["url" => "/admin/users"]) }}

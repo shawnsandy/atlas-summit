@@ -18,7 +18,7 @@
                     <div class="panel-body">
                         <p class="lead">Import Workshops from CVS</p>
                         <hr>
-                        @include("imports.form", ['url' => '/admin/cvs'])
+                        @include("imports.form", ['url' => '/admin/users-cvs'])
                         <hr>
                         {!! Form::open(['url' => '/admin/workshops']) !!}
                             @include('forms.workshops')

@@ -45,7 +45,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:admin-ability']
 
     Route::resource("users", "UserAdminController");
 
-    Route::resource("cvs", "ImportCvsController", ["only", [""]]);
+    Route::resource("cvs", "ImportCvsController", ["only" => ["store"]]);
+
+    Route::resource("workshop-cvs", "ImportWorkshops", ["only" => ["store"]]);
+
+    Route::resource("users-cvs", "ImportUsersController", ["only" => ["store"]]);
 
 
 });

@@ -1,9 +1,9 @@
 <?php
     /**
      * Created by PhpStorm.
-     * User: shawnsandy
-     * Date: 8/28/17
-     * Time: 2:23 PM
+     * User: Shawn
+     * Date: 8/28/2017
+     * Time: 5:24 PM
      */
 
     namespace App\Http\Controllers;
@@ -12,18 +12,16 @@
     use App\Http\Requests\ImportRequests;
     use Illuminate\Http\Request;
 
-    class ImportWorkshops extends Controller
+    class ImportUsersController extends Controller
     {
 
-        public function store(ImportRequests $request)
+
+        public function store(ImportRequests $requests)
         {
-
-            if ($request->hasFile("cvs")) {
-
-                $data = $request->imports();
+            if ($requests->hasFile('cvs')) {
+                $data = $requests->imports();
 
                 return dump($data);
-
             }
 
             return back()->with("error", "Failed to import file");
