@@ -23,7 +23,7 @@ class ImportCvsController extends Controller
 
     public function store(ImportRequests $request)
     {
-        $data = $request->imports();
+        $data = $request->imports(7,0);
 
         dd($data);
 
