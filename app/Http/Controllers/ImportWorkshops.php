@@ -21,7 +21,7 @@
 
             if ($request->hasFile("cvs")) {
 
-                $data = $request->imports();
+                $data = $request->imports(10);
 
                 return dump($data);
 
