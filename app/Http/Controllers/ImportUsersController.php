@@ -19,7 +19,7 @@
         public function store(ImportRequests $requests)
         {
             if ($requests->hasFile('cvs')) {
-                $data = $requests->imports(10, 0);
+                $data = $requests->imports(7, 0);
 
                 return dump($data);
             }
