@@ -33,7 +33,7 @@ class ImportRequests extends FormRequest
     }
 
 
-    public function imports($limitColumns = 5, $skipRows=3)
+    public function imports($limitColumns = 10, $skipRows=3)
     {
 
         if ($this->hasFile('cvs')):
