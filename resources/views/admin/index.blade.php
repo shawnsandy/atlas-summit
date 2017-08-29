@@ -85,6 +85,17 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Imports</div>
+                    <div class="panel-body">
+                        <p class="lead">Import user from CSV</p>
+                        <hr>
+                        @include("imports.form", ["url" => "/admin/cvs"])
+                        <hr>
+
+                    </div>
+                </div>
             </div>
         </div><!--/.row-->
 
