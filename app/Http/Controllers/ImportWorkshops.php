@@ -11,6 +11,7 @@
 
     use App\Http\Requests\ImportRequests;
     use Illuminate\Http\Request;
+    use Laracasts\Flash\Flash;
 
     class ImportWorkshops extends Controller
     {
@@ -25,6 +26,7 @@
                 return dump($data);
 
             }
+
 
             return back()->with("error", "Failed to import file");
 
