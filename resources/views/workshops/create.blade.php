@@ -16,7 +16,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add A Workshop</div>
                     <div class="panel-body">
-                        <p class="lead">Import Workshops from CVS</p>
+                        <p class="lead">Import Workshops From CSV</p>
                         <hr>
                         @include("imports.form", ['url' => '/admin/workshop-cvs'])
                         <hr>

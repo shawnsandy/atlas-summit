@@ -48,7 +48,7 @@
                         <div class="panel-heading">Register New Users</div>
 
                         <div class="panel-body">
-                            <p class="lead">Import user from CSV's</p>
+                            <p class="lead">Import User From CSV's</p>
                             <hr>
                             @include("imports.form", ["url" => "/admin/users-cvs"])
                             <hr>
@@ -67,8 +67,6 @@
                         @endif
                     </div>
             </div>
-
-
             <!-- /.col-->
         </div><!-- /.row -->
     </div>
