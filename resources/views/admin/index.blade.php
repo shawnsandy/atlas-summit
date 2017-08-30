@@ -61,6 +61,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div><!--/.row-->
 
@@ -72,6 +74,26 @@
                         <div class="canvas-wrapper">
                             <div id="users" style="height: 350px;"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p class="lead">Import user from CSV</p>
+                        {!! $errors->first('cvs', '<p class="alert alert-danger">:message</p>') !!}
+
+                        @include("imports.form", ["url" => "/admin/cvs"])
+                        <hr>
+
+                        <p class="lead">Import Speakers from CVS</p>
+
+                        @include("imports.form", ['url' => '/admin/speakers-cvs'])
+                        <hr>
+
+                        <p class="lead">Import Workshops from CVS</p>
+                        
+                        @include("imports.form", ['url' => '/admin/workshop-cvs'])
+                        <hr>
+
                     </div>
                 </div>
             </div>
@@ -86,16 +108,6 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">Imports</div>
-                    <div class="panel-body">
-                        <p class="lead">Import user from CSV</p>
-                        <hr>
-                        @include("imports.form", ["url" => "/admin/cvs"])
-                        <hr>
-
-                    </div>
-                </div>
             </div>
         </div><!--/.row-->
 
