@@ -18,8 +18,7 @@
                         <table class="table datatables">
                             <thead>
                             <tr>
-                                <td>First Name</td>
-                                <td>Last Name</td>
+                                <td>Name</td>
                                 <td>Region</td>
                                 <td>Registered</td>
                                 <td class="">Action</td>
@@ -28,8 +27,7 @@
                             <tbody>
                             @foreach($users as $user)
                                 <tr>
-                                    <td>{{ $user->first_name }}</td>
-                                    <td>{{ $user->last_name }}</td>
+                                    <td>{{ $user->name }}</td>
                                     <td>{{ $user->region_id }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td class="text-right">
@@ -52,7 +50,7 @@
                         <div class="panel-body">
                             <p class="lead">Import user from CSV's</p>
                             <hr>
-                            @include("imports.form", ["url" => "/admin/cvs"])
+                            @include("imports.form", ["url" => "/admin/users-cvs"])
                             <hr>
 
                             {{ Form::open(["url" => "/admin/users"]) }}
