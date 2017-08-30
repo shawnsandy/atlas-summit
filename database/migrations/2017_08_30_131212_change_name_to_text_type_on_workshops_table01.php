@@ -14,7 +14,7 @@ class ChangeNameToTextTypeOnWorkshopsTable01 extends Migration
     public function up()
     {
         Schema::table('workshops', function (Blueprint $table) {
-            //$table->dropColumn('name');
+            $table->dropColumn('name');
             $table->string("name");
         });
     }
