@@ -40,19 +40,24 @@ class ImportUsersController extends Controller
                             "name" => $user["name"],
                             "password" => Hash::make($password),
                         ]);
+
+                        if (!$saved):
+                            // should throw exception and reverse transactions here
+                            Flash()->error("Error Importing, please verify that your data is valid.");
+                            return back();
+                        endif;
                         //run or store additional actions
-                        Flash()->success( "Users data imported");
                     } catch (Exception $e) {
-//                        Flash()->error("Error Importing, please verify that your data is valid.");
-//                        return back();
-                        return $e->getMessage() ;
+                        return $e->getMessage();
                     }
 
                 endforeach;
+                Flash()->success("Users data imported");
+                return back();
 
             });
 
-            return back();
+
         }
 
         return back()->with("error", "Failed to import file");
