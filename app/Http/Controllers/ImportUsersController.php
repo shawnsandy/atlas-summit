@@ -29,7 +29,8 @@ class ImportUsersController extends Controller
 
         if ($requests->hasFile('cvs')) {
 
-            $data = $requests->imports(7, 0);
+            $data = $requests->imports(10, 0);
+
 
             DB::transaction(function () use ($data) {
 
@@ -58,7 +59,7 @@ class ImportUsersController extends Controller
                             endif;
                             $user = User::find($saved);
                             //run or store additional actions
-                            Bouncer::assign("speaker")->to($user);
+                            Bouncer::assign("user")->to($user);
 
 //                            Notification::send($user, new AccountActivation($user, $password));
                         } catch (Exception $e) {

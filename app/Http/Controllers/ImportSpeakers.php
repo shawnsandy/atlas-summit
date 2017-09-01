@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Bio;
 use App\Http\Requests\ImportRequests;
 use DB;
 use Facades\App\User;
@@ -26,7 +27,8 @@ class ImportSpeakers extends Controller
 
         if ($request->hasFile("cvs")) {
 
-            $data = $request->imports(20, 0);
+            $data = $request->imports(10, 0);
+            //dd($data);
 
             DB::transaction(function () use ($data) {
 
@@ -50,6 +52,14 @@ class ImportSpeakers extends Controller
 
                         $user = User::find($saved);
                         // insert the speaker bio
+                        $bio_info = [
+
+                            "biography" => isset($speaker['biodescription']) ? $speaker['biodescription'] : 'n/a',
+                            "location" => isset($speaker['location']) ? $speaker['location'] : 'n/a',
+                            "job_title" => isset($speaker['position']) ? $speaker['position'] : 'n/a',
+                            "user_id" => $user->id
+                        ];
+                        Bio::insertGetId($bio_info);
 
                         Bouncer::assign("speaker")->to($user);
 //                        Notification::send($user, new AccountActivation($user, $password));
