@@ -30,7 +30,7 @@ class ImportWorkshops extends Controller
                     if (count($workshops)):
                         $ws = Workshop::insertGetId(
                             [
-                                "workshop_id" => isset($workshops['id']) ? $workshops['id'] : null,
+                                "key" => isset($workshops['id']) ? $workshops['id'] : null,
                                 "name" => isset($workshops["title"]) ? $workshops["title"] : null,
                                 "description" => isset($workshops["description"]) ? $workshops["description"] : null,
                                 "start_time" => isset($workshops["start_date_time"]) ? $workshops["start_date_time"] : null,
