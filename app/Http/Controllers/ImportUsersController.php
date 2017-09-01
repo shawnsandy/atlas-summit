@@ -10,12 +10,15 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\ImportRequests;
+use App\Notifications\AccountActivation;
 use Facades\App\User;
 use DB;
 use Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Laracasts\Flash\Flash;
 use Mockery\Exception;
+use Facades\Silber\Bouncer\Bouncer;
 
 class ImportUsersController extends Controller
 {
@@ -32,27 +35,38 @@ class ImportUsersController extends Controller
 
                 foreach ($data as $user):
 
-                    $password = str_random();
+                    $find_user = User::where('email', $user["email_address"])->first();
+                    if (!count($find_user)):
 
-                    try {
-                        $saved = User::insertGetId([
-                            "email" => isset($user["email_address"]) ? $user["email_address"]: null,
+                        $password = str_random();
+                        $user_array = [
+                            "email" => isset($user["email_address"]) ? $user["email_address"] : null,
                             "name" => isset($user["name"]) ? $user["name"] : null,
                             "password" => Hash::make($password),
-                        ]);
+                        ];
+                        try {
 
-                        if (!$saved):
-                            // should throw exception and reverse transactions here
-                            Flash()->error("Error Importing, please verify that your data is valid.");
-                            abort('400', "Error importing file");
-                            return back();
-                        endif;
-                        //run or store additional actions
-                    } catch (Exception $e) {
-                        return $e->getMessage();
-                    }
+                            $saved = User::insertGetId($user_array);
 
+                            if (!$saved):
+
+                                // should throw exception and reverse transactions here
+                                Flash()->error("Error Importing, please verify that your data is valid.");
+                                abort('400', "Error importing file");
+                                return back();
+
+                            endif;
+                            $user = User::find($saved);
+                            //run or store additional actions
+                            Bouncer::assign("speaker")->to($user);
+                            Notification::send($user, new AccountActivation($user, $password));
+                        } catch (Exception $e) {
+                            return $e->getMessage();
+                        }
+
+                    endif;
                 endforeach;
+
                 Flash()->success("Users data imported");
                 return back();
 

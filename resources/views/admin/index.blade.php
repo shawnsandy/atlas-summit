@@ -81,7 +81,7 @@
                         <p class="lead">Import Users From CSV</p>
                         {!! $errors->first('cvs', '<p class="alert alert-danger">:message</p>') !!}
 
-                        @include("imports.form", ["url" => "/admin/cvs"])
+                        @include("imports.form", ["url" => "/admin/users-cvs"])
                         <hr>
 
                         <p class="lead">Import Speakers From CSV</p>
