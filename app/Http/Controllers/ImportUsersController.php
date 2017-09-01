@@ -59,7 +59,8 @@ class ImportUsersController extends Controller
                             $user = User::find($saved);
                             //run or store additional actions
                             Bouncer::assign("speaker")->to($user);
-                            Notification::send($user, new AccountActivation($user, $password));
+
+//                            Notification::send($user, new AccountActivation($user, $password));
                         } catch (Exception $e) {
                             return $e->getMessage();
                         }
