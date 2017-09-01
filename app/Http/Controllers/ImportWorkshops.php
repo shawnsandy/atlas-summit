@@ -42,7 +42,9 @@ class ImportWorkshops extends Controller
                             ]
                         );
                     endif;
+
                     if (!$ws):
+                        abort('400', "Error importing file");
                         Flash()->error("Error Importing, please verify that your data is valid.");
                         return back();
                     endif;

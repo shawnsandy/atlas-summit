@@ -14,7 +14,7 @@ class AddWorkshopIdToWorkshopTable extends Migration
     public function up()
     {
         Schema::table('workshops', function (Blueprint $table) {
-            $table->string("workshop_id")->unique();
+            $table->string("key") ;
         });
     }
 
