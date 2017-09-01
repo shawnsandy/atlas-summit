@@ -42,9 +42,9 @@ class ImportUsersController extends Controller
                         ]);
 
                         if (!$saved):
-                            abort('400', "Error importing file");
                             // should throw exception and reverse transactions here
                             Flash()->error("Error Importing, please verify that your data is valid.");
+                            abort('400', "Error importing file");
                             return back();
                         endif;
                         //run or store additional actions
