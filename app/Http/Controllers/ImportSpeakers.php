@@ -31,8 +31,8 @@ class ImportSpeakers extends Controller
                 foreach ($data as $speaker):
                     $password = str_random();
                     $saved = User::insertGetId([
-                        "email" => $speaker["email_address"],
-                        "name" => $speaker["first_name"]." ".$speaker["last_name"],
+                        "email" => isset($speaker["email_address"]) ? $speaker["email_address"] : null,
+                        "name" => isset($speaker["first_name"]) ? $speaker["first_name"] : null ." ".isset($speaker["last_name"]) ? $speaker["last_name"] : null,
                         "password" => Hash::make($password),
                     ]);
 

@@ -30,15 +30,15 @@ class ImportWorkshops extends Controller
                     if (count($workshops)):
                         $ws = Workshop::insertGetId(
                             [
-                                "workshop_id" => $workshops['id'],
-                                "name" => $workshops["title"],
-                                "description" => $workshops["description"],
-                                "start_time" => $workshops["start_date_time"],
-                                "end_time" => $workshops["end_date_time"],
-                                "seats" => $workshops["capacity"],
+                                "workshop_id" => isset($workshops['id']) ? $workshops['id'] : null,
+                                "name" => isset($workshops["title"]) ? $workshops["title"] : null,
+                                "description" => isset($workshops["description"]) ? $workshops["description"] : null,
+                                "start_time" => isset($workshops["start_date_time"]) ? $workshops["start_date_time"] : null,
+                                "end_time" => isset($workshops["end_date_time"]) ? $workshops["end_date_time"] : null,
+                                "seats" => isset($workshops["capacity"]) ? $workshops["capacity"] : null,
                                 "date" => Carbon::now(),
-                                "room" => $workshops["venue"],
-                                "speakers" => $workshops["speakers"]
+                                "room" => isset($workshops["venue"]) ? $workshops["venue"] : null,
+                                "speakers" => isset($workshops["speakers"]) ? $workshops["speakers"] : null
                             ]
                         );
                     endif;

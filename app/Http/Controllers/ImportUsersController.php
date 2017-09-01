@@ -36,8 +36,8 @@ class ImportUsersController extends Controller
 
                     try {
                         $saved = User::insertGetId([
-                            "email" => $user["email_address"],
-                            "name" => $user["name"],
+                            "email" => isset($user["email_address"]) ? $user["email_address"]: null,
+                            "name" => isset($user["name"]) ? $user["name"] : null,
                             "password" => Hash::make($password),
                         ]);
 

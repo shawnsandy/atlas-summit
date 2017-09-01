@@ -47,5 +47,9 @@ class ImportRequests extends FormRequest
         return false;
     }
 
+    public function validateIndex($data) {
+        return isset($data) ? $data : null;
+    }
+
 
 }
