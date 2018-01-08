@@ -1,0 +1,95 @@
+@import "variables";
+.form-component {
+  label {
+    font-weight: normal;
+    text-transform: capitalize;
+  }
+
+  td {
+    padding: 16px !important;
+  }
+}
+body {
+  background-color: #f1f1f1;
+}
+header.landing h1, .headline {
+  font-size: 90px;
+}
+
+.theme-border {
+  border-top: 5px solid $theme-green;
+  &-bottom {
+    border-bottom: 5px solid $theme-green;
+  }
+  &-blue {
+    border-top-color: $theme-blue;
+  }
+  &-green {
+    border-top-color: darken($theme-green, 15%);
+  }
+}
+
+.panel-component {
+
+  .panel {
+    h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+
+      i {
+        color: $theme-green;
+      }
+
+    }
+    border-top: solid 3px #005DA7;
+
+  }
+
+  border-top: solid 3px #005DA7;
+
+}
+
+.panel {
+  &.dashboard {
+    h2  {
+      font-size: 28px;
+      color: $theme-blue;
+    }
+
+    .fa {
+      color: $theme-green;
+    }
+  }
+}
+
+
+#sidebar-wrapper {
+  background-color: darken($theme-blue, 15%);
+
+  .sidebar-nav li a {
+    color: #fff;
+
+    &:hover {
+      background-color: darken($theme-blue, 15%);
+    }
+  }
+}
+.navbar-static-top {
+  background-color: rgba(255, 255, 255, 0.26);
+}
+
+.navbar-brand {
+  padding-top: 25px;
+  background-color: #ffffff;
+  .fa {
+    font-size: 21px;
+  }
+}
+
+.sidebar-nav li:first-child {
+  line-height: 50px;
+  background-color: darken($theme-blue, 15%);
+  a:hover, a {
+    background-color: darken($theme-blue, 8%);
+  }
+}
+
+@import "shared";

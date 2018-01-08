@@ -11,14 +11,78 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('page::index');
+
+    $sponsors = [];
+    return view('page::index', compact("sponsors"));
+});
+
+Route::group(['prefix' => "scans"], function () {
+    Route::get('/', 'ScansController@index');
+    Route::get('/{id}', 'ScansController@scans');
+    Route::post('/rfid', 'ScansController@store');
+    Route::post('/room', 'ScansController@room');
+});
+
+Route::group(['prefix' => 'admin'], function () {
+
+    Route::get("auth/setup", "Auth\AuthSetupController");
+
+});
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:admin-ability'] ], function () {
+
+    Route::get('/', 'AdminController@index');
+
+    Route::resource("sponsors", "SponsorsController");
+
+    Route::resource("regions", "RegionsController");
+
+    Route::resource("rooms", "RoomsController");
+
+    Route::resource("workshops", "WorkshopController");
+
+    Route::resource("users", "UserAdminController");
+
+    Route::resource("cvs", "ImportCvsController", ["only" => ["store"]]);
+
+    Route::resource("workshop-cvs", "ImportWorkshops", ["only" => ["store"]]);
+
+    Route::resource("speakers-cvs", "ImportSpeakers", ["only" => ["store"]]);
+
+    Route::resource("users-cvs", "ImportUsersController", ["only" => ["store"]]);
+
+
+});
+
+Route::group(['prefix' => 'api',], function () {
+    Route::get('/users/{start}/{end}', 'ApiController@users');
 });
 
 Route::group(['prefix' => "extras"], function () {
-    Extras::routes();
+     Extras::routes();
 });
 
-Route::group(['prefix' => 'admin'], function(){
-   Dash::routes();
+Route::group(["prefix" => "summit"], function () {
+
+    Route::resource('/u', 'Summit\WshopController', ['only' => ['show', 'index']]);
+
+    Route::get('/wshops', 'Summit\WshopController@index');
+
+    Route::resource('/bios', 'Summit\BiosController');
+
+    Route::get('/myscheulde', 'Summit\BiosController@index');
+
+    Route::get("/activation", 'Summit\ActivationController');
+
+    Route::get('/ws/{workshop_id}', 'Summit\WorkshopRegController');
+
 });
+
+Route::group(["prefix" => "page"], function () {
+    Pages::routes();
+});
+
+
+Auth::routes();
